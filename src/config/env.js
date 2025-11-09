@@ -6,7 +6,7 @@ export const env = {
   SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY || '',
   SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY || '',
   GOOGLE_GEMINI_API_KEY: process.env.GOOGLE_GEMINI_API_KEY || '',
-  GOOGLE_GEMINI_MODEL: process.env.GOOGLE_GEMINI_MODEL || 'gemini-2.0-flash-001',
+  GOOGLE_GEMINI_MODEL: process.env.GOOGLE_GEMINI_MODEL || 'gemini-2.5-flash',
   GOOGLE_GEMINI_ENABLE_SEARCH_RETRIEVAL:
     process.env.GOOGLE_GEMINI_ENABLE_SEARCH_RETRIEVAL === 'false'
       ? false

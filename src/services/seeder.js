@@ -275,13 +275,31 @@ async function seedTeams(supabase, empresasData, companyMap, contactMap, departm
     }
   }
 
-  // Insertar team_members
+  // Insertar team_members (filtrar duplicados primero)
   if (teamMembersToInsert.length > 0) {
-    const { error } = await supabase.from('team_members').upsert(teamMembersToInsert, {
-      onConflict: 'team_id,contact_id',
+    // Filtrar duplicados por (team_id, contact_id)
+    const seenKeys = new Set();
+    const uniqueTeamMembers = teamMembersToInsert.filter((member) => {
+      const key = `${member.team_id}:${member.contact_id}`;
+      if (seenKeys.has(key)) {
+        return false; // Duplicado, omitir
+      }
+      seenKeys.add(key);
+      return true;
     });
-    if (error) throw error;
-    log(`Insertados ${teamMembersToInsert.length} miembros de equipos`);
+    
+    if (uniqueTeamMembers.length > 0) {
+      // Insertar en lotes para evitar problemas
+      const batchSize = 50;
+      for (let i = 0; i < uniqueTeamMembers.length; i += batchSize) {
+        const batch = uniqueTeamMembers.slice(i, i + batchSize);
+        const { error } = await supabase.from('team_members').upsert(batch, {
+          onConflict: 'team_id,contact_id',
+        });
+        if (error) throw error;
+      }
+      log(`Insertados ${uniqueTeamMembers.length} miembros de equipos (de ${teamMembersToInsert.length} totales, ${teamMembersToInsert.length - uniqueTeamMembers.length} duplicados omitidos)`);
+    }
   }
 
   return teamMap;
@@ -503,10 +521,10 @@ export async function seedCompleto({ generate = false } = {}) {
   log(`Procesados ${departmentMap.size} departamentos`);
 
   // 4. Crear/actualizar contacts desde empresas_mock.json y obtener mapa
-  const contactMap = new Map(); // name/email -> contactId
+  const contactMap = new Map(); // name -> contactId (puede haber duplicados entre empresas, se usa el último)
+  const contactMapByKey = new Map(); // (name:company_id) -> contactId (clave única)
   
   // Primero, recopilar todos los contactos únicos (por nombre + company_id)
-  const contactsToUpsert = [];
   const contactKeyMap = new Map(); // (name, companyId) -> contact data
   
   for (const empresa of empresasData) {
@@ -533,52 +551,90 @@ export async function seedCompleto({ generate = false } = {}) {
     }
   }
   
-  // Convertir a array para upsert
-  contactsToUpsert.push(...contactKeyMap.values());
+  // Buscar contactos existentes por nombre y company_id
+  const allNames = Array.from(new Set(Array.from(contactKeyMap.values()).map(c => c.name)));
+  const allCompanyIds = Array.from(new Set(Array.from(contactKeyMap.values()).map(c => c.company_id)));
   
-  // Hacer upsert en lotes para evitar duplicados
-  if (contactsToUpsert.length > 0) {
+  const { data: existingContacts, error: findError } = await supabase
+    .from('contacts')
+    .select('id,name,company_id')
+    .in('name', allNames)
+    .in('company_id', allCompanyIds);
+  
+  if (findError) throw findError;
+  
+  // Crear mapa de contactos existentes: (name, company_id) -> contactId
+  const existingMap = new Map();
+  if (existingContacts) {
+    for (const contact of existingContacts) {
+      const key = `${contact.name}:${contact.company_id}`;
+      existingMap.set(key, contact.id);
+      contactMap.set(contact.name, contact.id); // Para compatibilidad con código existente
+      contactMapByKey.set(key, contact.id); // Clave única
+    }
+  }
+  
+  // Separar contactos nuevos de los existentes
+  const contactsToInsert = [];
+  const contactsToUpdate = [];
+  
+  for (const [key, contactData] of contactKeyMap.entries()) {
+    if (existingMap.has(key)) {
+      // Contacto existe, preparar para actualizar
+      const contactId = existingMap.get(key);
+      contactsToUpdate.push({
+        id: contactId,
+        ...contactData,
+        updated_at: new Date().toISOString(),
+      });
+    } else {
+      // Contacto nuevo, preparar para insertar
+      contactsToInsert.push(contactData);
+    }
+  }
+  
+  // Insertar contactos nuevos en lotes
+  if (contactsToInsert.length > 0) {
     const batchSize = 50;
-    for (let i = 0; i < contactsToUpsert.length; i += batchSize) {
-      const batch = contactsToUpsert.slice(i, i + batchSize);
-      const { data: upserted, error: upsertError } = await supabase
+    for (let i = 0; i < contactsToInsert.length; i += batchSize) {
+      const batch = contactsToInsert.slice(i, i + batchSize);
+      const { data: inserted, error: insertError } = await supabase
         .from('contacts')
-        .upsert(batch, { 
-          onConflict: 'name,company_id',
-          ignoreDuplicates: false 
-        })
+        .insert(batch)
         .select('id,name,company_id');
       
-      if (upsertError) throw upsertError;
+      if (insertError) throw insertError;
       
-      // Mapear los contactos insertados/actualizados
-      if (upserted) {
-        for (const contact of upserted) {
+      if (inserted) {
+        for (const contact of inserted) {
           const key = `${contact.name}:${contact.company_id}`;
-          contactMap.set(contact.name, contact.id);
+          contactMap.set(contact.name, contact.id); // Para compatibilidad
+          contactMapByKey.set(key, contact.id); // Clave única
         }
       }
     }
-    
-    // Si el upsert no devuelve datos, necesitamos buscar los contactos
-    if (contactMap.size === 0) {
-      const names = Array.from(new Set(contactsToUpsert.map(c => c.name)));
-      const companyIds = Array.from(new Set(contactsToUpsert.map(c => c.company_id)));
-      
-      const { data: foundContacts, error: findError } = await supabase
-        .from('contacts')
-        .select('id,name,company_id')
-        .in('name', names)
-        .in('company_id', companyIds);
-      
-      if (findError) throw findError;
-      
-      if (foundContacts) {
-        for (const contact of foundContacts) {
-          contactMap.set(contact.name, contact.id);
+    log(`Insertados ${contactsToInsert.length} contactos nuevos`);
+  }
+  
+  // Actualizar contactos existentes en lotes
+  if (contactsToUpdate.length > 0) {
+    const batchSize = 50;
+    for (let i = 0; i < contactsToUpdate.length; i += batchSize) {
+      const batch = contactsToUpdate.slice(i, i + batchSize);
+      // Actualizar uno por uno para evitar conflictos
+      for (const contact of batch) {
+        const { id, ...updateData } = contact;
+        const { error: updateError } = await supabase
+          .from('contacts')
+          .update(updateData)
+          .eq('id', id);
+        
+        if (updateError) {
+          console.warn(`[seeder] Error actualizando contacto ${id}:`, updateError.message);
         }
       }
     }
+    log(`Actualizados ${contactsToUpdate.length} contactos existentes`);
   }
   
   log(`Procesados ${contactMap.size} contactos`);
