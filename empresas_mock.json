@@ -1,0 +1,657 @@
+[
+  {
+    "empresa": "TechSmart",
+    "departamentos": [
+      {
+        "nombre": "Comercial",
+        "usuarios": [],
+        "tareas": []
+      },
+      {
+        "nombre": "Logística",
+        "usuarios": [
+          {
+            "id": "e2ea7090-917f-4877-b26e-660d32c4c991",
+            "nombre": "Patricia Peña",
+            "puesto": "CEO",
+            "compañia": "TechSmart",
+            "es_cliente": true,
+            "es_proveedor": true,
+            "equipo": [],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "20b7c6eb-9e8a-4111-bb9d-1bfd4694842a",
+                "titulo": "Diseño y fabricación de mobiliario",
+                "usuario_responsable": "Patricia Peña",
+                "estatus": "En proceso",
+                "requerimientos": "Revisión legal",
+                "kpis": [
+                  "Entrega a tiempo"
+                ],
+                "plazo": "2025-11-14",
+                "canal": "WhatsApp",
+                "presupuesto": 16197,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefiere ser llamado/a Patricia.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-07T23:17:30.992171",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Patricia Peña",
+                  "Roberto Sánchez"
+                ],
+                "presupuesto": 46812,
+                "requerimientos": "Cotización formal",
+                "kpis": [
+                  "Reducción de costos"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-28"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "2d3b8e03-dc77-497a-846b-144c1a9f820f",
+            "titulo": "Outsourcing de soporte técnico",
+            "usuario_responsable": "Patricia Peña",
+            "estatus": "Terminado",
+            "requerimientos": "Documentación actualizada",
+            "kpis": [
+              "Mejorar servicio"
+            ],
+            "plazo": "2025-12-01",
+            "canal": "WhatsApp",
+            "presupuesto": 46869,
+            "notas": "Seguimiento semanal"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-01",
+        "noticia": "TechSmart Lanza nueva división de IA",
+        "tema_relacionado": "Automatización"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-06",
+        "noticia": "TechSmart Lanza nueva división de IA",
+        "tema_relacionado": "Finanzas"
+      }
+    ]
+  },
+  {
+    "empresa": "SaludExpress",
+    "departamentos": [
+      {
+        "nombre": "Médico",
+        "usuarios": [
+          {
+            "id": "b66520ef-06c3-434d-bceb-f4fdc1fe3f59",
+            "nombre": "Roberto Sánchez",
+            "puesto": "Coordinador Médico",
+            "compañia": "SaludExpress",
+            "es_cliente": false,
+            "es_proveedor": false,
+            "equipo": [],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "21f18a4b-4ebc-4145-ae19-9d496aff5608",
+                "titulo": "Suministro de materiales",
+                "usuario_responsable": "Roberto Sánchez",
+                "estatus": "Pendiente",
+                "requerimientos": "Documentación actualizada",
+                "kpis": [
+                  "Reducción de costos"
+                ],
+                "plazo": "2025-11-14",
+                "canal": "Email",
+                "presupuesto": 19213,
+                "notas": "Prioridad alta"
+              },
+              {
+                "id": "282e2d5b-c2ec-4663-8b88-f6b24493a9b4",
+                "titulo": "Plataforma de marketing digital",
+                "usuario_responsable": "Roberto Sánchez",
+                "estatus": "En proceso",
+                "requerimientos": "Documentación actualizada",
+                "kpis": [
+                  "Reducción de costos"
+                ],
+                "plazo": "2025-11-25",
+                "canal": "Email",
+                "presupuesto": 40999,
+                "notas": "Seguimiento semanal"
+              }
+            ],
+            "notas_personales": "Prefiere ser llamado/a Roberto.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-05T23:17:30.992171",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Roberto Sánchez",
+                  "Juan Torres"
+                ],
+                "presupuesto": 9546,
+                "requerimientos": "Cotización formal",
+                "kpis": [
+                  "Entrega a tiempo"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-14"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "6c0b9bd9-7353-494f-8250-a52b24f5bd97",
+            "titulo": "Implementación de blockchain",
+            "usuario_responsable": "Roberto Sánchez",
+            "estatus": "Pendiente",
+            "requerimientos": "Integración ERP",
+            "kpis": [
+              "Entrega a tiempo"
+            ],
+            "plazo": "2025-11-25",
+            "canal": "WhatsApp",
+            "presupuesto": 76786,
+            "notas": "Prioridad alta"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-03",
+        "noticia": "SaludExpress Expansión de operaciones en Latinoamérica",
+        "tema_relacionado": "Finanzas"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-08",
+        "noticia": "SaludExpress Expansión de operaciones en Latinoamérica",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "Innovar Group",
+    "departamentos": [
+      {
+        "nombre": "IT",
+        "usuarios": [],
+        "tareas": []
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-02",
+        "noticia": "Innovar Group Premio de innovación 2025",
+        "tema_relacionado": "Finanzas"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-06",
+        "noticia": "Innovar Group Premio de innovación 2025",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-30",
+        "noticia": "Innovar Group Premio de innovación 2025",
+        "tema_relacionado": "Finanzas"
+      }
+    ]
+  },
+  {
+    "empresa": "Alimentos Brisa",
+    "departamentos": [
+      {
+        "nombre": "Sourcing",
+        "usuarios": [
+          {
+            "id": "acaf36b7-0b7c-41ce-b7c3-2692e9eae318",
+            "nombre": "Carla Díaz",
+            "puesto": "Compras Internacionales",
+            "compañia": "Alimentos Brisa",
+            "es_cliente": true,
+            "es_proveedor": false,
+            "equipo": [],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "c1af168b-352c-4382-8cb2-28d19e2a9992",
+                "titulo": "Consultoría estratégica",
+                "usuario_responsable": "Carla Díaz",
+                "estatus": "Pendiente",
+                "requerimientos": "Documentación actualizada",
+                "kpis": [
+                  "Entrega a tiempo"
+                ],
+                "plazo": "2025-11-22",
+                "canal": "Llamada",
+                "presupuesto": 61516,
+                "notas": "Seguimiento semanal"
+              },
+              {
+                "id": "398f9fb1-c4e7-4a89-aeb0-1a82deab8636",
+                "titulo": "Outsourcing de soporte técnico",
+                "usuario_responsable": "Carla Díaz",
+                "estatus": "Terminado",
+                "requerimientos": "Integración ERP",
+                "kpis": [
+                  "Mejorar servicio"
+                ],
+                "plazo": "2025-11-15",
+                "canal": "Llamada",
+                "presupuesto": 58076,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefiere ser llamado/a Carla.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-07T23:17:30.992171",
+                "canal": "Llamada",
+                "participantes": [
+                  "Carla Díaz",
+                  "Carla Díaz"
+                ],
+                "presupuesto": 50451,
+                "requerimientos": "Informe detallado",
+                "kpis": [
+                  "Reducción de costos"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-20"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "c5597c5e-8cda-4a83-933d-3b0cc637f0bd",
+            "titulo": "Diseño y fabricación de mobiliario",
+            "usuario_responsable": "Carla Díaz",
+            "estatus": "En proceso",
+            "requerimientos": "Documentación actualizada",
+            "kpis": [
+              "Entrega a tiempo"
+            ],
+            "plazo": "2025-11-29",
+            "canal": "Llamada",
+            "presupuesto": 60572,
+            "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "240a81c9-cdb9-49d4-b18b-086a78fe38bd",
+            "titulo": "Suministro de materiales",
+            "usuario_responsable": "Carla Díaz",
+            "estatus": "Terminado",
+            "requerimientos": "Integración ERP",
+            "kpis": [
+              "Reducción de costos"
+            ],
+            "plazo": "2025-11-13",
+            "canal": "WhatsApp",
+            "presupuesto": 55637,
+            "notas": "Seguimiento semanal"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-31",
+        "noticia": "Alimentos Brisa Lanza nueva división de IA",
+        "tema_relacionado": "Finanzas"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-06",
+        "noticia": "Alimentos Brisa Expansión de operaciones en Latinoamérica",
+        "tema_relacionado": "Finanzas"
+      }
+    ]
+  },
+  {
+    "empresa": "Constructora Taurus",
+    "departamentos": [
+      {
+        "nombre": "Compras",
+        "usuarios": [
+          {
+            "id": "942bf86f-9210-4fc3-8755-02a830550f3b",
+            "nombre": "Valeria Torres",
+            "puesto": "Jefa de Proyectos",
+            "compañia": "Constructora Taurus",
+            "es_cliente": true,
+            "es_proveedor": true,
+            "equipo": [],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "6ffd1eb1-afa7-4b8d-867a-73b5c5c0298c",
+                "titulo": "Servicios logísticos integrales",
+                "usuario_responsable": "Valeria Torres",
+                "estatus": "Terminado",
+                "requerimientos": "Documentación actualizada",
+                "kpis": [
+                  "Reducción de costos"
+                ],
+                "plazo": "2025-11-12",
+                "canal": "Email",
+                "presupuesto": 37845,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefiere ser llamado/a Valeria.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-05T23:17:30.993173",
+                "canal": "Email",
+                "participantes": [
+                  "Valeria Torres",
+                  "Valeria Torres"
+                ],
+                "presupuesto": 14507,
+                "requerimientos": "Cotización formal",
+                "kpis": [
+                  "Mejorar servicio"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-21"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "df2397ac-53c0-4604-9fac-db1bd2c083c8",
+            "titulo": "Software ERP especializado",
+            "usuario_responsable": "Valeria Torres",
+            "estatus": "Pendiente",
+            "requerimientos": "Documentación actualizada",
+            "kpis": [
+              "Satisfacción cliente"
+            ],
+            "plazo": "2025-11-30",
+            "canal": "Email",
+            "presupuesto": 17728,
+            "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "9ecfeba5-aeb3-451d-b756-b475d17ea1c3",
+            "titulo": "Servicios logísticos integrales",
+            "usuario_responsable": "Valeria Torres",
+            "estatus": "Pendiente",
+            "requerimientos": "Documentación actualizada",
+            "kpis": [
+              "Mejorar servicio"
+            ],
+            "plazo": "2025-12-07",
+            "canal": "Llamada",
+            "presupuesto": 12555,
+            "notas": "Seguimiento semanal"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-31",
+        "noticia": "Constructora Taurus Firma alianza internacional",
+        "tema_relacionado": "Automatización"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-05",
+        "noticia": "Constructora Taurus Lanza nueva división de IA",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-30",
+        "noticia": "Constructora Taurus Firma alianza internacional",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "Farmasur",
+    "departamentos": [
+      {
+        "nombre": "Finanzas",
+        "usuarios": [
+          {
+            "id": "75cd880e-4a3c-4dde-b7e3-58533b7fe9fc",
+            "nombre": "Esteban Ruiz",
+            "puesto": "Líder Logístico",
+            "compañia": "Farmasur",
+            "es_cliente": false,
+            "es_proveedor": false,
+            "equipo": [],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "fce52f18-0e54-4fb6-a835-d875f949d269",
+                "titulo": "Plataforma de marketing digital",
+                "usuario_responsable": "Esteban Ruiz",
+                "estatus": "En proceso",
+                "requerimientos": "Revisión legal",
+                "kpis": [
+                  "Satisfacción cliente"
+                ],
+                "plazo": "2025-11-19",
+                "canal": "WhatsApp",
+                "presupuesto": 38308,
+                "notas": "Prioridad alta"
+              },
+              {
+                "id": "44085380-cd76-4431-be58-c21c486c5a26",
+                "titulo": "Outsourcing de soporte técnico",
+                "usuario_responsable": "Esteban Ruiz",
+                "estatus": "En proceso",
+                "requerimientos": "Integración ERP",
+                "kpis": [
+                  "Mejorar servicio"
+                ],
+                "plazo": "2025-12-05",
+                "canal": "WhatsApp",
+                "presupuesto": 57712,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefiere ser llamado/a Esteban.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-01T23:17:30.993173",
+                "canal": "Email",
+                "participantes": [
+                  "Esteban Ruiz",
+                  "Patricia Peña"
+                ],
+                "presupuesto": 30061,
+                "requerimientos": "Cotización formal",
+                "kpis": [
+                  "Mejorar servicio"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-09"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "178b26b0-0d70-44c2-8c4f-9fb119da5f3e",
+            "titulo": "Soluciones de automatización en la nube",
+            "usuario_responsable": "Esteban Ruiz",
+            "estatus": "En proceso",
+            "requerimientos": "Documentación actualizada",
+            "kpis": [
+              "Satisfacción cliente"
+            ],
+            "plazo": "2025-12-02",
+            "canal": "WhatsApp",
+            "presupuesto": 58936,
+            "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "4bf4fc17-390d-42b1-80c5-6295b4e7729f",
+            "titulo": "Outsourcing de soporte técnico",
+            "usuario_responsable": "Esteban Ruiz",
+            "estatus": "En proceso",
+            "requerimientos": "Documentación actualizada",
+            "kpis": [
+              "Mejorar servicio"
+            ],
+            "plazo": "2025-11-28",
+            "canal": "WhatsApp",
+            "presupuesto": 17523,
+            "notas": "Seguimiento semanal"
+          }
+        ]
+      },
+      {
+        "nombre": "Médico",
+        "usuarios": [],
+        "tareas": []
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-06",
+        "noticia": "Farmasur Firma alianza internacional",
+        "tema_relacionado": "Finanzas"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-29",
+        "noticia": "Farmasur Expansión de operaciones en Latinoamérica",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "TecGlobal",
+    "departamentos": [
+      {
+        "nombre": "Médico",
+        "usuarios": [],
+        "tareas": []
+      },
+      {
+        "nombre": "Logística",
+        "usuarios": [],
+        "tareas": []
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-05",
+        "noticia": "TecGlobal Lanza nueva división de IA",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-01",
+        "noticia": "TecGlobal Firma alianza internacional",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "Finanzas Next",
+    "departamentos": [
+      {
+        "nombre": "Médico",
+        "usuarios": [],
+        "tareas": []
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-02",
+        "noticia": "Finanzas Next Firma alianza internacional",
+        "tema_relacionado": "Automatización"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-29",
+        "noticia": "Finanzas Next Lanza nueva división de IA",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-08",
+        "noticia": "Finanzas Next Lanza nueva división de IA",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "ModaFutura",
+    "departamentos": [
+      {
+        "nombre": "Compras",
+        "usuarios": [],
+        "tareas": []
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-04",
+        "noticia": "ModaFutura Premio de innovación 2025",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "Energía Verde",
+    "departamentos": [
+      {
+        "nombre": "Proyectos",
+        "usuarios": [],
+        "tareas": []
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-06",
+        "noticia": "Energía Verde Firma alianza internacional",
+        "tema_relacionado": "Finanzas"
+      }
+    ]
+  }
+]

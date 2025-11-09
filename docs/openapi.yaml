@@ -1,0 +1,1935 @@
+openapi: 3.0.3
+info:
+  title: Zero-Click CRM API
+  version: 1.0.0
+  description: >-
+    Documentación de la API para el backend Zero-Click CRM. Incluye ingestión multicanal,
+    procesamiento de audio/video, consultas CRM, chat asistido por IA, alertas, notas,
+    knowledge base y endpoints administrativos.
+  contact:
+    name: Equipo Relay
+servers:
+  - url: http://localhost:4000
+    description: Servidor de desarrollo local
+  - url: https://your-deployment-url.example
+    description: Servidor de producción (actualiza esta URL al desplegar)
+tags:
+  - name: Health
+  - name: Ingest
+  - name: Jobs
+  - name: CRM
+  - name: Search
+  - name: Chat
+  - name: Notes
+  - name: Alerts
+  - name: AI
+  - name: Knowledge
+  - name: WorkItems
+  - name: Admin
+paths:
+  /health:
+    get:
+      summary: Estado del servicio
+      tags: [Health]
+      responses:
+        '200':
+          description: Información básica de salud del backend
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+  /api/ingest/email:
+    post:
+      summary: Ingesta de email (mock o real)
+      description: Normaliza un email a una interacción CRM. Si no se especifica body o incluye `generate=true`, genera datos mock automáticamente.
+      tags: [Ingest]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngestEmailRequest'
+      responses:
+        '200':
+          description: Email ingerido correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IngestResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/ingest/slack:
+    post:
+      summary: Ingesta de mensaje de Slack (mock o real)
+      tags: [Ingest]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngestSlackRequest'
+      responses:
+        '200':
+          description: Mensaje ingerido correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IngestResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/ingest/whatsapp:
+    post:
+      summary: Ingesta de mensaje de WhatsApp (mock o real)
+      tags: [Ingest]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngestWhatsAppRequest'
+      responses:
+        '200':
+          description: Mensaje ingerido correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IngestResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/ingest/audio:
+    post:
+      summary: Sube audio a Supabase Storage y dispara procesamiento automático
+      tags: [Ingest]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngestAudioVideoRequest'
+      responses:
+        '200':
+          description: Audio cargado y en proceso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StorageUploadResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/ingest/video:
+    post:
+      summary: Sube video a Supabase Storage y dispara procesamiento automático
+      tags: [Ingest]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngestAudioVideoRequest'
+      responses:
+        '200':
+          description: Video cargado y en proceso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StorageUploadResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/jobs/audio:
+    post:
+      summary: Procesa audio inline con Gemini y genera interacción
+      tags: [Jobs]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobAudioRequest'
+      responses:
+        '200':
+          description: Audio procesado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /api/jobs/video:
+    post:
+      summary: Procesa video inline con Gemini (audio_only o multimodal)
+      tags: [Jobs]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobVideoRequest'
+      responses:
+        '200':
+          description: Video procesado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /api/crm/contacts:
+    get:
+      summary: Lista contactos del CRM
+      tags: [CRM]
+      parameters:
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: sentiment
+          in: query
+          schema:
+            $ref: '#/components/schemas/Sentiment'
+        - name: personKind
+          in: query
+          schema:
+            type: string
+            enum: [employee, client, supplier, partner, other]
+        - name: isClient
+          in: query
+          schema:
+            type: boolean
+        - $ref: '#/components/parameters/UpdatedAfterQuery'
+        - $ref: '#/components/parameters/UpdatedBeforeQuery'
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Lista paginada de contactos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContactsListResponse'
+  /api/crm/companies:
+    get:
+      summary: Lista compañías
+      tags: [CRM]
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: industry
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Lista paginada de compañías
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompaniesListResponse'
+  /api/crm/interactions:
+    get:
+      summary: Lista interacciones
+      tags: [CRM]
+      parameters:
+        - name: contactId
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: channel
+          in: query
+          schema:
+            type: string
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: endDate
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: minBudget
+          in: query
+          schema:
+            type: number
+        - name: maxBudget
+          in: query
+          schema:
+            type: number
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Lista paginada de interacciones
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InteractionsListResponse'
+  /api/crm/work-items:
+    get:
+      summary: Lista work items
+      tags: [CRM]
+      parameters:
+        - name: status
+          in: query
+          schema:
+            $ref: '#/components/schemas/WorkItemStatus'
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: assigneeId
+          in: query
+          schema:
+            type: string
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: priority
+          in: query
+          schema:
+            $ref: '#/components/schemas/Priority'
+        - name: dueBefore
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: dueAfter
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: onlyOverdue
+          in: query
+          schema:
+            type: boolean
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Lista paginada de work items
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItemsListResponse'
+  /api/crm/fresh-data:
+    get:
+      summary: Lista señales fresh data
+      tags: [CRM]
+      parameters:
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: topic
+          in: query
+          schema:
+            type: string
+        - name: source
+          in: query
+          schema:
+            type: string
+        - name: tag
+          in: query
+          schema:
+            type: string
+        - name: search
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Lista paginada de señales
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FreshDataListResponse'
+  /api/crm/insights/summary:
+    get:
+      summary: Dashboard resumen por compañía
+      tags: [CRM]
+      parameters:
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - $ref: '#/components/parameters/LimitQuery'
+      responses:
+        '200':
+          description: Resumen con métricas, deals y próximos pasos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InsightsSummaryResponse'
+  /api/crm/timeline:
+    get:
+      summary: Timeline combinado de interacciones, work items y señales
+      tags: [CRM]
+      parameters:
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: contactId
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/LimitQuery'
+      responses:
+        '200':
+          description: Lista unificada ordenada por fecha
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimelineResponse'
+  /api/crm/companies/{id}/overview:
+    get:
+      summary: Overview completo de una compañía
+      tags: [CRM]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: interactionsLimit
+          in: query
+          schema:
+            type: integer
+        - name: workItemsLimit
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Información consolidada de la compañía
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompanyOverviewResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/crm/contacts/{id}/overview:
+    get:
+      summary: Overview completo de un contacto
+      tags: [CRM]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: interactionsLimit
+          in: query
+          schema:
+            type: integer
+        - name: workItemsLimit
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Información consolidada del contacto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContactOverviewResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/crm/insights/trends:
+    get:
+      summary: Tendencias de interacciones, work items y fresh data
+      tags: [CRM]
+      parameters:
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: days
+          in: query
+          schema:
+            type: integer
+            default: 30
+      responses:
+        '200':
+          description: Datos agrupados por día
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrendsResponse'
+  /api/crm/insights/actionable:
+    get:
+      summary: Insights accionables (contactos en riesgo, alertas, tareas vencidas)
+      tags: [CRM]
+      parameters:
+        - $ref: '#/components/parameters/CompanyIdQuery'
+      responses:
+        '200':
+          description: Información lista para actuar
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionableInsightsResponse'
+  /api/search/query:
+    post:
+      summary: Búsqueda semántica en contextos de IA
+      tags: [Search]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchQueryRequest'
+      responses:
+        '200':
+          description: Resultados ordenados por similitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchQueryResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /api/chat:
+    post:
+      summary: Chat corporativo con soporte de herramientas
+      tags: [Chat]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Respuesta generada por Gemini
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+  /api/notes:
+    post:
+      summary: Registrar nota/interaction manual
+      tags: [Notes]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NoteRequest'
+      responses:
+        '200':
+          description: Nota registrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NoteResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/alerts:
+    get:
+      summary: Listar alertas
+      tags: [Alerts]
+      parameters:
+        - name: status
+          in: query
+          schema:
+            type: string
+            default: open
+        - name: severity
+          in: query
+          schema:
+            $ref: '#/components/schemas/AlertSeverity'
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: contactId
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Alertas paginadas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertsListResponse'
+  /api/alerts/{id}/resolve:
+    post:
+      summary: Marcar una alerta como resuelta
+      tags: [Alerts]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Alerta resuelta
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/ai/contexts:
+    get:
+      summary: Listar contextos de IA indexados
+      tags: [AI]
+      parameters:
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [interaction, work_item, fresh_data, knowledge, note]
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: contactId
+          in: query
+          schema:
+            type: string
+        - name: search
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Contextos paginados
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AIContextsListResponse'
+  /api/ai/contexts/{id}:
+    delete:
+      summary: Eliminar contexto de IA por ID
+      tags: [AI]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Contexto eliminado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/knowledge:
+    get:
+      summary: Listar entradas de la base de conocimiento
+      tags: [Knowledge]
+      parameters:
+        - $ref: '#/components/parameters/CompanyIdQuery'
+        - name: search
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/LimitQuery'
+        - $ref: '#/components/parameters/OffsetQuery'
+      responses:
+        '200':
+          description: Entradas paginadas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeListResponse'
+    post:
+      summary: Crear entrada de conocimiento
+      tags: [Knowledge]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeCreateRequest'
+      responses:
+        '200':
+          description: Entrada creada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeEntryResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/knowledge/upload:
+    post:
+      summary: Crear múltiples entradas desde texto/base64
+      tags: [Knowledge]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeUploadRequest'
+      responses:
+        '200':
+          description: Entradas creadas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  entries:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/KnowledgeEntry'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/knowledge/search:
+    post:
+      summary: Buscar en knowledge con embeddings (si disponibles)
+      tags: [Knowledge]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeSearchRequest'
+      responses:
+        '200':
+          description: Resultados por similitud o búsqueda simple
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/KnowledgeSearchResult'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/knowledge/{id}:
+    delete:
+      summary: Eliminar entrada de conocimiento por ID
+      tags: [Knowledge]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Entrada eliminada
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /api/work-items:
+    post:
+      summary: Crear work item manualmente
+      tags: [WorkItems]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorkItemCreateRequest'
+      responses:
+        '200':
+          description: Work item creado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkItemCreateResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/admin/seed/usuarios:
+    post:
+      summary: Seed de contactos/usuarios (usa mock JSON o Python generator)
+      tags: [Admin]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                generate:
+                  type: boolean
+                  default: false
+      responses:
+        '200':
+          description: Seed ejecutado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/admin/seed/completo:
+    post:
+      summary: Seed completo (companies, contacts, work items, interacciones, fresh data)
+      tags: [Admin]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                generate:
+                  type: boolean
+                  default: false
+      responses:
+        '200':
+          description: Seed ejecutado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  result:
+                    type: object
+                    properties:
+                      companies:
+                        type: integer
+                      contacts:
+                        type: integer
+                      workItems:
+                        type: integer
+                      interactions:
+                        type: integer
+                      freshData:
+                        type: integer
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/admin/analyze/trigger:
+    post:
+      summary: Disparar análisis manual sobre tablas soportadas
+      tags: [Admin]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum: [interactions, work_items, contacts, fresh_data]
+                  default: interactions
+                id:
+                  type: string
+                limit:
+                  type: integer
+                  default: 10
+      responses:
+        '200':
+          description: Número de registros analizados
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  analyzed:
+                    type: integer
+  /api/admin/watchers/init:
+    post:
+      summary: Reinicializar watchers realtime (requires service role)
+      tags: [Admin]
+      responses:
+        '200':
+          description: Watchers reinicializados
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  message:
+                    type: string
+  /api/admin/ai/reindex:
+    post:
+      summary: Reindexar embeddings/contextos para IA
+      tags: [Admin]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum: [interactions, work_items, fresh_data, all]
+                  default: all
+                limit:
+                  type: integer
+                  default: 100
+                companyId:
+                  type: string
+      responses:
+        '200':
+          description: Reindex ejecutado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  type:
+                    type: string
+                  result:
+                    type: object
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+          example: true
+        timestamp:
+          type: string
+          format: date-time
+        services:
+          type: object
+          properties:
+            gemini_configured:
+              type: boolean
+            supabase_configured:
+              type: boolean
+    Sentiment:
+      type: string
+      enum: [positive, neutral, negative]
+    Priority:
+      type: string
+      enum: [low, medium, high, critical]
+    WorkItemStatus:
+      type: string
+      enum: [pending, in_progress, blocked, completed]
+    AlertSeverity:
+      type: string
+      enum: [low, medium, high, critical]
+    IngestEmailRequest:
+      type: object
+      properties:
+        from:
+          type: string
+          example: 'Patricia Peña <patricia.pena@techsmart.com>'
+        to:
+          type: string
+          example: ventas@miempresa.com
+        subject:
+          type: string
+        body:
+          type: string
+        date:
+          type: string
+          format: date-time
+        company:
+          type: string
+        attachments:
+          type: array
+          items:
+            type: object
+        metadata:
+          type: object
+        generate:
+          type: boolean
+          description: Si es true ignora el resto del body y genera datos mock
+    IngestSlackRequest:
+      type: object
+      properties:
+        user:
+          type: object
+        channel:
+          type: object
+        text:
+          type: string
+          example: 'Hola equipo, tenemos una nueva oportunidad con TechSmart...'
+        ts:
+          type: string
+        thread_ts:
+          type: string
+          nullable: true
+        metadata:
+          type: object
+        generate:
+          type: boolean
+    IngestWhatsAppRequest:
+      type: object
+      properties:
+        from:
+          type: string
+          example: '+521234567890'
+        to:
+          type: string
+        message:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        contactName:
+          type: string
+        email:
+          type: string
+        company:
+          type: string
+        media:
+          type: object
+          nullable: true
+        metadata:
+          type: object
+        generate:
+          type: boolean
+    IngestAudioVideoRequest:
+      type: object
+      properties:
+        bucket:
+          type: string
+        filePath:
+          type: string
+        localPath:
+          type: string
+        base64:
+          type: string
+        mimeType:
+          type: string
+        process:
+          type: boolean
+          default: true
+    StorageUploadResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+          example: true
+        message:
+          type: string
+        bucket:
+          type: string
+        path:
+          type: string
+        url:
+          type: string
+        willProcess:
+          type: boolean
+    IngestResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        message:
+          type: string
+        interactionId:
+          type: string
+        contactId:
+          type: string
+          nullable: true
+        companyId:
+          type: string
+          nullable: true
+        generated:
+          type: boolean
+        data:
+          type: object
+          nullable: true
+    JobAudioRequest:
+      type: object
+      required: [audio]
+      properties:
+        audio:
+          type: object
+          required: [base64, mimeType]
+          properties:
+            base64:
+              type: string
+            mimeType:
+              type: string
+        source:
+          type: string
+          default: call
+        metadata:
+          type: object
+          default: {}
+    JobVideoRequest:
+      allOf:
+        - $ref: '#/components/schemas/JobAudioRequest'
+        - type: object
+          properties:
+            video:
+              type: object
+              required: [base64, mimeType]
+              properties:
+                base64:
+                  type: string
+                mimeType:
+                  type: string
+            analysis:
+              type: string
+              enum: [audio_only, video]
+              default: audio_only
+    JobResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        jobId:
+          type: string
+        status:
+          type: string
+        data:
+          type: object
+        contact:
+          type: object
+          nullable: true
+    ContactsListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+    Contact:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        role:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+          nullable: true
+        sentiment:
+          $ref: '#/components/schemas/Sentiment'
+        person_kind:
+          type: string
+        is_client:
+          type: boolean
+        updated_at:
+          type: string
+          format: date-time
+        company:
+          $ref: '#/components/schemas/Company'
+    Company:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        industry:
+          type: string
+          nullable: true
+        website:
+          type: string
+          nullable: true
+        domain:
+          type: string
+          nullable: true
+    CompaniesListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Company'
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+    InteractionsListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interaction'
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+    Interaction:
+      type: object
+      properties:
+        id:
+          type: string
+        channel:
+          type: string
+        occurred_at:
+          type: string
+          format: date-time
+        notes:
+          type: string
+        participants:
+          type: array
+          items:
+            type: string
+        budget:
+          type: number
+          nullable: true
+        currency:
+          type: string
+          nullable: true
+        requirements:
+          type: object
+          nullable: true
+        kpis:
+          type: object
+          nullable: true
+        data:
+          type: object
+          nullable: true
+        deadline:
+          type: string
+          format: date-time
+          nullable: true
+        contact:
+          $ref: '#/components/schemas/ContactBasic'
+        company:
+          $ref: '#/components/schemas/Company'
+    ContactBasic:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          nullable: true
+        sentiment:
+          $ref: '#/components/schemas/Sentiment'
+          nullable: true
+    WorkItemsListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/WorkItem'
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+    WorkItem:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+          nullable: true
+        status:
+          $ref: '#/components/schemas/WorkItemStatus'
+        priority:
+          $ref: '#/components/schemas/Priority'
+        due_date:
+          type: string
+          format: date-time
+          nullable: true
+        owner:
+          $ref: '#/components/schemas/ContactBasic'
+        assignee:
+          $ref: '#/components/schemas/ContactBasic'
+        company:
+          $ref: '#/components/schemas/Company'
+    FreshDataListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/FreshData'
+        count:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+    FreshData:
+      type: object
+      properties:
+        id:
+          type: string
+        topic:
+          type: string
+        source:
+          type: string
+        title:
+          type: string
+        summary:
+          type: string
+          nullable: true
+        tags:
+          type: array
+          items:
+            type: string
+          nullable: true
+        published_at:
+          type: string
+          format: date-time
+          nullable: true
+        detected_at:
+          type: string
+          format: date-time
+          nullable: true
+        company:
+          $ref: '#/components/schemas/Company'
+    InsightsSummaryResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        summary:
+          type: object
+        workItemsStatus:
+          type: array
+          items:
+            type: object
+        sentiment:
+          type: array
+          items:
+            type: object
+        topDeals:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interaction'
+        upcomingWorkItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/WorkItem'
+        recentInteractions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interaction'
+    TimelineEntry:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [interaction, work_item, fresh_data]
+        id:
+          type: string
+        occurredAt:
+          type: string
+          format: date-time
+        sortDate:
+          type: string
+          format: date-time
+        channel:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          $ref: '#/components/schemas/WorkItemStatus'
+          nullable: true
+        priority:
+          $ref: '#/components/schemas/Priority'
+          nullable: true
+        dueDate:
+          type: string
+          format: date-time
+          nullable: true
+        topic:
+          type: string
+          nullable: true
+        company:
+          $ref: '#/components/schemas/Company'
+          nullable: true
+        contact:
+          $ref: '#/components/schemas/ContactBasic'
+          nullable: true
+    TimelineResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/TimelineEntry'
+        total:
+          type: integer
+    CompanyOverviewResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        company:
+          $ref: '#/components/schemas/Company'
+        contacts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+        workItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/WorkItem'
+        interactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interaction'
+        freshData:
+          type: array
+          items:
+            $ref: '#/components/schemas/FreshData'
+        pipeline:
+          type: object
+        sentiment:
+          type: array
+          items:
+            type: object
+        workItemsStatus:
+          type: array
+          items:
+            type: object
+    ContactOverviewResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        contact:
+          $ref: '#/components/schemas/Contact'
+        interactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interaction'
+        workItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/WorkItem'
+        freshData:
+          type: array
+          items:
+            $ref: '#/components/schemas/FreshData'
+        pipeline:
+          type: object
+        workItemsStatus:
+          type: array
+          items:
+            type: object
+    TrendsResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        interactions:
+          type: array
+          items:
+            type: object
+        workItems:
+          type: array
+          items:
+            type: object
+        freshData:
+          type: array
+          items:
+            type: object
+    ActionableInsightsResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        risky_contacts:
+          type: array
+          items:
+            type: object
+        open_alerts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Alert'
+        overdue_work_items:
+          type: array
+          items:
+            $ref: '#/components/schemas/WorkItem'
+        stale_companies:
+          type: array
+          items:
+            type: object
+    Alert:
+      type: object
+      properties:
+        id:
+          type: string
+        entity_type:
+          type: string
+        entity_id:
+          type: string
+        severity:
+          $ref: '#/components/schemas/AlertSeverity'
+        status:
+          type: string
+        message:
+          type: string
+        data:
+          type: object
+        company:
+          $ref: '#/components/schemas/Company'
+        contact:
+          $ref: '#/components/schemas/ContactBasic'
+    SearchQueryRequest:
+      type: object
+      required: [query]
+      properties:
+        query:
+          type: string
+        type:
+          type: string
+          nullable: true
+        companyId:
+          type: string
+          nullable: true
+        contactId:
+          type: string
+          nullable: true
+        limit:
+          type: integer
+          default: 8
+        taskType:
+          type: string
+          default: RETRIEVAL_QUERY
+    SearchQueryResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        query:
+          type: string
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/SearchResult'
+    SearchResult:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        sourceId:
+          type: string
+        companyId:
+          type: string
+          nullable: true
+        contactId:
+          type: string
+          nullable: true
+        text:
+          type: string
+        metadata:
+          type: object
+        similarity:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    ChatRequest:
+      type: object
+      required: [question]
+      properties:
+        sessionId:
+          type: string
+          nullable: true
+        question:
+          type: string
+        companyId:
+          type: string
+          nullable: true
+        contactId:
+          type: string
+          nullable: true
+        userId:
+          type: string
+          nullable: true
+        topK:
+          type: integer
+          default: 5
+        tools:
+          type: array
+          items:
+            type: string
+            enum: [alerts, risk_contacts, timeline, trends, knowledge]
+        action:
+          type: object
+          nullable: true
+          properties:
+            type:
+              type: string
+              enum: [create_work_item, resolve_alert, generate_summary]
+            payload:
+              type: object
+    ChatResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        sessionId:
+          type: string
+        answer:
+          type: string
+        sources:
+          type: array
+          items:
+            $ref: '#/components/schemas/SearchResult'
+        tools:
+          type: object
+          nullable: true
+    NoteRequest:
+      type: object
+      required: [text]
+      properties:
+        companyId:
+          type: string
+          nullable: true
+        contactId:
+          type: string
+          nullable: true
+        author:
+          type: string
+          nullable: true
+        channel:
+          type: string
+          default: note
+        text:
+          type: string
+        occurredAt:
+          type: string
+          format: date-time
+        metadata:
+          type: object
+          default: {}
+    NoteResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        interactionId:
+          type: string
+    AlertsListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Alert'
+        count:
+          type: integer
+    AIContextsListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/AIContext'
+        count:
+          type: integer
+    AIContext:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        source_id:
+          type: string
+        company:
+          $ref: '#/components/schemas/Company'
+          nullable: true
+        contact:
+          $ref: '#/components/schemas/ContactBasic'
+          nullable: true
+        text:
+          type: string
+        metadata:
+          type: object
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    KnowledgeEntry:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+          nullable: true
+        title:
+          type: string
+        content:
+          type: string
+        metadata:
+          type: object
+        created_at:
+          type: string
+          format: date-time
+    KnowledgeListResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/KnowledgeEntry'
+        count:
+          type: integer
+    KnowledgeCreateRequest:
+      type: object
+      required: [content]
+      properties:
+        title:
+          type: string
+          nullable: true
+        content:
+          type: string
+        companyId:
+          type: string
+          nullable: true
+        metadata:
+          type: object
+          default: {}
+    KnowledgeEntryResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        entry:
+          $ref: '#/components/schemas/KnowledgeEntry'
+    KnowledgeUploadRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+        fileBase64:
+          type: string
+        chunkSize:
+          type: integer
+          default: 1600
+        companyId:
+          type: string
+          nullable: true
+        metadata:
+          type: object
+          default: {}
+    KnowledgeSearchRequest:
+      type: object
+      required: [query]
+      properties:
+        query:
+          type: string
+        companyId:
+          type: string
+          nullable: true
+        limit:
+          type: integer
+          default: 5
+    KnowledgeSearchResult:
+      type: object
+      properties:
+        id:
+          type: string
+        sourceId:
+          type: string
+        companyId:
+          type: string
+          nullable: true
+        contactId:
+          type: string
+          nullable: true
+        text:
+          type: string
+        metadata:
+          type: object
+        similarity:
+          type: number
+        created_at:
+          type: string
+          format: date-time
+    WorkItemCreateRequest:
+      type: object
+      required: [title]
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+          nullable: true
+        companyId:
+          type: string
+          nullable: true
+        assigneeContactId:
+          type: string
+          nullable: true
+        dueDate:
+          type: string
+          format: date-time
+          nullable: true
+        priority:
+          $ref: '#/components/schemas/Priority'
+          default: medium
+        data:
+          type: object
+          default: {}
+    WorkItemCreateResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        workItem:
+          $ref: '#/components/schemas/WorkItem'
+    AlertSeedResult:
+      type: object
+      properties:
+        companies:
+          type: integer
+        contacts:
+          type: integer
+        workItems:
+          type: integer
+        interactions:
+          type: integer
+        freshData:
+          type: integer
+  parameters:
+    CompanyIdQuery:
+      name: companyId
+      in: query
+      schema:
+        type: string
+      description: Filtra por UUID de la compañía
+    LimitQuery:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+    OffsetQuery:
+      name: offset
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+    UpdatedAfterQuery:
+      name: updatedAfter
+      in: query
+      schema:
+        type: string
+        format: date-time
+    UpdatedBeforeQuery:
+      name: updatedBefore
+      in: query
+      schema:
+        type: string
+        format: date-time
+  responses:
+    BadRequest:
+      description: Petición inválida
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              ok:
+                type: boolean
+                example: false
+              error:
+                type: string
+    NotFound:
+      description: Recurso no encontrado
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              ok:
+                type: boolean
+                example: false
+              error:
+                type: string
+    ServiceUnavailable:
+      description: Servicio externo no configurado o no disponible (Gemini/Embeddings)
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              ok:
+                type: boolean
+                example: false
+              error:
+                type: string

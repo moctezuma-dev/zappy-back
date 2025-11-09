@@ -1,0 +1,4291 @@
+[
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Red de distribución B2B",
+        "value": 28042,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f4f51d04-1189-47dc-a897-eab810898efd",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 80203,
+        "currency": "EUR",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b5752eba-71ec-4a18-b733-ca1c53bb90b0",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 90943,
+        "currency": "EUR",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-11"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 72363,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "0274820a-11dc-4620-9801-75077a5a2920",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 11140,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a14dbf90-3ff1-4892-a103-9b75328786de",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 87977,
+        "currency": "EUR",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "d64ca92b-32c8-4033-8812-45bd4e8e6a10",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 74397,
+        "currency": "USD",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-22"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a14dbf90-3ff1-4892-a103-9b75328786de",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 69191,
+        "currency": "MXN",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-19"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c1a50b9c-7c8c-427f-b48a-1f4c2ae12791",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 47382,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 11792,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "15640fc0-b8f1-49d7-b6e4-cd9ef8c737ee",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 59812,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-11"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c1a50b9c-7c8c-427f-b48a-1f4c2ae12791",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 72291,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 24267,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f4f51d04-1189-47dc-a897-eab810898efd",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 35094,
+        "currency": "EUR",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "42fc272a-9f1c-46eb-a23c-346cea09073b",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 32171,
+        "currency": "EUR",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 75674,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 50989,
+        "currency": "USD",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "42fc272a-9f1c-46eb-a23c-346cea09073b",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 85905,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 22690,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-22"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a4fddb32-8223-495a-9b79-2dd2ffa167c3",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 2359,
+        "currency": "MXN",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "027ba82e-6d96-4324-87bc-050383b63817",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 85299,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a4fddb32-8223-495a-9b79-2dd2ffa167c3",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 92015,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "38f15c0c-a6f5-4961-a2b2-a4b11c5b60a7",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 93328,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c1a50b9c-7c8c-427f-b48a-1f4c2ae12791",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 42188,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-19"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 71251,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "68f7d909-6649-45ec-b135-68ef21cef942",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 36800,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-18"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f4f51d04-1189-47dc-a897-eab810898efd",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 24708,
+        "currency": "EUR",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 42154,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f4f51d04-1189-47dc-a897-eab810898efd",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 37984,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-19"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a14dbf90-3ff1-4892-a103-9b75328786de",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 48095,
+        "currency": "USD",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-11"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "d64ca92b-32c8-4033-8812-45bd4e8e6a10",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 7501,
+        "currency": "MXN",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "e76e1861-6e94-4ef1-ac45-07707c23ff0d",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 25702,
+        "currency": "EUR",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "139a274a-21e5-4819-8a69-8cd99535d3ad",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 37936,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 2278,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 42064,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 27910,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c1a50b9c-7c8c-427f-b48a-1f4c2ae12791",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 36960,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "19fa8bd3-7529-4ca2-93bb-aed7aaf74f76",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 3316,
+        "currency": "EUR",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "38f15c0c-a6f5-4961-a2b2-a4b11c5b60a7",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 36386,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "98c9059c-eb93-4364-ab3d-faab6ae1c74f",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 53223,
+        "currency": "MXN",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 29920,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "139a274a-21e5-4819-8a69-8cd99535d3ad",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 39524,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "cda9d914-c2ad-4aa9-83c9-0b4a61f2a338",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 65970,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-19"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 75122,
+        "currency": "USD",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 64193,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-18"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c1a50b9c-7c8c-427f-b48a-1f4c2ae12791",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 92314,
+        "currency": "USD",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "38f15c0c-a6f5-4961-a2b2-a4b11c5b60a7",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 67879,
+        "currency": "EUR",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 53987,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-11"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "19fa8bd3-7529-4ca2-93bb-aed7aaf74f76",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 76251,
+        "currency": "EUR",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "d64ca92b-32c8-4033-8812-45bd4e8e6a10",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 45596,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "d64ca92b-32c8-4033-8812-45bd4e8e6a10",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 52322,
+        "currency": "EUR",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "38f15c0c-a6f5-4961-a2b2-a4b11c5b60a7",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 25472,
+        "currency": "EUR",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "9a5319e6-8e49-41e9-b0d5-0a23600350e8",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 75176,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 16048,
+        "currency": "EUR",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 24333,
+        "currency": "MXN",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 79583,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "68f7d909-6649-45ec-b135-68ef21cef942",
+      "deal": {
+        "title": "Red de distribución B2B",
+        "value": 52470,
+        "currency": "USD",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 72298,
+        "currency": "USD",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "98c9059c-eb93-4364-ab3d-faab6ae1c74f",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 46292,
+        "currency": "EUR",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-19"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a4fddb32-8223-495a-9b79-2dd2ffa167c3",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 68847,
+        "currency": "EUR",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "e76e1861-6e94-4ef1-ac45-07707c23ff0d",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 13788,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-19"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b5752eba-71ec-4a18-b733-ca1c53bb90b0",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 72051,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 58703,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "68f7d909-6649-45ec-b135-68ef21cef942",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 35639,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "6ec84df3-9738-4588-b8f7-89d5b72be5b9",
+      "deal": {
+        "title": "Red de distribución B2B",
+        "value": 57709,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "19fa8bd3-7529-4ca2-93bb-aed7aaf74f76",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 57252,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "98c9059c-eb93-4364-ab3d-faab6ae1c74f",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 97198,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "8b814af8-f6e3-4763-9f79-855d9854de97",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 96131,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "e76e1861-6e94-4ef1-ac45-07707c23ff0d",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 86603,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b5752eba-71ec-4a18-b733-ca1c53bb90b0",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 23013,
+        "currency": "EUR",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "29c50108-9d1f-4faf-ad3d-0a3e83a39332",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 79891,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 39969,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a14dbf90-3ff1-4892-a103-9b75328786de",
+      "deal": {
+        "title": "Red de distribución B2B",
+        "value": 81585,
+        "currency": "MXN",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f62fef3c-48e2-49b8-b4fb-f6b97573ae9b",
+      "deal": {
+        "title": "Implementación de blockchain",
+        "value": 35502,
+        "currency": "EUR",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 81611,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "cda9d914-c2ad-4aa9-83c9-0b4a61f2a338",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 30774,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-22"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 2864,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 22247,
+        "currency": "MXN",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 87894,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "6ec84df3-9738-4588-b8f7-89d5b72be5b9",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 72709,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a4fddb32-8223-495a-9b79-2dd2ffa167c3",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 44514,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 11635,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 45162,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-18"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 57404,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f4f51d04-1189-47dc-a897-eab810898efd",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 88014,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-11"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "9a5319e6-8e49-41e9-b0d5-0a23600350e8",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 5596,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "42fc272a-9f1c-46eb-a23c-346cea09073b",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 49471,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "0274820a-11dc-4620-9801-75077a5a2920",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 65368,
+        "currency": "MXN",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "98c9059c-eb93-4364-ab3d-faab6ae1c74f",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 54539,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "139a274a-21e5-4819-8a69-8cd99535d3ad",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 28239,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 91566,
+        "currency": "USD",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "19fa8bd3-7529-4ca2-93bb-aed7aaf74f76",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 90218,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "98c9059c-eb93-4364-ab3d-faab6ae1c74f",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 57866,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f62fef3c-48e2-49b8-b4fb-f6b97573ae9b",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 55074,
+        "currency": "EUR",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "97888e97-719b-491c-9f29-9764ad194730",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 96743,
+        "currency": "EUR",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "9a5319e6-8e49-41e9-b0d5-0a23600350e8",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 27862,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "97888e97-719b-491c-9f29-9764ad194730",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 92470,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-18"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "97888e97-719b-491c-9f29-9764ad194730",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 9126,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "8b814af8-f6e3-4763-9f79-855d9854de97",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 46902,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "29c50108-9d1f-4faf-ad3d-0a3e83a39332",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 34443,
+        "currency": "MXN",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f4f51d04-1189-47dc-a897-eab810898efd",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 81101,
+        "currency": "MXN",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c3b265c0-1da6-4c4a-9f37-60cbe75a32f2",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 24900,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 6028,
+        "currency": "EUR",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "19fa8bd3-7529-4ca2-93bb-aed7aaf74f76",
+      "deal": {
+        "title": "Red de distribución B2B",
+        "value": 8738,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f62fef3c-48e2-49b8-b4fb-f6b97573ae9b",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 17691,
+        "currency": "MXN",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "37795b9e-e945-459a-b45a-8568115e6eb1",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 79544,
+        "currency": "USD",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 55999,
+        "currency": "EUR",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "0274820a-11dc-4620-9801-75077a5a2920",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 75515,
+        "currency": "MXN",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "68f7d909-6649-45ec-b135-68ef21cef942",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 53538,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 99126,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "e76e1861-6e94-4ef1-ac45-07707c23ff0d",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 12915,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-12"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "6ec84df3-9738-4588-b8f7-89d5b72be5b9",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 97536,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "97888e97-719b-491c-9f29-9764ad194730",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 98180,
+        "currency": "EUR",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "e76e1861-6e94-4ef1-ac45-07707c23ff0d",
+      "deal": {
+        "title": "Prueba piloto de producto",
+        "value": 50283,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c3b265c0-1da6-4c4a-9f37-60cbe75a32f2",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 44389,
+        "currency": "MXN",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Red de distribución B2B",
+        "value": 59356,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-22"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "6ec84df3-9738-4588-b8f7-89d5b72be5b9",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 83325,
+        "currency": "USD",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-18"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c3b265c0-1da6-4c4a-9f37-60cbe75a32f2",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 23682,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-22"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a14dbf90-3ff1-4892-a103-9b75328786de",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 22624,
+        "currency": "MXN",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "c1a50b9c-7c8c-427f-b48a-1f4c2ae12791",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 63334,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b5752eba-71ec-4a18-b733-ca1c53bb90b0",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 70479,
+        "currency": "MXN",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "38f15c0c-a6f5-4961-a2b2-a4b11c5b60a7",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 26750,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "d64ca92b-32c8-4033-8812-45bd4e8e6a10",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 79021,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a14dbf90-3ff1-4892-a103-9b75328786de",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 98405,
+        "currency": "USD",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 42791,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "8b814af8-f6e3-4763-9f79-855d9854de97",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 71992,
+        "currency": "MXN",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "38f15c0c-a6f5-4961-a2b2-a4b11c5b60a7",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 12538,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f4f51d04-1189-47dc-a897-eab810898efd",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 16452,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "98c9059c-eb93-4364-ab3d-faab6ae1c74f",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 2594,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "42fc272a-9f1c-46eb-a23c-346cea09073b",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 39675,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f62fef3c-48e2-49b8-b4fb-f6b97573ae9b",
+      "deal": {
+        "title": "Renovación de contrato anual",
+        "value": 88902,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "b33e9792-af6d-4ae6-aa47-fa587e223f4d",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 75605,
+        "currency": "MXN",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-20"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "68f7d909-6649-45ec-b135-68ef21cef942",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 78130,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 20561,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-09"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Wednesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "98c9059c-eb93-4364-ab3d-faab6ae1c74f",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 15835,
+        "currency": "EUR",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-11"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "0274820a-11dc-4620-9801-75077a5a2920",
+      "deal": {
+        "title": "Soluciones de automatización en la nube",
+        "value": 89326,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "9a5319e6-8e49-41e9-b0d5-0a23600350e8",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 20554,
+        "currency": "MXN",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-11"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿El contrato permite ajustes trimestrales?\nProveedor: Sí, revisamos cada Q."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "cda9d914-c2ad-4aa9-83c9-0b4a61f2a338",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 98657,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "d64ca92b-32c8-4033-8812-45bd4e8e6a10",
+      "deal": {
+        "title": "Plataforma de marketing digital",
+        "value": 44377,
+        "currency": "USD",
+        "stage": "en espera"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-16"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "7b3938d0-d9ea-43a6-8196-275c7d421de4",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 71962,
+        "currency": "USD",
+        "stage": "negociación"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Saturday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "f62fef3c-48e2-49b8-b4fb-f6b97573ae9b",
+      "deal": {
+        "title": "Suministro de materiales",
+        "value": 76504,
+        "currency": "EUR",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-15"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 7436,
+        "currency": "EUR",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-22"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "9a5319e6-8e49-41e9-b0d5-0a23600350e8",
+      "deal": {
+        "title": "Equipo médico innovador",
+        "value": 90547,
+        "currency": "MXN",
+        "stage": "seguimiento"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-21"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "negativo",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "a4fddb32-8223-495a-9b79-2dd2ffa167c3",
+      "deal": {
+        "title": "Outsourcing de soporte técnico",
+        "value": 21314,
+        "currency": "MXN",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Seguimiento telefónico",
+          "due_date": "2025-11-22"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Red de distribución B2B",
+        "value": 66200,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-18"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Sunday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Proveedora: ¿Se requiere demo presencial o virtual?\nGerente: Virtual sería mejor por temas de agenda."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "6ec84df3-9738-4588-b8f7-89d5b72be5b9",
+      "deal": {
+        "title": "Software ERP especializado",
+        "value": 638,
+        "currency": "MXN",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-10"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Monday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Actualización tecnológica",
+        "Backup automático"
+      ],
+      "transcript": "Compras: ¿Hay tarifas preferenciales para volumen?\nComercial: Se puede negociar, depende del volumen y periodicidad."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "12348ac8-b5aa-455d-ba0a-2892d186d87d",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 91851,
+        "currency": "USD",
+        "stage": "cotización"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Reducir costos",
+        "Demo",
+        "Contrato",
+        "Implementación"
+      ],
+      "transcript": "CEO: ¿Plazo estimado de entrega?\nVendedor: 15 días hábiles tras la firma."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "29c50108-9d1f-4faf-ad3d-0a3e83a39332",
+      "deal": {
+        "title": "Consultoría estratégica",
+        "value": 87303,
+        "currency": "EUR",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-17"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Tuesday 10 PM"
+        }
+      ],
+      "sentiment": "positivo",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "676a46ec-35ca-4ba3-9d44-d2819d19d55a",
+      "deal": {
+        "title": "Diseño y fabricación de mobiliario",
+        "value": 89539,
+        "currency": "USD",
+        "stage": "cerrada"
+      },
+      "next_steps": [
+        {
+          "title": "Enviar propuesta",
+          "due_date": "2025-11-14"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Friday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Soporte técnico",
+        "Capacitación",
+        "Garantía"
+      ],
+      "transcript": "Directora: El soporte incluye asesoría 24/7, ¿es un requisito para tu equipo?\nAnalista: Sí, indispensable."
+    }
+  },
+  {
+    "status": "completed",
+    "data": {
+      "contact_id": "9a5319e6-8e49-41e9-b0d5-0a23600350e8",
+      "deal": {
+        "title": "Servicios logísticos integrales",
+        "value": 27316,
+        "currency": "USD",
+        "stage": "demo agendada"
+      },
+      "next_steps": [
+        {
+          "title": "Agendar demo",
+          "due_date": "2025-11-13"
+        },
+        {
+          "title": "Confirmar recepción",
+          "due_date": "Thursday 10 PM"
+        }
+      ],
+      "sentiment": "neutral",
+      "topics": [
+        "Expansión internacional",
+        "Plazos de entrega"
+      ],
+      "transcript": "Ejecutivo: Buen día, ¿cómo podemos colaborar este trimestre?\nCliente: Me interesa ampliar el alcance del servicio."
+    }
+  }
+]

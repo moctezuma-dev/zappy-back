@@ -1,0 +1,47 @@
+{
+  "categories": [
+    "Energía",
+    "Manufactura",
+    "Logística",
+    "Tecnología",
+    "Alimentación",
+    "Salud",
+    "Consultoría",
+    "Retail",
+    "Finanzas",
+    "Moda y Sourcing"
+  ],
+  "jobs": [
+    "Analista Senior",
+    "Gerente Comercial",
+    "Coordinador Médico",
+    "Encargada de Sourcing",
+    "Jefa de Proyectos",
+    "Director de IT",
+    "Líder Logístico",
+    "Compras Internacionales"
+  ],
+  "services": [
+    "Cloud",
+    "Ingeniería",
+    "Distribución",
+    "Desarrollo",
+    "Sourcing",
+    "Logística",
+    "Soporte",
+    "Consultoría",
+    "Legal",
+    "Marketing"
+  ],
+  "companies": [
+    "ModaFutura",
+    "Energía Verde",
+    "SaludExpress",
+    "Alimentos Brisa",
+    "Constructora Taurus",
+    "Farmasur",
+    "TecGlobal",
+    "Finanzas Next"
+  ],
+  "num_contacts": 30
+}

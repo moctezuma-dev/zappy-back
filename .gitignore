@@ -1,0 +1,9 @@
+node_modules/
+.env
+.DS_Store
+processed_emails/
+email_analysis/
+.node_modules
+*.md
+esquemas.md
+schema.sql
