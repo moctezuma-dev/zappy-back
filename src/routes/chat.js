@@ -219,6 +219,111 @@ router.post('/', async (req, res) => {
       similarity: item.similarity,
     }));
 
+    // Fallback a datos de Supabase cuando no hay contexto semántico
+    if (contexts.length === 0) {
+      const fallbackChunks = [];
+
+      // 1) Fresh data recientes (noticias internas)
+      try {
+        const { data: freshDataRows, error: freshError } = await supabase
+          .from('fresh_data')
+          .select('id, company_id, source, title, topic, summary, published_at')
+          .order('published_at', { ascending: false })
+          .limit(5);
+
+        if (!freshError && freshDataRows?.length) {
+          const formatted = freshDataRows
+            .map((row, idx) => {
+              const published = row.published_at ? new Date(row.published_at).toISOString().split('T')[0] : 'sin fecha';
+              return `FreshData ${idx + 1}: ${row.title} (${published})\nFuente: ${row.source || 'desconocida'}\nTema: ${row.topic || 'N/A'}\nResumen: ${row.summary || 'sin resumen'}`;
+            })
+            .join('\n\n');
+
+          fallbackChunks.push(`Noticias internas:
+${formatted}`);
+
+          // Convertir a contextos para la IA
+          for (const row of freshDataRows) {
+            contexts.push({
+              id: row.id,
+              type: 'fresh_data_fallback',
+              sourceId: row.id,
+              companyId: row.company_id,
+              contactId: null,
+              text: `Noticia: ${row.title}\nFuente: ${row.source || 'desconocida'}\nTema: ${row.topic || 'N/A'}\nResumen: ${row.summary || 'sin resumen'}`,
+              metadata: { source: row.source, topic: row.topic, published_at: row.published_at },
+              similarity: null,
+            });
+          }
+
+          toolData.freshData = freshDataRows;
+        }
+      } catch (error) {
+        console.warn('[chat] fallback fresh_data error', error.message);
+      }
+
+      // 2) Knowledge base fallback usando búsqueda textual simple
+      try {
+        const keywords = question
+          .split(/[^\p{L}\p{N}]+/u)
+          .map((word) => word.trim())
+          .filter((word) => word.length >= 4)
+          .slice(0, 3);
+
+        let knowledgeQuery = supabase
+          .from('knowledge_entries')
+          .select('id, company_id, title, content, metadata, created_at')
+          .order('created_at', { ascending: false })
+          .limit(5);
+
+        if (companyId) knowledgeQuery = knowledgeQuery.eq('company_id', companyId);
+
+        if (keywords.length > 0) {
+          const ilikeFilters = keywords
+            .map((word) => `content.ilike.%${word}%`)
+            .join(',');
+          knowledgeQuery = knowledgeQuery.or(ilikeFilters);
+        } else {
+          knowledgeQuery = knowledgeQuery.ilike('content', `%${question.slice(0, 50)}%`);
+        }
+
+        const { data: knowledgeRows, error: knowledgeFallbackError } = await knowledgeQuery;
+
+        if (!knowledgeFallbackError && knowledgeRows?.length) {
+          const formatted = knowledgeRows
+            .map((row, idx) => {
+              const snippet = row.content?.slice(0, 280) || 'sin contenido';
+              return `Knowledge ${idx + 1}: ${row.title || 'Documento sin título'}\n${snippet}`;
+            })
+            .join('\n\n');
+
+          fallbackChunks.push(`Documentación relacionada:
+${formatted}`);
+
+          for (const row of knowledgeRows) {
+            contexts.push({
+              id: row.id,
+              type: 'knowledge_fallback',
+              sourceId: row.id,
+              companyId: row.company_id,
+              contactId: null,
+              text: `${row.title || 'Documento'}\n${row.content?.slice(0, 1000) || ''}`,
+              metadata: row.metadata || {},
+              similarity: null,
+            });
+          }
+
+          toolData.knowledgeFallback = knowledgeRows;
+        }
+      } catch (error) {
+        console.warn('[chat] fallback knowledge error', error.message);
+      }
+
+      if (fallbackChunks.length > 0) {
+        toolTexts.push(fallbackChunks.join('\n\n'));
+      }
+    }
+
     const contextText = buildContextText(contexts);
 
     if (Array.isArray(tools) && tools.length > 0) {
