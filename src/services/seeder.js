@@ -504,60 +504,83 @@ export async function seedCompleto({ generate = false } = {}) {
 
   // 4. Crear/actualizar contacts desde empresas_mock.json y obtener mapa
   const contactMap = new Map(); // name/email -> contactId
+  
+  // Primero, recopilar todos los contactos únicos (por nombre + company_id)
+  const contactsToUpsert = [];
+  const contactKeyMap = new Map(); // (name, companyId) -> contact data
+  
   for (const empresa of empresasData) {
     const companyId = companyMap.get(empresa.empresa);
     if (!companyId) continue;
 
     for (const dept of empresa.departamentos || []) {
       for (const usuario of dept.usuarios || []) {
-        // Buscar contacto existente por nombre o crear uno básico
-        const { data: existingContact, error: findContactError } = await supabase
-          .from('contacts')
-          .select('id')
-          .eq('name', usuario.nombre)
-          .eq('company_id', companyId)
-          .limit(1)
-          .single();
-        if (findContactError && findContactError.code !== 'PGRST116') throw findContactError;
-
-        let contactId;
-        if (existingContact) {
-          contactId = existingContact.id;
-          // Actualizar campos adicionales
-          await supabase
-            .from('contacts')
-            .update({
-              role: usuario.puesto,
-              person_kind: usuario.es_cliente ? 'client' : usuario.es_proveedor ? 'supplier' : 'employee',
-              is_client: usuario.es_cliente || false,
-              is_supplier: usuario.es_proveedor || false,
-              personal_notes: usuario.notas_personales || null,
-              updated_at: new Date().toISOString(),
-            })
-            .eq('id', contactId);
-        } else {
-          // Crear contacto básico (sin email, se puede actualizar después)
-          const { data: newContact, error: insertContactError } = await supabase
-            .from('contacts')
-            .insert({
-              name: usuario.nombre,
-              company: empresa.empresa,
-              company_id: companyId,
-              role: usuario.puesto,
-              person_kind: usuario.es_cliente ? 'client' : usuario.es_proveedor ? 'supplier' : 'employee',
-              is_client: usuario.es_cliente || false,
-              is_supplier: usuario.es_proveedor || false,
-              personal_notes: usuario.notas_personales || null,
-            })
-            .select('id')
-            .single();
-          if (insertContactError) throw insertContactError;
-          contactId = newContact.id;
+        const key = `${usuario.nombre}:${companyId}`;
+        // Solo agregar si no hemos visto este contacto antes
+        if (!contactKeyMap.has(key)) {
+          contactKeyMap.set(key, {
+            name: usuario.nombre,
+            company: empresa.empresa,
+            company_id: companyId,
+            role: usuario.puesto,
+            person_kind: usuario.es_cliente ? 'client' : usuario.es_proveedor ? 'supplier' : 'employee',
+            is_client: usuario.es_cliente || false,
+            is_supplier: usuario.es_proveedor || false,
+            personal_notes: usuario.notas_personales || null,
+          });
         }
-        contactMap.set(usuario.nombre, contactId);
       }
     }
   }
+  
+  // Convertir a array para upsert
+  contactsToUpsert.push(...contactKeyMap.values());
+  
+  // Hacer upsert en lotes para evitar duplicados
+  if (contactsToUpsert.length > 0) {
+    const batchSize = 50;
+    for (let i = 0; i < contactsToUpsert.length; i += batchSize) {
+      const batch = contactsToUpsert.slice(i, i + batchSize);
+      const { data: upserted, error: upsertError } = await supabase
+        .from('contacts')
+        .upsert(batch, { 
+          onConflict: 'name,company_id',
+          ignoreDuplicates: false 
+        })
+        .select('id,name,company_id');
+      
+      if (upsertError) throw upsertError;
+      
+      // Mapear los contactos insertados/actualizados
+      if (upserted) {
+        for (const contact of upserted) {
+          const key = `${contact.name}:${contact.company_id}`;
+          contactMap.set(contact.name, contact.id);
+        }
+      }
+    }
+    
+    // Si el upsert no devuelve datos, necesitamos buscar los contactos
+    if (contactMap.size === 0) {
+      const names = Array.from(new Set(contactsToUpsert.map(c => c.name)));
+      const companyIds = Array.from(new Set(contactsToUpsert.map(c => c.company_id)));
+      
+      const { data: foundContacts, error: findError } = await supabase
+        .from('contacts')
+        .select('id,name,company_id')
+        .in('name', names)
+        .in('company_id', companyIds);
+      
+      if (findError) throw findError;
+      
+      if (foundContacts) {
+        for (const contact of foundContacts) {
+          contactMap.set(contact.name, contact.id);
+        }
+      }
+    }
+  }
+  
   log(`Procesados ${contactMap.size} contactos`);
 
   // 5. Seed de teams y team_members

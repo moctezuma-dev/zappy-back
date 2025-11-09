@@ -33,6 +33,36 @@ export function hasEmbeddingModel() {
 }
 
 /**
+ * Valida que la API key de Gemini sea válida haciendo una prueba de embedding
+ * @returns {Promise<{valid: boolean, error?: string}>}
+ */
+export async function validateApiKey() {
+  if (!env.GOOGLE_GEMINI_API_KEY) {
+    return { valid: false, error: 'GOOGLE_GEMINI_API_KEY no está configurada' };
+  }
+  
+  if (!embeddingModel) {
+    return { valid: false, error: 'Modelo de embeddings no inicializado' };
+  }
+
+  try {
+    const testEmbedding = await embedText({ text: 'test', taskType: 'RETRIEVAL_QUERY' });
+    if (testEmbedding && testEmbedding.length > 0) {
+      return { valid: true };
+    }
+    return { valid: false, error: 'No se pudo generar embedding de prueba' };
+  } catch (error) {
+    if (error?.errorDetails?.some?.((detail) => detail?.reason === 'API_KEY_INVALID') ||
+        error?.message?.includes?.('API key not valid') ||
+        error?.message?.includes?.('API_KEY_INVALID') ||
+        error?.message?.includes?.('API key de Google Gemini no es válida')) {
+      return { valid: false, error: 'API key de Google Gemini no es válida' };
+    }
+    return { valid: false, error: error.message || 'Error desconocido al validar API key' };
+  }
+}
+
+/**
  * Analiza texto de una interacción (email, slack, whatsapp) y extrae información CRM avanzada
  */
 export async function analyzeInteractionText({ notes, channel, participants = [] }) {
@@ -206,15 +236,27 @@ export async function embedText({ text, taskType = 'RETRIEVAL_DOCUMENT' } = {}) 
   if (!embeddingModel) throw new Error('Gemini embeddings no configurado');
   if (!text) return [];
 
-  const result = await embeddingModel.embedContent({
-    content: {
-      parts: [{ text }],
-    },
-    taskType,
-  });
+  try {
+    const result = await embeddingModel.embedContent({
+      content: {
+        parts: [{ text }],
+      },
+      taskType,
+    });
 
-  const values = result?.embedding?.values || [];
-  return values.map((v) => Number(v));
+    const values = result?.embedding?.values || [];
+    return values.map((v) => Number(v));
+  } catch (error) {
+    // Detectar errores de API key inválida
+    if (error?.errorDetails?.some?.((detail) => detail?.reason === 'API_KEY_INVALID') ||
+        error?.message?.includes?.('API key not valid') ||
+        error?.message?.includes?.('API_KEY_INVALID')) {
+      console.error('[gemini] API key de Google Gemini no es válida');
+      throw new Error('API key de Google Gemini no es válida. Por favor, verifica la variable de entorno GOOGLE_GEMINI_API_KEY');
+    }
+    // Re-lanzar otros errores
+    throw error;
+  }
 }
 
 function mapMessagesToGeminiContent(messages = [], contextText = null) {

@@ -21,7 +21,20 @@ router.post('/query', async (req, res) => {
       return res.status(503).json({ ok: false, error: 'Servicio de embeddings no configurado' });
     }
 
-    const embedding = await embedText({ text: query, taskType });
+    let embedding;
+    try {
+      embedding = await embedText({ text: query, taskType });
+    } catch (error) {
+      // Si hay un error con la API key, devolver un error claro
+      if (error.message?.includes('API key de Google Gemini no es válida')) {
+        return res.status(503).json({ 
+          ok: false, 
+          error: 'API key de Google Gemini no es válida. Por favor, verifica la configuración de GOOGLE_GEMINI_API_KEY' 
+        });
+      }
+      throw error;
+    }
+    
     if (!embedding || embedding.length === 0) {
       return res.status(500).json({ ok: false, error: 'No se pudo generar embedding para la consulta' });
     }

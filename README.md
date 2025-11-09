@@ -1,64 +1,73 @@
-# Zero-Click CRM (Backend MVP)
+# Relay – Zero-Click CRM (Backend)
 
-Backend en Node.js + Express que integra Supabase (PostgreSQL) y Google Gemini 1.5 Pro para procesar audio y extraer información CRM de manera automática.
+Backend in Node.js + Express that integrates Supabase (PostgreSQL/Realtime/Storage) and Google Gemini (multimodal + embeddings) to capture interactions frictionlessly, analyze them automatically, and prioritize actions.
 
-## Requisitos
+## Requirements
 - Node.js 18+
-- Cuenta de Supabase (URL y `anon key`)
-- API Key de Google Gemini (`GOOGLE_GEMINI_API_KEY` desde ai.google.dev)
+- Supabase account (URL and `anon key`)
+- Google Gemini API Key (`GOOGLE_GEMINI_API_KEY` from ai.google.dev)
 
-## Configuración
-1. Copia `.env.example` a `.env` y completa las variables:
+## Setup
+1. Copy `.env.example` to `.env` and complete the variables:
    - `SUPABASE_URL`
    - `SUPABASE_ANON_KEY`
    - `GOOGLE_GEMINI_API_KEY`
-   - `PORT` (opcional, por defecto 4000)
-2. Instala dependencias:
+   - `PORT` (optional, default 4000)
+2. Install dependencies:
    ```bash
    npm install
    ```
-3. Arranca en desarrollo:
+3. Start in development:
    ```bash
    npm run dev
    ```
 
+4. Quick verification:
+   ```bash
+   npm run verify
+   curl http://localhost:4000/health/
+   ```
+
+## Short Description
+See `docs/short-description.md` (150–300 words: problem, solution, what works, roles, and technologies).
+
 ## Endpoints
-- `GET /health`: Estado del servicio y configuración básica
-- `POST /api/jobs/audio`: Procesa audio (base64) y devuelve JSON estructurado
-- `POST /api/jobs/video`: Procesamiento multimodal de video
-- `POST /api/ingest/email|slack|whatsapp`: Ingesta mock que genera interacciones y análisis automáticos
-- `POST /api/ingest/video|audio`: Sube archivos a Supabase Storage y dispara procesamiento automático
-- `GET /api/crm/contacts|companies|interactions|work-items|fresh-data`: API de lectura de datos del CRM
-- `POST /api/search/query`: Búsqueda semántica sobre interacciones, tareas y señales
-- `POST /api/chat`: Chat corporativo con memoria y RAG
-- `POST /api/admin/ai/reindex`: Reconstruye embeddings para interacciones/work_items/fresh_data
-- `GET /api/crm/insights/summary`: Dashboard con métricas agregadas, top deals y pendientes próximos
-- `GET /api/crm/timeline`: Feed cronológico combinando interacciones, work items y señales
-- `GET /api/crm/companies/:id/overview`: Resumen profundo de una empresa (contactos, pipeline, tareas, señales)
-- `GET /api/crm/contacts/:id/overview`: Resumen del historial y pendientes de un contacto
-- `GET /api/crm/insights/actionable`: Riesgos y próximos pasos sugeridos (contactos, alertas, tareas vencidas)
-- `POST /api/notes`: Registrar notas/interacciones manuales y indexarlas para IA
-- `GET /api/alerts`: Consultar alertas automáticas (sentimiento negativo, urgencias, tareas vencidas)
-- `POST /api/alerts/:id/resolve`: Resolver alertas abiertas
-- `GET /api/ai/contexts`: Listar contextos indexados (datos para RAG)
-- `DELETE /api/ai/contexts/:id`: Eliminar un contexto específico
-- `GET /api/crm/insights/trends`: Series temporales (interacciones, work items y señales)
-- `GET/POST/DELETE /api/knowledge`: Gestionar la base de conocimiento (documentos, apuntes)
-- `POST /api/work-items`: Crear work items (usado por la IA o manualmente)
+- `GET /health`: Service status and basic configuration
+- `POST /api/jobs/audio`: Processes audio (base64) and returns structured JSON
+- `POST /api/jobs/video`: Multimodal video processing
+- `POST /api/ingest/email|slack|whatsapp`: Mock ingestion that generates interactions and automatic analysis
+- `POST /api/ingest/video|audio`: Uploads files to Supabase Storage and triggers automatic processing
+- `GET /api/crm/contacts|companies|interactions|work-items|fresh-data`: CRM data read API
+- `POST /api/search/query`: Semantic search over interactions, tasks, and signals
+- `POST /api/chat`: Corporate chat with memory and RAG
+- `POST /api/admin/ai/reindex`: Rebuilds embeddings for interactions/work_items/fresh_data
+- `GET /api/crm/insights/summary`: Dashboard with aggregated metrics, top deals, and upcoming pending items
+- `GET /api/crm/timeline`: Chronological feed combining interactions, work items, and signals
+- `GET /api/crm/companies/:id/overview`: Deep summary of a company (contacts, pipeline, tasks, signals)
+- `GET /api/crm/contacts/:id/overview`: Summary of a contact's history and pending items
+- `GET /api/crm/insights/actionable`: Risks and suggested next steps (contacts, alerts, overdue tasks)
+- `POST /api/notes`: Register manual notes/interactions and index them for AI
+- `GET /api/alerts`: Query automatic alerts (negative sentiment, urgencies, overdue tasks)
+- `POST /api/alerts/:id/resolve`: Resolve open alerts
+- `GET /api/ai/contexts`: List indexed contexts (data for RAG)
+- `DELETE /api/ai/contexts/:id`: Delete a specific context
+- `GET /api/crm/insights/trends`: Time series (interactions, work items, and signals)
+- `GET/POST/DELETE /api/knowledge`: Manage knowledge base (documents, notes)
+- `POST /api/work-items`: Create work items (used by AI or manually)
 
 ### `POST /api/jobs/audio`
-Body esperado:
+Expected body:
 ```json
 {
   "audio": {
     "mimeType": "audio/mp3",
-    "base64": "<BASE64_DEL_AUDIO>"
+    "base64": "<BASE64_AUDIO>"
   },
   "source": "call",
-  "metadata": { "notes": "opcional" }
+  "metadata": { "notes": "optional" }
 }
 ```
-Respuesta (ejemplo simplificado):
+Response (simplified example):
 ```json
 {
   "jobId": "uuid",
@@ -74,67 +83,67 @@ Respuesta (ejemplo simplificado):
 }
 ```
 
-Adicionalmente, el backend crea automáticamente una `interaction` (`channel = call`) con la transcripción, presupuesto, requisitos y próximos pasos, la indexa en `ai_contexts` y dispara el flujo de análisis/next_steps.
+Additionally, the backend automatically creates an `interaction` (`channel = call`) with the transcript, budget, requirements, and next steps, indexes it in `ai_contexts`, and triggers the analysis/next_steps flow.
 
-## Supabase (tablas sugeridas)
-Consulta `db/schema.sql` para una propuesta de esquema mínimo (contacts, companies, deals, activities, tasks, jobs).
+## Supabase (suggested tables)
+See `db/schema.sql` for a minimal schema proposal (contacts, companies, deals, activities, tasks, jobs).
 
-## Notas
-- Este es un MVP: el flujo de jobs es síncrono por simplicidad. Se puede migrar a asincronía usando una tabla `jobs` y workers.
-- El endpoint de Gmail webhook se añadirá en iteraciones siguientes.
+## Notes
+- This is an MVP: the jobs flow is synchronous for simplicity. It can be migrated to asynchrony using a `jobs` table and workers.
+- The Gmail webhook endpoint will be added in future iterations.
 
-## Nuevo: Procesamiento de Video
+## New: Video Processing
 
 - Endpoint: `POST /api/jobs/video`
-- Permite dos modos:
-  - `audio_only`: se extrae el audio del video (FFmpeg) y se analiza igual que el endpoint de audio.
-  - `video`: se extrae audio y se muestrean frames del video (1 fps, máx 6) para análisis multimodal con Gemini.
+- Allows two modes:
+  - `audio_only`: audio is extracted from the video (FFmpeg) and analyzed the same as the audio endpoint.
+  - `video`: audio is extracted and video frames are sampled (1 fps, max 6) for multimodal analysis with Gemini.
 
-Body (ejemplo):
+Body (example):
 ```json
 {
   "video": {
     "mimeType": "video/mp4",
-    "base64": "<BASE64_DEL_VIDEO>"
+    "base64": "<BASE64_VIDEO>"
   },
   "analysis": "audio_only",
   "source": "call",
-  "metadata": { "notes": "opcional" }
+  "metadata": { "notes": "optional" }
 }
 ```
 
-Respuesta (ejemplo simplificado):
-## Lectura de datos del CRM
+Response (simplified example):
+## CRM Data Reading
 
 ### `GET /api/crm/interactions`
-Parámetros opcionales: `channel`, `startDate`, `endDate`, `minBudget`, `maxBudget`, `search`.
+Optional parameters: `channel`, `startDate`, `endDate`, `minBudget`, `maxBudget`, `search`.
 
 ```bash
 curl "http://localhost:4000/api/crm/interactions?companyId=<uuid>&channel=email&startDate=2025-01-01"
 ```
 
 ### `GET /api/crm/work-items`
-Parámetros disponibles: `status`, `priority`, `dueBefore`, `dueAfter`, `onlyOverdue=true`.
+Available parameters: `status`, `priority`, `dueBefore`, `dueAfter`, `onlyOverdue=true`.
 
 ```bash
 curl "http://localhost:4000/api/crm/work-items?companyId=<uuid>&onlyOverdue=true"
 ```
 
 ### `GET /api/crm/contacts`
-Permite filtrar por `sentiment`, `personKind`, `isClient`, `updatedAfter`, `updatedBefore`.
+Allows filtering by `sentiment`, `personKind`, `isClient`, `updatedAfter`, `updatedBefore`.
 
 ```bash
 curl "http://localhost:4000/api/crm/contacts?companyId=<uuid>&sentiment=negative&isClient=true"
 ```
 
-## Búsqueda Semántica y Chat
+## Semantic Search and Chat
 
 ### `GET /api/crm/insights/summary`
 ```bash
 curl "http://localhost:4000/api/crm/insights/summary?companyId=<uuid>&limit=5"
 ```
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
@@ -179,7 +188,7 @@ Respuesta:
     { "id": "...", "budget": 50000, "company": { "name": "TechSmart" }, "contact": { "name": "Juan Pérez" } }
   ],
   "upcomingWorkItems": [
-    { "id": "...", "title": "Enviar propuesta", "due_date": "2025-01-20T12:00:00Z" }
+    { "id": "...", "title": "Send proposal", "due_date": "2025-01-20T12:00:00Z" }
   ],
   "recentInteractions": [
     { "id": "...", "channel": "email", "occurred_at": "2025-01-15T10:30:00Z" }
@@ -192,7 +201,7 @@ Respuesta:
 curl "http://localhost:4000/api/crm/timeline?companyId=<uuid>&limit=30"
 ```
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
@@ -234,7 +243,7 @@ Respuesta:
 curl "http://localhost:4000/api/crm/companies/<uuid>/overview?interactionsLimit=5&workItemsLimit=5"
 ```
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
@@ -291,7 +300,7 @@ Respuesta:
 curl "http://localhost:4000/api/crm/contacts/<uuid>/overview?interactionsLimit=5&workItemsLimit=5"
 ```
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
@@ -324,17 +333,17 @@ Respuesta:
 ```
 
 ### `POST /api/notes`
-Permite capturar notas manuales (llamadas, reuniones, recordatorios) y se indexan en `ai_contexts` para búsquedas y chat.
+Allows capturing manual notes (calls, meetings, reminders) and indexes them in `ai_contexts` for search and chat.
 
 ```bash
 curl -X POST http://localhost:4000/api/notes \
   -H "Content-Type: application/json" \
   -d '{
-    "companyId": "<uuid opcional>",
-    "contactId": "<uuid opcional>",
+    "companyId": "<uuid optional>",
+    "contactId": "<uuid optional>",
     "author": "María García",
     "channel": "note",
-    "text": "Llamada con Juan. Comentó que necesitan propuesta final el lunes.",
+    "text": "Call with Juan. He mentioned they need the final proposal on Monday.",
     "occurredAt": "2025-01-18T10:30:00Z",
     "metadata": {
       "origin": "phone",
@@ -343,7 +352,7 @@ curl -X POST http://localhost:4000/api/notes \
   }'
 ```
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
@@ -353,60 +362,60 @@ Respuesta:
 ### `POST /api/search/query`
 ```json
 {
-  "query": "¿qué pendientes críticos tenemos con TechSmart?",
-  "companyId": "uuid-opcional",
+  "query": "what critical pending items do we have with TechSmart?",
+  "companyId": "uuid-optional",
   "type": "work_item",
   "limit": 5
 }
 ```
-Devuelve los fragmentos más relevantes (cosine similarity) usando embeddings (`text-embedding-004`) almacenados en `ai_contexts`.
+Returns the most relevant fragments (cosine similarity) using embeddings (`text-embedding-004`) stored in `ai_contexts`.
 
 ### `POST /api/chat`
 ```json
 {
   "sessionId": null,
-  "question": "Dame un resumen de la situación actual con TechSmart",
-  "companyId": "uuid-opcional",
-  "userId": "uuid-opcional",
+  "question": "Give me a summary of the current situation with TechSmart",
+  "companyId": "uuid-optional",
+  "userId": "uuid-optional",
   "topK": 5
 }
 ```
-El servicio:
-1. Registra el mensaje y crea la sesión si no existe.
-2. Busca contexto en `ai_contexts` (interacciones, work items, noticias).
-3. Invoca Gemini con un prompt corporativo y contexto.
-4. Devuelve respuesta + fuentes utilizadas.
+The service:
+1. Records the message and creates the session if it doesn't exist.
+2. Searches context in `ai_contexts` (interactions, work items, news).
+3. Invokes Gemini with a corporate prompt and context.
+4. Returns response + sources used.
 
-#### Modo avanzado con herramientas
-Puedes extender el contexto solicitando herramientas en el request:
+#### Advanced mode with tools
+You can extend the context by requesting tools in the request:
 
-- `alerts`: alertas abiertas de alta prioridad.
-- `risk_contacts`: contactos con riesgo (sentimiento negativo o sin seguimiento).
-- `timeline`: últimas interacciones/work_items/señales (límite 5).
-- `trends`: métricas de los últimos 30 días.
-- `knowledge`: documentos en la base de conocimiento relacionados.
+- `alerts`: open high-priority alerts.
+- `risk_contacts`: contacts at risk (negative sentiment or no follow-up).
+- `timeline`: latest interactions/work_items/signals (limit 5).
+- `trends`: metrics from the last 30 days.
+- `knowledge`: related documents in the knowledge base.
 
 ```json
 {
-  "question": "¿Qué debo hacer con TechSmart esta semana?",
-  "companyId": "uuid-empresa",
+  "question": "What should I do with TechSmart this week?",
+  "companyId": "uuid-company",
   "tools": ["alerts", "risk_contacts", "timeline"]
 }
 ```
 
-La respuesta incluirá `tools` con los datos agregados utilizados además de `sources`.
+The response will include `tools` with the aggregated data used in addition to `sources`.
 
-#### Ejecutar acciones (crear work items)
-Puedes solicitar una acción simple junto con la pregunta:
+#### Execute actions (create work items)
+You can request a simple action along with the question:
 
 ```json
 {
-  "question": "Agenda seguimiento para el lunes",
-  "companyId": "uuid-empresa",
+  "question": "Schedule follow-up for Monday",
+  "companyId": "uuid-company",
   "action": {
     "type": "create_work_item",
     "payload": {
-      "title": "Seguimiento con TechSmart",
+      "title": "Follow-up with TechSmart",
       "dueDate": "2025-01-20T15:00:00Z",
       "assigneeContactId": "uuid-contacto"
     }
@@ -414,14 +423,14 @@ Puedes solicitar una acción simple junto con la pregunta:
 }
 ```
 
-El sistema creará el work item automáticamente, lo registrará en `ai_tool_calls` y lo reflejará en el `toolData` de la respuesta.
+The system will create the work item automatically, record it in `ai_tool_calls`, and reflect it in the response's `toolData`.
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
   "sessionId": "uuid",
-  "answer": "Actualmente TechSmart solicitó integraciones...",
+  "answer": "Currently TechSmart requested integrations...",
   "sources": [
     {
       "id": "context-uuid",
@@ -433,7 +442,7 @@ Respuesta:
 }
 ```
 
-Variables extra en `.env`:
+Extra variables in `.env`:
 ```
 SUPABASE_STORAGE_BUCKET=videos
 SUPABASE_STORAGE_FOLDER=
@@ -441,7 +450,7 @@ SUPABASE_STORAGE_WATCH_INTERVAL=30000
 SUPABASE_STORAGE_WATCH_ENABLED=true
 ```
 
-### Reindexar embeddings manualmente
+### Manually reindex embeddings
 
 ```
 POST http://localhost:4000/api/admin/ai/reindex
@@ -452,7 +461,7 @@ POST http://localhost:4000/api/admin/ai/reindex
 }
 ```
 
-`type` puede ser `interactions`, `work_items`, `fresh_data` o `all`. Esto reutiliza el analizador para recalcular resúmenes y volver a indexar en `ai_contexts`.
+`type` can be `interactions`, `work_items`, `fresh_data`, or `all`. This reuses the analyzer to recalculate summaries and reindex in `ai_contexts`.
 
 ### `GET /api/alerts`
 ```bash
@@ -464,10 +473,10 @@ curl "http://localhost:4000/api/alerts?status=open&severity=high"
 curl -X POST http://localhost:4000/api/alerts/<uuid>/resolve
 ```
 
-Alertas automáticas cuando:
-- Una interacción tiene sentimiento negativo o urgencia alta/crítica.
-- Próximos pasos detectados vencen.
-- Work items quedan atrasados.
+Automatic alerts when:
+- An interaction has negative sentiment or high/critical urgency.
+- Detected next steps expire.
+- Work items become overdue.
 
 ### `GET /api/ai/contexts`
 ```bash
@@ -484,7 +493,7 @@ curl -X DELETE http://localhost:4000/api/ai/contexts/<uuid>
 curl "http://localhost:4000/api/crm/insights/trends?companyId=<uuid>&days=30"
 ```
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
@@ -505,7 +514,7 @@ Respuesta:
 curl "http://localhost:4000/api/crm/insights/actionable?companyId=<uuid>"
 ```
 
-Respuesta:
+Response:
 ```json
 {
   "ok": true,
@@ -529,7 +538,7 @@ Respuesta:
   "overdue_work_items": [
     {
       "id": "work-uuid",
-      "title": "Enviar propuesta final",
+      "title": "Send final proposal",
       "due_date": "2025-01-15T12:00:00Z",
       "assignee_name": "María García"
     }
@@ -552,7 +561,7 @@ curl -X POST http://localhost:4000/api/knowledge \
   -d '{
     "title": "Caso de éxito 2024",
     "content": "Resumen del proyecto de modernización con TechSmart...",
-    "companyId": "<uuid opcional>",
+    "companyId": "<uuid optional>",
     "metadata": { "tipo": "caso" }
   }'
 ```
@@ -585,19 +594,19 @@ curl -X POST http://localhost:4000/api/knowledge/search \
   -H "Content-Type: application/json" \
   -d '{
     "query": "integración ERP",
-    "companyId": "<uuid opcional>",
+    "companyId": "<uuid optional>",
     "limit": 5
   }'
 ```
 
-Los documentos se trocean automáticamente (1,600 caracteres por defecto), se generan embeddings y se registran en `ai_contexts` como tipo `knowledge`, por lo que el chat puede citarlos con `tools:["knowledge"]`.
+Documents are automatically chunked (1,600 characters by default), embeddings are generated, and they are registered in `ai_contexts` as type `knowledge`, so chat can cite them with `tools:["knowledge"]`.
 
 ### `POST /api/work-items`
 ```bash
 curl -X POST http://localhost:4000/api/work-items \
   -H "Content-Type: application/json" \
   -d '{
-    "title": "Preparar propuesta final TechSmart",
+    "title": "Prepare final proposal TechSmart",
     "companyId": "<uuid>",
     "assigneeContactId": "<uuid>",
     "dueDate": "2025-01-25T15:00:00Z",
@@ -605,25 +614,43 @@ curl -X POST http://localhost:4000/api/work-items \
   }'
 ```
 
-## Esquema CRM (Empresas → Departamentos → Usuarios → Tareas)
+## CRM Schema (Companies → Departments → Users → Tasks)
 
-Resumen de las entidades principales (ver `db/schema.sql` para definiciones completas):
-- `companies`: empresa/organización, con `domain`, `website`, `industry`, `company_type`.
-- `departments`: departamentos por empresa.
-- `contacts`: personas del CRM (usuarios), ampliado con:
+Summary of main entities (see `db/schema.sql` for complete definitions):
+- `companies`: company/organization, with `domain`, `website`, `industry`, `company_type`.
+- `departments`: departments per company.
+- `contacts`: CRM people (users), extended with:
   - `company_id`, `person_kind` (`employee|client|supplier|partner|other`), `is_client`, `is_supplier`.
-  - `personal_notes` y `preferences` (JSON) para contexto personal.
-- `teams` y `team_members`: equipos, líder, y relación de integrantes.
-- `work_items`: tareas/trabajos/pendientes con:
+  - `personal_notes` and `preferences` (JSON) for personal context.
+- `teams` and `team_members`: teams, leader, and member relationships.
+- `work_items`: tasks/jobs/pending items with:
   - `status` (`pending|in_progress|blocked|completed`), `priority`, `is_external`.
   - `owner_contact_id`, `assignee_contact_id`, `company_id`, `department_id`, `team_id`.
   - `budget`, `requirements` (JSON), `kpis` (JSON), `data` (JSON), `due_date`.
-- `interactions`: últimas interacciones con:
+- `interactions`: latest interactions with:
   - `channel` (`email|call|meeting|chat|social|web|other`), `occurred_at`, `participants` (JSON), `budget`, `requirements`, `kpis`, `data`, `deadline`.
-  - Vista `latest_interaction_per_contact` para obtener la fecha de la última interacción por contacto.
-- `fresh_data`: “data fresh collector” de noticias/señales con `source`, `source_url`, `title`, `summary`, `tags`, `published_at`, `detected_at`.
+  - View `latest_interaction_per_contact` to get the date of the last interaction per contact.
+- `fresh_data`: "data fresh collector" for news/signals with `source`, `source_url`, `title`, `summary`, `tags`, `published_at`, `detected_at`.
 
-Cómo aplicar el esquema en Supabase:
-- Abre el editor SQL de tu proyecto Supabase y pega el contenido de `db/schema.sql`.
-- Ejecuta el script. Las tablas y tipos se crearán si no existen.
-- Revisa y ajusta RLS/policies según tus necesidades de acceso.
+How to apply the schema in Supabase:
+- Open the SQL editor of your Supabase project and paste the content of `db/schema.sql`.
+- Execute the script. Tables and types will be created if they don't exist.
+- Review and adjust RLS/policies according to your access needs.
+
+## Documentation and Resources
+- Detailed API: `docs-api.md` and `docs/api-inventory.md`
+- OpenAPI: `docs/openapi.yaml` (if applicable)
+- One-Pager (PDF): generate from `docs/one-pager.md` (e.g., `npx md-to-pdf docs/one-pager.md`)
+- Video scripts:
+  - Demo (≤60s): `docs/video-scripts/demo-60s.md`
+  - Tech (≤60s): `docs/video-scripts/tech-60s.md`
+
+## Dataset
+- Mock files included: `contactos_mock.json`, `conversaciones_mock.json`, `empresas_mock.json`, `metadatos_mock.json`
+- Regeneration (optional): `python correos_mock.py` (no external dependencies required)
+- Full seed to Supabase: `npm run seed:completo` (or via `POST /api/admin/seed/completo`)
+
+## Deliverables
+- Public repository: [add URL]
+- Code ZIP: `Relay.zip`
+- `requirements.txt`: this project is Node.js; no Python dependencies (see `package.json`)

@@ -165,7 +165,20 @@ router.post('/', async (req, res) => {
     }
 
     // Buscar contexto relevante
-    const embedding = await embedText({ text: question, taskType: 'RETRIEVAL_QUERY' });
+    let embedding = [];
+    try {
+      embedding = await embedText({ text: question, taskType: 'RETRIEVAL_QUERY' });
+    } catch (error) {
+      // Si hay un error con la API key, devolver un error claro
+      if (error.message?.includes('API key de Google Gemini no es válida')) {
+        return res.status(503).json({ 
+          ok: false, 
+          error: 'API key de Google Gemini no es válida. Por favor, verifica la configuración de GOOGLE_GEMINI_API_KEY' 
+        });
+      }
+      throw error;
+    }
+    
     const { data: contextResults, error: searchError } = await supabase.rpc('match_ai_contexts', {
       query_embedding: embedding,
       match_count: Math.min(Number(topK) || 5, 20),

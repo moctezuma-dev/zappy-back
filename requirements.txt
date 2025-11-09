@@ -1,0 +1,7 @@
+# Este proyecto es Node.js; las dependencias están definidas en package.json.
+# No se requieren dependencias Python. El script correos_mock.py usa solo la librería estándar.
+# Requisitos de entorno:
+# - Node.js >= 18
+# - Opcional: Python 3.8+ (solo si deseas regenerar los mocks con correos_mock.py)
+
+

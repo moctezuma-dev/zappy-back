@@ -1,192 +1,272 @@
 [
   {
-    "empresa": "Amazon",
+    "empresa": "Netflix",
     "departamentos": [
       {
-        "nombre": "IT",
+        "nombre": "Innovación",
         "usuarios": [
           {
-            "id": "fd39b48a-f7cf-4f8d-900c-da9ee1200311",
-            "nombre": "Alicia Boler Davis",
-            "puesto": "SVP Global Customer Fulfillment",
-            "compañia": "Amazon",
+            "id": "76d8fec2-2dfb-4cf4-8728-66b5d99ce63a",
+            "nombre": "Greg Peters",
+            "puesto": "Co-CEO",
+            "compañia": "Netflix",
             "es_cliente": false,
             "es_proveedor": true,
             "equipo": [
               {
-                "id": "610867b8-2880-4433-bf2c-150a8cdcd0cf",
-                "nombre": "Andy Jassy",
-                "puesto": "President and CEO"
+                "id": "e3c37a3d-94e0-46d3-8bce-2a2537c17369",
+                "nombre": "Reed Hastings",
+                "puesto": "Executive Chairman"
               }
             ],
-            "a_cargo_de_equipo": true,
+            "a_cargo_de_equipo": false,
             "status_tareas": [
               {
-                "id": "1de7365f-eb07-4086-9c00-daa93ce43223",
-                "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Alicia Boler Davis",
-                "estatus": "Terminado",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Customer satisfaction"
-                ],
-                "plazo": "2025-12-03",
-                "canal": "WhatsApp",
-                "presupuesto": 28219,
-                "notas": "Seguimiento semanal"
-              },
-              {
-                "id": "8f15f53e-7d6b-4ad7-bf95-35c49d1da5ac",
-                "titulo": "Gigafactory capacity expansion",
-                "usuario_responsable": "Alicia Boler Davis",
+                "id": "d42c4ba1-ee7e-4b6f-a012-1a9ed26ba6ec",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "Greg Peters",
                 "estatus": "Pendiente",
                 "requerimientos": "Evaluación ESG",
                 "kpis": [
-                  "Subscriber retention"
+                  "Network uptime"
                 ],
-                "plazo": "2025-11-28",
+                "plazo": "2025-11-13",
                 "canal": "Email",
-                "presupuesto": 71119,
-                "notas": "Prioridad alta"
+                "presupuesto": 74851,
+                "notas": "Seguimiento semanal"
+              },
+              {
+                "id": "480b99f7-0c10-4a7a-b340-7813339133d0",
+                "titulo": "5G enterprise connectivity bundle",
+                "usuario_responsable": "Greg Peters",
+                "estatus": "En proceso",
+                "requerimientos": "Integración ERP global",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "plazo": "2025-11-12",
+                "canal": "WhatsApp",
+                "presupuesto": 23222,
+                "notas": "Seguimiento semanal"
               }
             ],
-            "notas_personales": "Prefers to be called Alicia.",
+            "notas_personales": "Prefers to be called Greg.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-08T07:07:06.107878",
+                "fecha": "2025-11-08T08:24:46.986203",
                 "canal": "Email",
                 "participantes": [
-                  "Alicia Boler Davis",
-                  "Sundar Pichai"
+                  "Greg Peters",
+                  "Tim Cook"
                 ],
-                "presupuesto": 20051,
-                "requerimientos": "Plan maestro de cadena de suministro",
+                "presupuesto": 49667,
+                "requerimientos": "Estrategia de sostenibilidad",
                 "kpis": [
-                  "Operating margin"
+                  "Revenue growth"
                 ],
                 "datos": {
                   "otro_dato": "Valor mock"
                 },
-                "plazo": "2025-11-22"
+                "plazo": "2025-11-19"
               }
             ]
           }
         ],
         "tareas": [
           {
-            "id": "2a639fba-56e7-4b42-af14-947788de448f",
+            "id": "4c0bb33a-6eb5-4a02-84e0-53644dccaa6f",
             "titulo": "Global beverage supply optimization program",
-            "usuario_responsable": "Alicia Boler Davis",
-            "estatus": "Pendiente",
-            "requerimientos": "Evaluación ESG",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-11-17",
-            "canal": "WhatsApp",
-            "presupuesto": 32233,
-            "notas": "Prioridad alta"
-          },
-          {
-            "id": "65a4ea9a-003f-4fc0-b69f-a783d3a3dc2e",
-            "titulo": "Prime fulfillment automation initiative",
-            "usuario_responsable": "Alicia Boler Davis",
+            "usuario_responsable": "Greg Peters",
             "estatus": "En proceso",
             "requerimientos": "Integración ERP global",
             "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-11-26",
+            "canal": "Email",
+            "presupuesto": 64288,
+            "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "274b0e2e-0ceb-4c2d-9eb4-a4388d818f09",
+            "titulo": "Gigafactory capacity expansion",
+            "usuario_responsable": "Greg Peters",
+            "estatus": "Terminado",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
               "Network uptime"
             ],
-            "plazo": "2025-12-01",
-            "canal": "Email",
-            "presupuesto": 79001,
-            "notas": "Seguimiento semanal"
+            "plazo": "2025-11-20",
+            "canal": "Llamada",
+            "presupuesto": 57359,
+            "notas": "Prioridad alta"
           }
         ]
       },
       {
-        "nombre": "Comercial",
+        "nombre": "Operaciones",
         "usuarios": [
           {
-            "id": "48943aa1-a295-4841-a598-f3d42d8bb2e8",
-            "nombre": "Alicia Boler Davis",
-            "puesto": "SVP Global Customer Fulfillment",
-            "compañia": "Amazon",
-            "es_cliente": true,
+            "id": "1bafc047-5ed0-4383-b322-bea85dec71c6",
+            "nombre": "Greg Peters",
+            "puesto": "Co-CEO",
+            "compañia": "Netflix",
+            "es_cliente": false,
             "es_proveedor": false,
             "equipo": [
               {
-                "id": "a94910d4-005e-49c3-b208-8ace467283c8",
-                "nombre": "Andy Jassy",
-                "puesto": "President and CEO"
+                "id": "67b8088f-084c-46d2-ab99-de5f8bac0d02",
+                "nombre": "Reed Hastings",
+                "puesto": "Executive Chairman"
               }
             ],
-            "a_cargo_de_equipo": true,
+            "a_cargo_de_equipo": false,
             "status_tareas": [
               {
-                "id": "9d72aa4e-abc4-46a9-8b9d-1f4b523d97e5",
-                "titulo": "Sustainable packaging transformation",
-                "usuario_responsable": "Alicia Boler Davis",
+                "id": "ae61d74c-6a8b-4c17-b398-84bbb9d04062",
+                "titulo": "AI-driven customer care rollout",
+                "usuario_responsable": "Greg Peters",
                 "estatus": "Terminado",
-                "requerimientos": "Integración ERP global",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-11-19",
-                "canal": "Email",
-                "presupuesto": 27265,
-                "notas": "Prioridad alta"
-              },
-              {
-                "id": "db303575-dd8f-41d2-94dd-27317548eb56",
-                "titulo": "5G enterprise connectivity bundle",
-                "usuario_responsable": "Alicia Boler Davis",
-                "estatus": "Pendiente",
                 "requerimientos": "Auditoría de ciberseguridad",
                 "kpis": [
-                  "Subscriber retention"
+                  "Revenue growth"
                 ],
-                "plazo": "2025-11-17",
+                "plazo": "2025-11-27",
                 "canal": "Llamada",
-                "presupuesto": 72011,
-                "notas": "Prioridad alta"
+                "presupuesto": 60859,
+                "notas": "Seguimiento semanal"
               }
             ],
-            "notas_personales": "Prefers to be called Alicia.",
+            "notas_personales": "Prefers to be called Greg.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-08T07:07:06.107878",
-                "canal": "Llamada",
+                "fecha": "2025-11-07T08:24:46.986203",
+                "canal": "WhatsApp",
                 "participantes": [
-                  "Alicia Boler Davis",
-                  "Ruth Porat"
+                  "Greg Peters",
+                  "Jane Wakely"
                 ],
-                "presupuesto": 33987,
-                "requerimientos": "Informe de cumplimiento global",
+                "presupuesto": 12483,
+                "requerimientos": "Estrategia de sostenibilidad",
                 "kpis": [
                   "Supply chain resilience"
                 ],
                 "datos": {
                   "otro_dato": "Valor mock"
                 },
-                "plazo": "2025-11-25"
+                "plazo": "2025-11-18"
+              }
+            ]
+          },
+          {
+            "id": "e74cb5dc-1030-4ca1-b19d-da5535602d15",
+            "nombre": "Reed Hastings",
+            "puesto": "Executive Chairman",
+            "compañia": "Netflix",
+            "es_cliente": true,
+            "es_proveedor": false,
+            "equipo": [
+              {
+                "id": "f7e685c4-0a52-4086-8d97-3905dc2003e4",
+                "nombre": "Greg Peters",
+                "puesto": "Co-CEO"
+              }
+            ],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "99f3ee47-04e3-4732-a71e-30eda1a33ca8",
+                "titulo": "Prime fulfillment automation initiative",
+                "usuario_responsable": "Reed Hastings",
+                "estatus": "Terminado",
+                "requerimientos": "Integración ERP global",
+                "kpis": [
+                  "Revenue growth"
+                ],
+                "plazo": "2025-11-29",
+                "canal": "WhatsApp",
+                "presupuesto": 42726,
+                "notas": "Prioridad alta"
+              },
+              {
+                "id": "7d2028d3-404d-489f-bd7f-2f3652602de7",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "Reed Hastings",
+                "estatus": "En proceso",
+                "requerimientos": "Evaluación ESG",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "plazo": "2025-11-18",
+                "canal": "Llamada",
+                "presupuesto": 46774,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefers to be called Reed.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-07T08:24:46.986203",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Reed Hastings",
+                  "Katherine Adams"
+                ],
+                "presupuesto": 48681,
+                "requerimientos": "Plan maestro de cadena de suministro",
+                "kpis": [
+                  "Supply chain resilience"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-17"
               }
             ]
           }
         ],
         "tareas": [
           {
-            "id": "80687530-297f-4d05-8c35-fc14720bdfba",
-            "titulo": "Cloud modernization for enterprise productivity",
-            "usuario_responsable": "Alicia Boler Davis",
+            "id": "c6b2de05-5f3f-4ed3-bec0-3ec8cd40b0c0",
+            "titulo": "Personalized streaming recommendation engine",
+            "usuario_responsable": "Greg Peters",
             "estatus": "Terminado",
-            "requerimientos": "Arquitectura de datos unificada",
+            "requerimientos": "Evaluación ESG",
             "kpis": [
-              "Operating margin"
+              "Revenue growth"
             ],
-            "plazo": "2025-11-28",
-            "canal": "Llamada",
-            "presupuesto": 51555,
+            "plazo": "2025-11-13",
+            "canal": "Email",
+            "presupuesto": 61692,
             "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "c49a3ce4-2b36-4e99-bd2d-fce1685fafbf",
+            "titulo": "5G enterprise connectivity bundle",
+            "usuario_responsable": "Reed Hastings",
+            "estatus": "En proceso",
+            "requerimientos": "Evaluación ESG",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-11-18",
+            "canal": "WhatsApp",
+            "presupuesto": 74863,
+            "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "037752a0-0fbe-4d62-8b08-9db20e54e974",
+            "titulo": "Global beverage supply optimization program",
+            "usuario_responsable": "Reed Hastings",
+            "estatus": "Terminado",
+            "requerimientos": "Integración ERP global",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-11-29",
+            "canal": "WhatsApp",
+            "presupuesto": 33906,
+            "notas": "Prioridad alta"
           }
         ]
       }
@@ -195,801 +275,113 @@
       {
         "fuente": "Google News",
         "fecha": "2025-11-09",
-        "noticia": "Amazon secures multiyear sponsorship with global sports league",
-        "tema_relacionado": "Finanzas"
-      }
-    ]
-  },
-  {
-    "empresa": "Samsung Electronics",
-    "departamentos": [
-      {
-        "nombre": "Dirección",
-        "usuarios": [
-          {
-            "id": "9b50c790-2a95-4a4c-9e89-f2b90f0cad7f",
-            "nombre": "Park Hark-kyu",
-            "puesto": "President and CFO",
-            "compañia": "Samsung Electronics",
-            "es_cliente": true,
-            "es_proveedor": false,
-            "equipo": [
-              {
-                "id": "7c8d560a-38a1-4b1a-b3c1-2b7d653654b8",
-                "nombre": "Han Jong-hee",
-                "puesto": "Vice Chairman and CEO"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "d7d64bef-92f6-47a4-932a-ba0108855b39",
-                "titulo": "Global beverage supply optimization program",
-                "usuario_responsable": "Park Hark-kyu",
-                "estatus": "En proceso",
-                "requerimientos": "Auditoría de ciberseguridad",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-12-04",
-                "canal": "Email",
-                "presupuesto": 16367,
-                "notas": "Prioridad alta"
-              },
-              {
-                "id": "789e307b-e345-49e6-8424-8e272440425c",
-                "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Park Hark-kyu",
-                "estatus": "En proceso",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Supply chain resilience"
-                ],
-                "plazo": "2025-12-06",
-                "canal": "Llamada",
-                "presupuesto": 56973,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Park.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-04T07:07:06.107878",
-                "canal": "WhatsApp",
-                "participantes": [
-                  "Park Hark-kyu",
-                  "Katherine Adams"
-                ],
-                "presupuesto": 27177,
-                "requerimientos": "Arquitectura de IA generativa",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-28"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "cb17ccdf-abfc-4432-a3ab-b6c6dba46b24",
-            "titulo": "Cloud modernization for enterprise productivity",
-            "usuario_responsable": "Park Hark-kyu",
-            "estatus": "Pendiente",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-11-27",
-            "canal": "Email",
-            "presupuesto": 18030,
-            "notas": "Prioridad alta"
-          }
-        ]
-      },
-      {
-        "nombre": "IT",
-        "usuarios": [
-          {
-            "id": "e588dd36-49b4-4d23-a11f-9ab12df1ea3e",
-            "nombre": "Han Jong-hee",
-            "puesto": "Vice Chairman and CEO",
-            "compañia": "Samsung Electronics",
-            "es_cliente": false,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "177b305a-6b1f-4271-b61c-5f9cf9ec75ea",
-                "nombre": "Park Hark-kyu",
-                "puesto": "President and CFO"
-              }
-            ],
-            "a_cargo_de_equipo": false,
-            "status_tareas": [
-              {
-                "id": "ddb6de18-5018-491f-a633-a88a8cebc80f",
-                "titulo": "Cloud modernization for enterprise productivity",
-                "usuario_responsable": "Han Jong-hee",
-                "estatus": "En proceso",
-                "requerimientos": "Arquitectura de datos unificada",
-                "kpis": [
-                  "Customer satisfaction"
-                ],
-                "plazo": "2025-11-27",
-                "canal": "WhatsApp",
-                "presupuesto": 17218,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Han.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-05T07:07:06.107878",
-                "canal": "Email",
-                "participantes": [
-                  "Han Jong-hee",
-                  "Satya Nadella"
-                ],
-                "presupuesto": 13899,
-                "requerimientos": "Estrategia de sostenibilidad",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-25"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "3fb709a5-8193-46fe-9aa4-ed0d22dcb7d5",
-            "titulo": "Personalized streaming recommendation engine",
-            "usuario_responsable": "Han Jong-hee",
-            "estatus": "En proceso",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-11-29",
-            "canal": "Llamada",
-            "presupuesto": 66099,
-            "notas": "Seguimiento semanal"
-          }
-        ]
-      }
-    ],
-    "data_fresh_collector": [
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-03",
-        "noticia": "Samsung Electronics announces strategic partnership with Microsoft on cloud innovation",
+        "noticia": "Netflix announces strategic partnership with Microsoft on cloud innovation",
         "tema_relacionado": "Logística"
       }
     ]
   },
   {
-    "empresa": "The Coca-Cola Company",
-    "departamentos": [
-      {
-        "nombre": "Operaciones",
-        "usuarios": [
-          {
-            "id": "8fc64618-1bb0-4924-b7d1-837718f94c46",
-            "nombre": "James Quincey",
-            "puesto": "Chief Executive Officer",
-            "compañia": "The Coca-Cola Company",
-            "es_cliente": false,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "c368c3cc-fe29-477f-95b2-ae21487d3542",
-                "nombre": "Nancy Quan",
-                "puesto": "Chief Technical Officer"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "80c6b1f3-7c23-46c1-8ba5-d271047ed09a",
-                "titulo": "Personalized streaming recommendation engine",
-                "usuario_responsable": "James Quincey",
-                "estatus": "Pendiente",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Customer satisfaction"
-                ],
-                "plazo": "2025-12-02",
-                "canal": "WhatsApp",
-                "presupuesto": 27625,
-                "notas": "Prioridad alta"
-              },
-              {
-                "id": "0bee9a69-ef38-4860-9c71-c4b12a6e7409",
-                "titulo": "Global beverage supply optimization program",
-                "usuario_responsable": "James Quincey",
-                "estatus": "En proceso",
-                "requerimientos": "Integración ERP global",
-                "kpis": [
-                  "Customer satisfaction"
-                ],
-                "plazo": "2025-12-08",
-                "canal": "WhatsApp",
-                "presupuesto": 50980,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called James.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-06T07:07:06.107878",
-                "canal": "WhatsApp",
-                "participantes": [
-                  "James Quincey",
-                  "Jane Wakely"
-                ],
-                "presupuesto": 12129,
-                "requerimientos": "Informe de cumplimiento global",
-                "kpis": [
-                  "Revenue growth"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-21"
-              }
-            ]
-          },
-          {
-            "id": "f7bd9da1-b932-4f69-b53f-59dc2e36dc41",
-            "nombre": "Nancy Quan",
-            "puesto": "Chief Technical Officer",
-            "compañia": "The Coca-Cola Company",
-            "es_cliente": false,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "d50c10f8-0dcd-4f03-be5d-07a202f3c218",
-                "nombre": "James Quincey",
-                "puesto": "Chief Executive Officer"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "12f00f6c-7ca4-433c-ab78-cb16609c80af",
-                "titulo": "Sustainable packaging transformation",
-                "usuario_responsable": "Nancy Quan",
-                "estatus": "Pendiente",
-                "requerimientos": "Auditoría de ciberseguridad",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-12-06",
-                "canal": "Email",
-                "presupuesto": 61100,
-                "notas": "Seguimiento semanal"
-              },
-              {
-                "id": "24dbfaf8-7b35-459a-a526-0ed8a203b04c",
-                "titulo": "Global beverage supply optimization program",
-                "usuario_responsable": "Nancy Quan",
-                "estatus": "Terminado",
-                "requerimientos": "Integración ERP global",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-12-02",
-                "canal": "Llamada",
-                "presupuesto": 33029,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Nancy.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-04T07:07:06.107878",
-                "canal": "Email",
-                "participantes": [
-                  "Nancy Quan",
-                  "Callie Field"
-                ],
-                "presupuesto": 17844,
-                "requerimientos": "Informe de cumplimiento global",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-16"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "b2acc87f-2739-4f79-a10a-1edc7a1d0128",
-            "titulo": "Global beverage supply optimization program",
-            "usuario_responsable": "James Quincey",
-            "estatus": "Terminado",
-            "requerimientos": "Evaluación ESG",
-            "kpis": [
-              "Supply chain resilience"
-            ],
-            "plazo": "2025-12-08",
-            "canal": "WhatsApp",
-            "presupuesto": 48588,
-            "notas": "Prioridad alta"
-          },
-          {
-            "id": "f0f6267d-f86b-40d8-8ef6-d2e5ca4205ef",
-            "titulo": "Personalized streaming recommendation engine",
-            "usuario_responsable": "James Quincey",
-            "estatus": "Pendiente",
-            "requerimientos": "Integración ERP global",
-            "kpis": [
-              "Supply chain resilience"
-            ],
-            "plazo": "2025-11-13",
-            "canal": "WhatsApp",
-            "presupuesto": 78152,
-            "notas": "Prioridad alta"
-          },
-          {
-            "id": "33ee620d-78ea-4725-80ca-d5b48e295f25",
-            "titulo": "5G enterprise connectivity bundle",
-            "usuario_responsable": "Nancy Quan",
-            "estatus": "Pendiente",
-            "requerimientos": "Integración ERP global",
-            "kpis": [
-              "Network uptime"
-            ],
-            "plazo": "2025-11-22",
-            "canal": "WhatsApp",
-            "presupuesto": 40587,
-            "notas": "Prioridad alta"
-          }
-        ]
-      },
-      {
-        "nombre": "Suministro",
-        "usuarios": [
-          {
-            "id": "22928081-f651-40df-b9ac-fb41b81fb9b6",
-            "nombre": "James Quincey",
-            "puesto": "Chief Executive Officer",
-            "compañia": "The Coca-Cola Company",
-            "es_cliente": true,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "e1ec0cc0-600f-48cb-908a-bd77ead85ba8",
-                "nombre": "Nancy Quan",
-                "puesto": "Chief Technical Officer"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "20c3cc1d-479e-4283-a6df-fe005d2508ca",
-                "titulo": "North America retail analytics deployment",
-                "usuario_responsable": "James Quincey",
-                "estatus": "Terminado",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Network uptime"
-                ],
-                "plazo": "2025-11-12",
-                "canal": "Llamada",
-                "presupuesto": 52906,
-                "notas": "Seguimiento semanal"
-              }
-            ],
-            "notas_personales": "Prefers to be called James.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-05T07:07:06.107878",
-                "canal": "WhatsApp",
-                "participantes": [
-                  "James Quincey",
-                  "Park Hark-kyu"
-                ],
-                "presupuesto": 34389,
-                "requerimientos": "Estrategia de sostenibilidad",
-                "kpis": [
-                  "Operating margin"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-23"
-              }
-            ]
-          },
-          {
-            "id": "1e621e96-035d-4d76-8d69-9644b4a9a31d",
-            "nombre": "Nancy Quan",
-            "puesto": "Chief Technical Officer",
-            "compañia": "The Coca-Cola Company",
-            "es_cliente": true,
-            "es_proveedor": false,
-            "equipo": [
-              {
-                "id": "98549a3e-9e2c-456e-9b48-bc710cd60859",
-                "nombre": "James Quincey",
-                "puesto": "Chief Executive Officer"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "0fbda439-d81b-4d60-beea-e8e9cda6d327",
-                "titulo": "North America retail analytics deployment",
-                "usuario_responsable": "Nancy Quan",
-                "estatus": "Terminado",
-                "requerimientos": "Arquitectura de datos unificada",
-                "kpis": [
-                  "Supply chain resilience"
-                ],
-                "plazo": "2025-12-01",
-                "canal": "Email",
-                "presupuesto": 42475,
-                "notas": "Prioridad alta"
-              },
-              {
-                "id": "8ba480e9-5bf3-4232-bac3-705f9c124aa3",
-                "titulo": "AI-driven customer care rollout",
-                "usuario_responsable": "Nancy Quan",
-                "estatus": "En proceso",
-                "requerimientos": "Integración ERP global",
-                "kpis": [
-                  "Operating margin"
-                ],
-                "plazo": "2025-11-22",
-                "canal": "WhatsApp",
-                "presupuesto": 24904,
-                "notas": "Seguimiento semanal"
-              }
-            ],
-            "notas_personales": "Prefers to be called Nancy.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-04T07:07:06.107878",
-                "canal": "Llamada",
-                "participantes": [
-                  "Nancy Quan",
-                  "Elon Musk"
-                ],
-                "presupuesto": 43213,
-                "requerimientos": "Estrategia de sostenibilidad",
-                "kpis": [
-                  "Supply chain resilience"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-16"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "d38034b5-e8d5-4d70-9ad2-a18630e4e2c3",
-            "titulo": "Global beverage supply optimization program",
-            "usuario_responsable": "James Quincey",
-            "estatus": "Terminado",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Subscriber retention"
-            ],
-            "plazo": "2025-11-21",
-            "canal": "Email",
-            "presupuesto": 31401,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "7f0cbd68-3175-4627-baab-866a4d96b918",
-            "titulo": "Global beverage supply optimization program",
-            "usuario_responsable": "Nancy Quan",
-            "estatus": "Pendiente",
-            "requerimientos": "Integración ERP global",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-12-04",
-            "canal": "Llamada",
-            "presupuesto": 32942,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "e5e326a9-b393-4041-b37f-3e2152a0f98e",
-            "titulo": "Cloud modernization for enterprise productivity",
-            "usuario_responsable": "Nancy Quan",
-            "estatus": "Terminado",
-            "requerimientos": "Evaluación ESG",
-            "kpis": [
-              "Supply chain resilience"
-            ],
-            "plazo": "2025-11-22",
-            "canal": "WhatsApp",
-            "presupuesto": 14846,
-            "notas": "Prioridad alta"
-          }
-        ]
-      }
-    ],
-    "data_fresh_collector": [
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-03",
-        "noticia": "The Coca-Cola Company introduces new AI-driven customer experience program",
-        "tema_relacionado": "Automatización"
-      }
-    ]
-  },
-  {
-    "empresa": "Apple",
-    "departamentos": [
-      {
-        "nombre": "Comercial",
-        "usuarios": [
-          {
-            "id": "c34494de-48cf-4b06-9164-648c8c66a7e3",
-            "nombre": "Katherine Adams",
-            "puesto": "Senior Vice President and General Counsel",
-            "compañia": "Apple",
-            "es_cliente": false,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "a0852e54-f92d-4a7b-b12a-2514207036d5",
-                "nombre": "Tim Cook",
-                "puesto": "Chief Executive Officer"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "be53e698-18af-4c1e-9da3-1adc0d24be49",
-                "titulo": "North America retail analytics deployment",
-                "usuario_responsable": "Katherine Adams",
-                "estatus": "En proceso",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Operating margin"
-                ],
-                "plazo": "2025-11-24",
-                "canal": "WhatsApp",
-                "presupuesto": 41208,
-                "notas": "Seguimiento semanal"
-              },
-              {
-                "id": "c458fa13-2f84-477f-ac53-55b161f253c5",
-                "titulo": "Cloud modernization for enterprise productivity",
-                "usuario_responsable": "Katherine Adams",
-                "estatus": "En proceso",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Revenue growth"
-                ],
-                "plazo": "2025-12-04",
-                "canal": "Email",
-                "presupuesto": 78591,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Katherine.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-02T07:07:06.107878",
-                "canal": "Email",
-                "participantes": [
-                  "Katherine Adams",
-                  "Amy Hood"
-                ],
-                "presupuesto": 40394,
-                "requerimientos": "Estrategia de sostenibilidad",
-                "kpis": [
-                  "Revenue growth"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-25"
-              }
-            ]
-          },
-          {
-            "id": "f5ca5931-f94a-4a01-92a3-863a6cd23b7d",
-            "nombre": "Tim Cook",
-            "puesto": "Chief Executive Officer",
-            "compañia": "Apple",
-            "es_cliente": false,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "3e563919-a477-476d-844e-810ad1be01b2",
-                "nombre": "Katherine Adams",
-                "puesto": "Senior Vice President and General Counsel"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "cf037cfe-bac0-49c3-96bf-fd19e85a9f29",
-                "titulo": "Sustainable packaging transformation",
-                "usuario_responsable": "Tim Cook",
-                "estatus": "Terminado",
-                "requerimientos": "Integración ERP global",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-11-13",
-                "canal": "WhatsApp",
-                "presupuesto": 26440,
-                "notas": "Seguimiento semanal"
-              }
-            ],
-            "notas_personales": "Prefers to be called Tim.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-04T07:07:06.107878",
-                "canal": "Email",
-                "participantes": [
-                  "Tim Cook",
-                  "Amy Hood"
-                ],
-                "presupuesto": 39311,
-                "requerimientos": "Estrategia de sostenibilidad",
-                "kpis": [
-                  "Revenue growth"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-12"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "3e506bfc-3499-48bd-aee0-7292074c4850",
-            "titulo": "Prime fulfillment automation initiative",
-            "usuario_responsable": "Katherine Adams",
-            "estatus": "Pendiente",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Revenue growth"
-            ],
-            "plazo": "2025-12-03",
-            "canal": "Email",
-            "presupuesto": 41822,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "7ba9c153-67f7-4a9e-a2ab-188a30e846ab",
-            "titulo": "Cloud modernization for enterprise productivity",
-            "usuario_responsable": "Katherine Adams",
-            "estatus": "En proceso",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Supply chain resilience"
-            ],
-            "plazo": "2025-11-27",
-            "canal": "WhatsApp",
-            "presupuesto": 49189,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "8b78454f-52eb-4d0a-a142-90df33b2482d",
-            "titulo": "North America retail analytics deployment",
-            "usuario_responsable": "Tim Cook",
-            "estatus": "En proceso",
-            "requerimientos": "Evaluación ESG",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-11-15",
-            "canal": "WhatsApp",
-            "presupuesto": 19305,
-            "notas": "Prioridad alta"
-          },
-          {
-            "id": "4ff85e1f-e521-4cb0-8db8-fdc9b854a6c6",
-            "titulo": "North America retail analytics deployment",
-            "usuario_responsable": "Tim Cook",
-            "estatus": "Terminado",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Customer satisfaction"
-            ],
-            "plazo": "2025-11-29",
-            "canal": "WhatsApp",
-            "presupuesto": 77462,
-            "notas": "Prioridad alta"
-          }
-        ]
-      }
-    ],
-    "data_fresh_collector": [
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-06",
-        "noticia": "Apple launches sustainability roadmap aligned with 2030 goals",
-        "tema_relacionado": "Automatización"
-      },
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-07",
-        "noticia": "Apple announces strategic partnership with Microsoft on cloud innovation",
-        "tema_relacionado": "Automatización"
-      },
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-02",
-        "noticia": "Apple launches sustainability roadmap aligned with 2030 goals",
-        "tema_relacionado": "Automatización"
-      }
-    ]
-  },
-  {
-    "empresa": "Tesla",
+    "empresa": "PepsiCo",
     "departamentos": [
       {
         "nombre": "Marketing",
         "usuarios": [
           {
-            "id": "2a568584-43f4-4aaa-b0cf-89cf6952c79e",
-            "nombre": "Vaibhav Taneja",
-            "puesto": "Chief Financial Officer",
-            "compañia": "Tesla",
-            "es_cliente": false,
+            "id": "de6806e2-3e21-4014-b667-2570545d8f0b",
+            "nombre": "Jane Wakely",
+            "puesto": "Chief Consumer and Marketing Officer",
+            "compañia": "PepsiCo",
+            "es_cliente": true,
             "es_proveedor": false,
             "equipo": [
               {
-                "id": "4754f2ab-c8cc-48e2-a9e6-863e749f00d0",
-                "nombre": "Elon Musk",
-                "puesto": "Technoking"
+                "id": "18caa0d9-37c8-408d-a867-edaf4f74a062",
+                "nombre": "Ramon Laguarta",
+                "puesto": "Chairman and CEO"
               }
             ],
-            "a_cargo_de_equipo": false,
+            "a_cargo_de_equipo": true,
             "status_tareas": [
               {
-                "id": "1fb92a58-baa6-4b49-843f-8d175c918610",
-                "titulo": "Cloud modernization for enterprise productivity",
-                "usuario_responsable": "Vaibhav Taneja",
-                "estatus": "En proceso",
-                "requerimientos": "Auditoría de ciberseguridad",
+                "id": "3ee4e4ef-5c23-4b14-9d5f-4861424061b3",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "Jane Wakely",
+                "estatus": "Pendiente",
+                "requerimientos": "Evaluación ESG",
                 "kpis": [
-                  "Revenue growth"
+                  "Network uptime"
                 ],
-                "plazo": "2025-11-12",
+                "plazo": "2025-12-05",
                 "canal": "WhatsApp",
-                "presupuesto": 13487,
-                "notas": "Seguimiento semanal"
+                "presupuesto": 21975,
+                "notas": "Prioridad alta"
               }
             ],
-            "notas_personales": "Prefers to be called Vaibhav.",
+            "notas_personales": "Prefers to be called Jane.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-09T07:07:06.107878",
+                "fecha": "2025-11-07T08:24:46.986203",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Jane Wakely",
+                  "Tim Cook"
+                ],
+                "presupuesto": 12536,
+                "requerimientos": "Informe de cumplimiento global",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-24"
+              }
+            ]
+          },
+          {
+            "id": "dac3938b-cf58-49ce-bc26-727481797b7f",
+            "nombre": "Ramon Laguarta",
+            "puesto": "Chairman and CEO",
+            "compañia": "PepsiCo",
+            "es_cliente": true,
+            "es_proveedor": false,
+            "equipo": [
+              {
+                "id": "7c1c2ce7-c0c0-424e-a18e-91cd9e1a5bb8",
+                "nombre": "Jane Wakely",
+                "puesto": "Chief Consumer and Marketing Officer"
+              }
+            ],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "c7709e54-d321-42fb-8a7c-df9ce7b0dbc7",
+                "titulo": "AI-driven customer care rollout",
+                "usuario_responsable": "Ramon Laguarta",
+                "estatus": "En proceso",
+                "requerimientos": "Arquitectura de datos unificada",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "plazo": "2025-11-11",
+                "canal": "Llamada",
+                "presupuesto": 39088,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefers to be called Ramon.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-04T08:24:46.986203",
                 "canal": "Email",
                 "participantes": [
-                  "Vaibhav Taneja",
-                  "Ruth Porat"
+                  "Ramon Laguarta",
+                  "Sundar Pichai"
                 ],
-                "presupuesto": 17947,
-                "requerimientos": "Plan maestro de cadena de suministro",
+                "presupuesto": 51003,
+                "requerimientos": "Estrategia de sostenibilidad",
                 "kpis": [
-                  "Revenue growth"
+                  "Customer satisfaction"
                 ],
                 "datos": {
                   "otro_dato": "Valor mock"
@@ -997,65 +389,310 @@
                 "plazo": "2025-11-12"
               }
             ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "065ac34d-2e54-4ec3-848c-488fac880f6e",
+            "titulo": "Gigafactory capacity expansion",
+            "usuario_responsable": "Jane Wakely",
+            "estatus": "Terminado",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-12-01",
+            "canal": "Email",
+            "presupuesto": 22309,
+            "notas": "Prioridad alta"
           },
           {
-            "id": "27303380-bb3f-4f30-a537-642185540ca6",
-            "nombre": "Elon Musk",
-            "puesto": "Technoking",
-            "compañia": "Tesla",
+            "id": "fec4ceb5-0f31-4bb8-a1b7-057ac2b31f64",
+            "titulo": "Prime fulfillment automation initiative",
+            "usuario_responsable": "Ramon Laguarta",
+            "estatus": "En proceso",
+            "requerimientos": "Auditoría de ciberseguridad",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-11-27",
+            "canal": "Llamada",
+            "presupuesto": 23060,
+            "notas": "Prioridad alta"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-01",
+        "noticia": "PepsiCo introduces new AI-driven customer experience program",
+        "tema_relacionado": "Automatización"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-31",
+        "noticia": "PepsiCo expands manufacturing footprint in North America",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-09",
+        "noticia": "PepsiCo expands manufacturing footprint in North America",
+        "tema_relacionado": "Automatización"
+      }
+    ]
+  },
+  {
+    "empresa": "Amazon",
+    "departamentos": [
+      {
+        "nombre": "Operaciones",
+        "usuarios": [
+          {
+            "id": "12cb63fe-4239-4046-bed9-2dcafe01fc68",
+            "nombre": "Alicia Boler Davis",
+            "puesto": "SVP Global Customer Fulfillment",
+            "compañia": "Amazon",
             "es_cliente": false,
             "es_proveedor": false,
             "equipo": [
               {
-                "id": "97fc84ae-acf7-47ed-95e8-971734d5c62a",
-                "nombre": "Vaibhav Taneja",
-                "puesto": "Chief Financial Officer"
+                "id": "7819de3e-8e39-4251-8239-dce06ab0e3e9",
+                "nombre": "Andy Jassy",
+                "puesto": "President and CEO"
               }
             ],
             "a_cargo_de_equipo": false,
             "status_tareas": [
               {
-                "id": "59546114-0f0b-4ab1-b936-d0763ca36bbe",
+                "id": "f0dc2d30-bf5f-474c-b801-6496cd52bd8e",
+                "titulo": "Global beverage supply optimization program",
+                "usuario_responsable": "Alicia Boler Davis",
+                "estatus": "Terminado",
+                "requerimientos": "Auditoría de ciberseguridad",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "plazo": "2025-11-11",
+                "canal": "Email",
+                "presupuesto": 49821,
+                "notas": "Seguimiento semanal"
+              },
+              {
+                "id": "fe6e38b7-d378-4390-875a-10f392567c28",
                 "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Elon Musk",
-                "estatus": "Pendiente",
+                "usuario_responsable": "Alicia Boler Davis",
+                "estatus": "En proceso",
+                "requerimientos": "Integración ERP global",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "plazo": "2025-11-20",
+                "canal": "WhatsApp",
+                "presupuesto": 36827,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefers to be called Alicia.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-06T08:24:46.986203",
+                "canal": "Llamada",
+                "participantes": [
+                  "Alicia Boler Davis",
+                  "Sundar Pichai"
+                ],
+                "presupuesto": 23713,
+                "requerimientos": "Estrategia de sostenibilidad",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-16"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "cd72a4c7-6df7-428c-b54a-bf0f762d228c",
+            "titulo": "AI-driven customer care rollout",
+            "usuario_responsable": "Alicia Boler Davis",
+            "estatus": "Pendiente",
+            "requerimientos": "Auditoría de ciberseguridad",
+            "kpis": [
+              "Subscriber retention"
+            ],
+            "plazo": "2025-11-22",
+            "canal": "Llamada",
+            "presupuesto": 42371,
+            "notas": "Prioridad alta"
+          },
+          {
+            "id": "37fbe54c-ded2-43f5-bcfd-c994c4b77798",
+            "titulo": "North America retail analytics deployment",
+            "usuario_responsable": "Alicia Boler Davis",
+            "estatus": "Pendiente",
+            "requerimientos": "Integración ERP global",
+            "kpis": [
+              "Operating margin"
+            ],
+            "plazo": "2025-12-03",
+            "canal": "Email",
+            "presupuesto": 65396,
+            "notas": "Prioridad alta"
+          }
+        ]
+      },
+      {
+        "nombre": "Logística",
+        "usuarios": [
+          {
+            "id": "b47df0ef-d956-43e6-a304-555b2cd3c387",
+            "nombre": "Alicia Boler Davis",
+            "puesto": "SVP Global Customer Fulfillment",
+            "compañia": "Amazon",
+            "es_cliente": true,
+            "es_proveedor": false,
+            "equipo": [
+              {
+                "id": "6bee9a4a-122c-41e4-ad7e-ecb20e53014e",
+                "nombre": "Andy Jassy",
+                "puesto": "President and CEO"
+              }
+            ],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "444e7b21-6915-4ce0-bf43-1c3bad84b91c",
+                "titulo": "Sustainable packaging transformation",
+                "usuario_responsable": "Alicia Boler Davis",
+                "estatus": "Terminado",
+                "requerimientos": "Integración ERP global",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "plazo": "2025-11-25",
+                "canal": "Llamada",
+                "presupuesto": 26490,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefers to be called Alicia.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-07T08:24:46.986203",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Alicia Boler Davis",
+                  "Park Hark-kyu"
+                ],
+                "presupuesto": 29177,
+                "requerimientos": "Estrategia de sostenibilidad",
+                "kpis": [
+                  "Supply chain resilience"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-26"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "eda7500a-124b-4b99-9ec1-fc8fd4a61be5",
+            "titulo": "Gigafactory capacity expansion",
+            "usuario_responsable": "Alicia Boler Davis",
+            "estatus": "Terminado",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-12-08",
+            "canal": "WhatsApp",
+            "presupuesto": 22041,
+            "notas": "Prioridad alta"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-30",
+        "noticia": "Amazon announces strategic partnership with Microsoft on cloud innovation",
+        "tema_relacionado": "Finanzas"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-01",
+        "noticia": "Amazon launches sustainability roadmap aligned with 2030 goals",
+        "tema_relacionado": "Finanzas"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-09",
+        "noticia": "Amazon announces strategic partnership with Microsoft on cloud innovation",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "T-Mobile US",
+    "departamentos": [
+      {
+        "nombre": "Comercial",
+        "usuarios": [
+          {
+            "id": "fc89a1ba-5780-4778-a35f-eb4ad2d271c2",
+            "nombre": "Mike Sievert",
+            "puesto": "President and CEO",
+            "compañia": "T-Mobile US",
+            "es_cliente": false,
+            "es_proveedor": false,
+            "equipo": [
+              {
+                "id": "3f90e004-4bcc-4928-8fde-7ab35150b65c",
+                "nombre": "Callie Field",
+                "puesto": "President Business Group"
+              }
+            ],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "5b68bd03-7315-4d73-a18f-fdb273e54fd8",
+                "titulo": "Prime fulfillment automation initiative",
+                "usuario_responsable": "Mike Sievert",
+                "estatus": "En proceso",
                 "requerimientos": "Auditoría de ciberseguridad",
                 "kpis": [
                   "Customer satisfaction"
                 ],
-                "plazo": "2025-11-18",
-                "canal": "WhatsApp",
-                "presupuesto": 72553,
-                "notas": "Prioridad alta"
-              },
-              {
-                "id": "311c7018-e0b2-41f1-980c-d1550d0f375f",
-                "titulo": "Global beverage supply optimization program",
-                "usuario_responsable": "Elon Musk",
-                "estatus": "Pendiente",
-                "requerimientos": "Arquitectura de datos unificada",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-11-24",
-                "canal": "WhatsApp",
-                "presupuesto": 28206,
+                "plazo": "2025-11-15",
+                "canal": "Email",
+                "presupuesto": 70409,
                 "notas": "Prioridad alta"
               }
             ],
-            "notas_personales": "Prefers to be called Elon.",
+            "notas_personales": "Prefers to be called Mike.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-09T07:07:06.107878",
-                "canal": "Llamada",
+                "fecha": "2025-11-07T08:24:46.986203",
+                "canal": "WhatsApp",
                 "participantes": [
-                  "Elon Musk",
+                  "Mike Sievert",
                   "Amy Hood"
                 ],
-                "presupuesto": 51329,
-                "requerimientos": "Estrategia de sostenibilidad",
+                "presupuesto": 17611,
+                "requerimientos": "Informe de cumplimiento global",
                 "kpis": [
-                  "Operating margin"
+                  "Revenue growth"
                 ],
                 "datos": {
                   "otro_dato": "Valor mock"
@@ -1067,46 +704,18 @@
         ],
         "tareas": [
           {
-            "id": "f6bcdf3c-90f7-4ea1-9c2c-06ad8dfb5397",
-            "titulo": "Prime fulfillment automation initiative",
-            "usuario_responsable": "Vaibhav Taneja",
-            "estatus": "Pendiente",
-            "requerimientos": "Auditoría de ciberseguridad",
+            "id": "e82096d9-7c1b-4133-bbb2-5537a4f2a6ea",
+            "titulo": "5G enterprise connectivity bundle",
+            "usuario_responsable": "Mike Sievert",
+            "estatus": "En proceso",
+            "requerimientos": "Evaluación ESG",
             "kpis": [
-              "Network uptime"
+              "Subscriber retention"
             ],
-            "plazo": "2025-11-15",
-            "canal": "Email",
-            "presupuesto": 45173,
+            "plazo": "2025-11-19",
+            "canal": "Llamada",
+            "presupuesto": 79379,
             "notas": "Prioridad alta"
-          },
-          {
-            "id": "942e704a-2ed6-43c0-b33d-6157e44d6f10",
-            "titulo": "Prime fulfillment automation initiative",
-            "usuario_responsable": "Vaibhav Taneja",
-            "estatus": "Pendiente",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-11-18",
-            "canal": "Email",
-            "presupuesto": 74948,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "901363fe-4ce9-423e-98c9-ce0412787b78",
-            "titulo": "AI-driven customer care rollout",
-            "usuario_responsable": "Elon Musk",
-            "estatus": "Pendiente",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Customer satisfaction"
-            ],
-            "plazo": "2025-11-28",
-            "canal": "WhatsApp",
-            "presupuesto": 44413,
-            "notas": "Seguimiento semanal"
           }
         ]
       }
@@ -1114,21 +723,220 @@
     "data_fresh_collector": [
       {
         "fuente": "Google News",
-        "fecha": "2025-10-30",
-        "noticia": "Tesla expands manufacturing footprint in North America",
+        "fecha": "2025-11-07",
+        "noticia": "T-Mobile US reports record quarterly earnings above Wall Street expectations",
         "tema_relacionado": "Logística"
       },
       {
         "fuente": "Google News",
-        "fecha": "2025-11-02",
-        "noticia": "Tesla expands manufacturing footprint in North America",
+        "fecha": "2025-11-07",
+        "noticia": "T-Mobile US expands manufacturing footprint in North America",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-31",
+        "noticia": "T-Mobile US announces strategic partnership with Microsoft on cloud innovation",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "Samsung Electronics",
+    "departamentos": [
+      {
+        "nombre": "Dirección",
+        "usuarios": [
+          {
+            "id": "64a620f5-00c0-4a3d-b57b-fe0474dbe367",
+            "nombre": "Han Jong-hee",
+            "puesto": "Vice Chairman and CEO",
+            "compañia": "Samsung Electronics",
+            "es_cliente": true,
+            "es_proveedor": true,
+            "equipo": [
+              {
+                "id": "0e1d40fb-f4f5-41a7-b85b-4c292f6cf855",
+                "nombre": "Park Hark-kyu",
+                "puesto": "President and CFO"
+              }
+            ],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "b7b32081-46e6-451f-9971-3975b162aaa9",
+                "titulo": "Cloud modernization for enterprise productivity",
+                "usuario_responsable": "Han Jong-hee",
+                "estatus": "En proceso",
+                "requerimientos": "Auditoría de ciberseguridad",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "plazo": "2025-12-08",
+                "canal": "Email",
+                "presupuesto": 68386,
+                "notas": "Seguimiento semanal"
+              }
+            ],
+            "notas_personales": "Prefers to be called Han.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-05T08:24:46.986203",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Han Jong-hee",
+                  "Amy Hood"
+                ],
+                "presupuesto": 16772,
+                "requerimientos": "Informe de cumplimiento global",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-26"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "fa985fb8-3be9-450b-a5ca-a53124da8a4d",
+            "titulo": "Sustainable packaging transformation",
+            "usuario_responsable": "Han Jong-hee",
+            "estatus": "Pendiente",
+            "requerimientos": "Integración ERP global",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-11-23",
+            "canal": "Email",
+            "presupuesto": 40347,
+            "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "0aa022fb-3172-4da3-b4f6-c3121c159c3f",
+            "titulo": "5G enterprise connectivity bundle",
+            "usuario_responsable": "Han Jong-hee",
+            "estatus": "En proceso",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Subscriber retention"
+            ],
+            "plazo": "2025-11-19",
+            "canal": "Llamada",
+            "presupuesto": 73685,
+            "notas": "Seguimiento semanal"
+          }
+        ]
+      },
+      {
+        "nombre": "Suministro",
+        "usuarios": [
+          {
+            "id": "67aac9ca-7f35-4469-a0fa-6134af05e4e3",
+            "nombre": "Han Jong-hee",
+            "puesto": "Vice Chairman and CEO",
+            "compañia": "Samsung Electronics",
+            "es_cliente": true,
+            "es_proveedor": true,
+            "equipo": [
+              {
+                "id": "308b2126-75e0-44f7-a673-e1bed93f4320",
+                "nombre": "Park Hark-kyu",
+                "puesto": "President and CFO"
+              }
+            ],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "8d5bf5ea-9e0c-42d9-a155-dbc2815cdbd1",
+                "titulo": "Global beverage supply optimization program",
+                "usuario_responsable": "Han Jong-hee",
+                "estatus": "En proceso",
+                "requerimientos": "Evaluación ESG",
+                "kpis": [
+                  "Customer satisfaction"
+                ],
+                "plazo": "2025-11-17",
+                "canal": "Email",
+                "presupuesto": 69662,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefers to be called Han.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-09T08:24:46.986203",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Han Jong-hee",
+                  "Elon Musk"
+                ],
+                "presupuesto": 11050,
+                "requerimientos": "Estrategia de sostenibilidad",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-10"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "acd28666-fe38-435c-9541-f5b2cbaaf3c3",
+            "titulo": "AI-driven customer care rollout",
+            "usuario_responsable": "Han Jong-hee",
+            "estatus": "En proceso",
+            "requerimientos": "Evaluación ESG",
+            "kpis": [
+              "Operating margin"
+            ],
+            "plazo": "2025-11-20",
+            "canal": "Llamada",
+            "presupuesto": 48591,
+            "notas": "Prioridad alta"
+          },
+          {
+            "id": "fdb21aec-7477-4b14-b800-5be0b6433ca5",
+            "titulo": "North America retail analytics deployment",
+            "usuario_responsable": "Han Jong-hee",
+            "estatus": "En proceso",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Supply chain resilience"
+            ],
+            "plazo": "2025-11-14",
+            "canal": "Llamada",
+            "presupuesto": 50575,
+            "notas": "Prioridad alta"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-05",
+        "noticia": "Samsung Electronics expands manufacturing footprint in North America",
         "tema_relacionado": "Automatización"
       },
       {
         "fuente": "Google News",
-        "fecha": "2025-11-03",
-        "noticia": "Tesla secures multiyear sponsorship with global sports league",
-        "tema_relacionado": "Automatización"
+        "fecha": "2025-11-06",
+        "noticia": "Samsung Electronics expands manufacturing footprint in North America",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-10-31",
+        "noticia": "Samsung Electronics reports record quarterly earnings above Wall Street expectations",
+        "tema_relacionado": "Finanzas"
       }
     ]
   },
@@ -1136,163 +944,164 @@
     "empresa": "Alphabet",
     "departamentos": [
       {
-        "nombre": "Marketing",
+        "nombre": "Comercial",
         "usuarios": [
           {
-            "id": "87b2b5f8-f393-4e51-a8e5-07a15da750bb",
-            "nombre": "Sundar Pichai",
-            "puesto": "Chief Executive Officer",
+            "id": "8bd6bab6-615e-4105-b22f-97c4b0f17919",
+            "nombre": "Ruth Porat",
+            "puesto": "President and Chief Investment Officer",
             "compañia": "Alphabet",
             "es_cliente": false,
-            "es_proveedor": false,
+            "es_proveedor": true,
             "equipo": [
               {
-                "id": "9d1f328e-80cc-4820-983c-a6d27037d58d",
-                "nombre": "Ruth Porat",
-                "puesto": "President and Chief Investment Officer"
+                "id": "cf68af7f-3f54-44d8-aa33-6636ab2c0626",
+                "nombre": "Sundar Pichai",
+                "puesto": "Chief Executive Officer"
               }
             ],
             "a_cargo_de_equipo": true,
             "status_tareas": [
               {
-                "id": "3ed77e0c-680b-4ae5-a604-c82695c07d1b",
-                "titulo": "Global beverage supply optimization program",
-                "usuario_responsable": "Sundar Pichai",
-                "estatus": "Pendiente",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Customer satisfaction"
-                ],
-                "plazo": "2025-12-07",
-                "canal": "Llamada",
-                "presupuesto": 24672,
-                "notas": "Prioridad alta"
-              },
-              {
-                "id": "97209e3b-3936-4283-a4be-5978ff7abe43",
-                "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Sundar Pichai",
+                "id": "cee2400f-6b4d-474b-b4bb-aa94e092c5d6",
+                "titulo": "5G enterprise connectivity bundle",
+                "usuario_responsable": "Ruth Porat",
                 "estatus": "Pendiente",
                 "requerimientos": "Auditoría de ciberseguridad",
                 "kpis": [
-                  "Customer satisfaction"
+                  "Supply chain resilience"
                 ],
                 "plazo": "2025-11-18",
                 "canal": "WhatsApp",
-                "presupuesto": 50842,
+                "presupuesto": 20530,
+                "notas": "Seguimiento semanal"
+              },
+              {
+                "id": "41c2168c-c99d-4da2-8611-0b2d65b582a5",
+                "titulo": "AI-driven customer care rollout",
+                "usuario_responsable": "Ruth Porat",
+                "estatus": "Terminado",
+                "requerimientos": "Evaluación ESG",
+                "kpis": [
+                  "Subscriber retention"
+                ],
+                "plazo": "2025-11-16",
+                "canal": "Llamada",
+                "presupuesto": 64944,
                 "notas": "Prioridad alta"
               }
             ],
-            "notas_personales": "Prefers to be called Sundar.",
+            "notas_personales": "Prefers to be called Ruth.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-09T07:07:06.107878",
-                "canal": "Llamada",
+                "fecha": "2025-11-08T08:24:46.987220",
+                "canal": "Email",
                 "participantes": [
-                  "Sundar Pichai",
-                  "Katherine Adams"
+                  "Ruth Porat",
+                  "James Quincey"
                 ],
-                "presupuesto": 9495,
-                "requerimientos": "Plan maestro de cadena de suministro",
+                "presupuesto": 16539,
+                "requerimientos": "Estrategia de sostenibilidad",
                 "kpis": [
-                  "Customer satisfaction"
+                  "Revenue growth"
                 ],
                 "datos": {
                   "otro_dato": "Valor mock"
                 },
-                "plazo": "2025-11-13"
+                "plazo": "2025-11-18"
               }
             ]
           }
         ],
         "tareas": [
           {
-            "id": "0e0b68e9-faa0-409d-b2a9-d95633cbfb28",
-            "titulo": "5G enterprise connectivity bundle",
-            "usuario_responsable": "Sundar Pichai",
-            "estatus": "Pendiente",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Revenue growth"
-            ],
-            "plazo": "2025-11-26",
-            "canal": "Email",
-            "presupuesto": 39777,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "a8370d3d-c38e-4516-b024-617515832458",
-            "titulo": "Sustainable packaging transformation",
-            "usuario_responsable": "Sundar Pichai",
+            "id": "b3ce0a8a-6f9d-4d27-941e-731ff3f55e93",
+            "titulo": "Prime fulfillment automation initiative",
+            "usuario_responsable": "Ruth Porat",
             "estatus": "En proceso",
             "requerimientos": "Auditoría de ciberseguridad",
             "kpis": [
-              "Revenue growth"
+              "Network uptime"
             ],
-            "plazo": "2025-11-27",
+            "plazo": "2025-11-23",
             "canal": "WhatsApp",
-            "presupuesto": 12978,
+            "presupuesto": 39916,
             "notas": "Prioridad alta"
+          },
+          {
+            "id": "18e789a0-d205-4836-aa09-c5788edb63c2",
+            "titulo": "Prime fulfillment automation initiative",
+            "usuario_responsable": "Ruth Porat",
+            "estatus": "En proceso",
+            "requerimientos": "Auditoría de ciberseguridad",
+            "kpis": [
+              "Subscriber retention"
+            ],
+            "plazo": "2025-11-24",
+            "canal": "Llamada",
+            "presupuesto": 20372,
+            "notas": "Seguimiento semanal"
           }
         ]
-      }
-    ],
-    "data_fresh_collector": [
+      },
       {
-        "fuente": "Google News",
-        "fecha": "2025-11-08",
-        "noticia": "Alphabet launches sustainability roadmap aligned with 2030 goals",
-        "tema_relacionado": "Automatización"
-      }
-    ]
-  },
-  {
-    "empresa": "T-Mobile US",
-    "departamentos": [
-      {
-        "nombre": "Innovación",
+        "nombre": "Logística",
         "usuarios": [
           {
-            "id": "d1be1d93-11c8-4370-b36d-2ff6964cafc7",
-            "nombre": "Mike Sievert",
-            "puesto": "President and CEO",
-            "compañia": "T-Mobile US",
-            "es_cliente": true,
+            "id": "2b7e8fc1-51cb-4182-bd38-4096515b5efa",
+            "nombre": "Ruth Porat",
+            "puesto": "President and Chief Investment Officer",
+            "compañia": "Alphabet",
+            "es_cliente": false,
             "es_proveedor": true,
             "equipo": [
               {
-                "id": "08c9dd6a-03c0-479b-b84b-c2b7eee96b17",
-                "nombre": "Callie Field",
-                "puesto": "President Business Group"
+                "id": "8f55728e-ecc0-4d6b-8701-c4bd63fffcca",
+                "nombre": "Sundar Pichai",
+                "puesto": "Chief Executive Officer"
               }
             ],
             "a_cargo_de_equipo": false,
             "status_tareas": [
               {
-                "id": "a574fded-28b0-4f08-aea6-be4ade2765b6",
-                "titulo": "Personalized streaming recommendation engine",
-                "usuario_responsable": "Mike Sievert",
+                "id": "7bb32ca0-3311-444b-9b84-6cb0729260eb",
+                "titulo": "Global beverage supply optimization program",
+                "usuario_responsable": "Ruth Porat",
                 "estatus": "Pendiente",
-                "requerimientos": "Evaluación ESG",
+                "requerimientos": "Integración ERP global",
                 "kpis": [
-                  "Revenue growth"
+                  "Network uptime"
                 ],
-                "plazo": "2025-12-07",
+                "plazo": "2025-11-11",
                 "canal": "Llamada",
-                "presupuesto": 25888,
+                "presupuesto": 70774,
                 "notas": "Prioridad alta"
+              },
+              {
+                "id": "a50a18e8-3a05-406a-b1fa-3016b3109670",
+                "titulo": "Gigafactory capacity expansion",
+                "usuario_responsable": "Ruth Porat",
+                "estatus": "En proceso",
+                "requerimientos": "Arquitectura de datos unificada",
+                "kpis": [
+                  "Supply chain resilience"
+                ],
+                "plazo": "2025-12-02",
+                "canal": "Email",
+                "presupuesto": 68235,
+                "notas": "Seguimiento semanal"
               }
             ],
-            "notas_personales": "Prefers to be called Mike.",
+            "notas_personales": "Prefers to be called Ruth.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-08T07:07:06.107878",
-                "canal": "WhatsApp",
+                "fecha": "2025-11-09T08:24:46.987220",
+                "canal": "Email",
                 "participantes": [
-                  "Mike Sievert",
-                  "Tim Cook"
+                  "Ruth Porat",
+                  "Callie Field"
                 ],
-                "presupuesto": 16500,
+                "presupuesto": 26163,
                 "requerimientos": "Informe de cumplimiento global",
                 "kpis": [
                   "Network uptime"
@@ -1303,63 +1112,163 @@
                 "plazo": "2025-11-21"
               }
             ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "625a5c3d-8c6b-4433-9721-b3e919e0edd2",
+            "titulo": "Personalized streaming recommendation engine",
+            "usuario_responsable": "Ruth Porat",
+            "estatus": "Pendiente",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Supply chain resilience"
+            ],
+            "plazo": "2025-11-12",
+            "canal": "WhatsApp",
+            "presupuesto": 43557,
+            "notas": "Prioridad alta"
           },
           {
-            "id": "b06e7314-9011-4753-84da-40a7c81003e6",
-            "nombre": "Callie Field",
-            "puesto": "President Business Group",
-            "compañia": "T-Mobile US",
-            "es_cliente": true,
+            "id": "56bab09b-ea00-4fbb-9846-e945fddb7e7b",
+            "titulo": "Prime fulfillment automation initiative",
+            "usuario_responsable": "Ruth Porat",
+            "estatus": "Pendiente",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Operating margin"
+            ],
+            "plazo": "2025-11-26",
+            "canal": "Email",
+            "presupuesto": 46261,
+            "notas": "Prioridad alta"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-05",
+        "noticia": "Alphabet secures multiyear sponsorship with global sports league",
+        "tema_relacionado": "Finanzas"
+      }
+    ]
+  },
+  {
+    "empresa": "Microsoft",
+    "departamentos": [
+      {
+        "nombre": "Operaciones",
+        "usuarios": [
+          {
+            "id": "0d4a2801-5499-4071-b57f-158e783f5683",
+            "nombre": "Satya Nadella",
+            "puesto": "Chairman and CEO",
+            "compañia": "Microsoft",
+            "es_cliente": false,
             "es_proveedor": false,
             "equipo": [
               {
-                "id": "572a8c15-c70c-4208-94c1-c7c68675ee8f",
-                "nombre": "Mike Sievert",
-                "puesto": "President and CEO"
+                "id": "eeb731c4-c6a4-424d-b25d-bc9f062846c2",
+                "nombre": "Amy Hood",
+                "puesto": "Executive Vice President and CFO"
               }
             ],
             "a_cargo_de_equipo": true,
             "status_tareas": [
               {
-                "id": "c46db7b0-1e4a-458e-8245-f4f1ff476c8e",
+                "id": "9b2b49cb-6604-4bf4-bf38-961a2acb2a8c",
                 "titulo": "Global beverage supply optimization program",
-                "usuario_responsable": "Callie Field",
+                "usuario_responsable": "Satya Nadella",
+                "estatus": "Pendiente",
+                "requerimientos": "Evaluación ESG",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "plazo": "2025-12-09",
+                "canal": "WhatsApp",
+                "presupuesto": 46509,
+                "notas": "Prioridad alta"
+              },
+              {
+                "id": "9c195476-7945-42e4-84e9-f0a4387af480",
+                "titulo": "Sustainable packaging transformation",
+                "usuario_responsable": "Satya Nadella",
                 "estatus": "En proceso",
-                "requerimientos": "Integración ERP global",
+                "requerimientos": "Arquitectura de datos unificada",
                 "kpis": [
                   "Supply chain resilience"
                 ],
-                "plazo": "2025-11-25",
+                "plazo": "2025-11-27",
                 "canal": "Llamada",
-                "presupuesto": 22422,
-                "notas": "Seguimiento semanal"
-              },
-              {
-                "id": "89d5972d-6819-42da-92de-32a397cc2ff4",
-                "titulo": "Sustainable packaging transformation",
-                "usuario_responsable": "Callie Field",
-                "estatus": "Pendiente",
-                "requerimientos": "Auditoría de ciberseguridad",
-                "kpis": [
-                  "Operating margin"
-                ],
-                "plazo": "2025-12-03",
-                "canal": "WhatsApp",
-                "presupuesto": 29888,
+                "presupuesto": 13669,
                 "notas": "Prioridad alta"
               }
             ],
-            "notas_personales": "Prefers to be called Callie.",
+            "notas_personales": "Prefers to be called Satya.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-06T07:07:06.107878",
-                "canal": "WhatsApp",
+                "fecha": "2025-11-03T08:24:46.987220",
+                "canal": "Llamada",
                 "participantes": [
-                  "Callie Field",
-                  "Sundar Pichai"
+                  "Satya Nadella",
+                  "Ramon Laguarta"
                 ],
-                "presupuesto": 18341,
-                "requerimientos": "Informe de cumplimiento global",
+                "presupuesto": 39621,
+                "requerimientos": "Plan maestro de cadena de suministro",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-25"
+              }
+            ]
+          },
+          {
+            "id": "3421a10c-8670-48c3-9004-0ff82bc6dc84",
+            "nombre": "Amy Hood",
+            "puesto": "Executive Vice President and CFO",
+            "compañia": "Microsoft",
+            "es_cliente": true,
+            "es_proveedor": false,
+            "equipo": [
+              {
+                "id": "25543c72-5049-4611-ab9f-33724910f9ca",
+                "nombre": "Satya Nadella",
+                "puesto": "Chairman and CEO"
+              }
+            ],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "fd2135b6-1ba9-452b-b706-3198c82b6b66",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "Amy Hood",
+                "estatus": "En proceso",
+                "requerimientos": "Evaluación ESG",
+                "kpis": [
+                  "Subscriber retention"
+                ],
+                "plazo": "2025-11-11",
+                "canal": "Email",
+                "presupuesto": 43094,
+                "notas": "Seguimiento semanal"
+              }
+            ],
+            "notas_personales": "Prefers to be called Amy.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-02T08:24:46.987220",
+                "canal": "Llamada",
+                "participantes": [
+                  "Amy Hood",
+                  "Greg Peters"
+                ],
+                "presupuesto": 44017,
+                "requerimientos": "Plan maestro de cadena de suministro",
                 "kpis": [
                   "Revenue growth"
                 ],
@@ -1373,458 +1282,40 @@
         ],
         "tareas": [
           {
-            "id": "24618ff0-faee-4507-85aa-850f32c00f93",
-            "titulo": "5G enterprise connectivity bundle",
-            "usuario_responsable": "Mike Sievert",
-            "estatus": "Terminado",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Subscriber retention"
-            ],
-            "plazo": "2025-11-11",
-            "canal": "WhatsApp",
-            "presupuesto": 64732,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "ad7ab64a-9f25-466d-81d4-7afdd3c68a76",
+            "id": "94b10864-af49-490e-9c30-7b5ae1c1e894",
             "titulo": "Global beverage supply optimization program",
-            "usuario_responsable": "Mike Sievert",
-            "estatus": "En proceso",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Supply chain resilience"
-            ],
-            "plazo": "2025-11-12",
-            "canal": "Llamada",
-            "presupuesto": 42307,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "c71f8028-e1a2-4df9-8c03-40b686b137ed",
-            "titulo": "North America retail analytics deployment",
-            "usuario_responsable": "Callie Field",
-            "estatus": "Pendiente",
-            "requerimientos": "Evaluación ESG",
-            "kpis": [
-              "Supply chain resilience"
-            ],
-            "plazo": "2025-11-23",
-            "canal": "Email",
-            "presupuesto": 43470,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "cbeab6d1-3e0a-4c53-9ebc-ea94f67282e8",
-            "titulo": "Gigafactory capacity expansion",
-            "usuario_responsable": "Callie Field",
-            "estatus": "Pendiente",
-            "requerimientos": "Evaluación ESG",
-            "kpis": [
-              "Customer satisfaction"
-            ],
-            "plazo": "2025-11-15",
-            "canal": "WhatsApp",
-            "presupuesto": 77404,
-            "notas": "Prioridad alta"
-          }
-        ]
-      },
-      {
-        "nombre": "Comercial",
-        "usuarios": [
-          {
-            "id": "4d111f36-f413-49d7-b11c-2a1c79644af3",
-            "nombre": "Callie Field",
-            "puesto": "President Business Group",
-            "compañia": "T-Mobile US",
-            "es_cliente": false,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "1b240424-fc01-4a71-b878-67b746c9e225",
-                "nombre": "Mike Sievert",
-                "puesto": "President and CEO"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "220f4411-126f-4cce-861f-068c093df9aa",
-                "titulo": "AI-driven customer care rollout",
-                "usuario_responsable": "Callie Field",
-                "estatus": "En proceso",
-                "requerimientos": "Auditoría de ciberseguridad",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-11-20",
-                "canal": "Llamada",
-                "presupuesto": 12261,
-                "notas": "Seguimiento semanal"
-              },
-              {
-                "id": "bdb79091-77bb-411a-b01c-fdf45d0688b5",
-                "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Callie Field",
-                "estatus": "Terminado",
-                "requerimientos": "Integración ERP global",
-                "kpis": [
-                  "Operating margin"
-                ],
-                "plazo": "2025-11-11",
-                "canal": "Llamada",
-                "presupuesto": 24411,
-                "notas": "Seguimiento semanal"
-              }
-            ],
-            "notas_personales": "Prefers to be called Callie.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-04T07:07:06.107878",
-                "canal": "Email",
-                "participantes": [
-                  "Callie Field",
-                  "Callie Field"
-                ],
-                "presupuesto": 23831,
-                "requerimientos": "Informe de cumplimiento global",
-                "kpis": [
-                  "Network uptime"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-20"
-              }
-            ]
-          },
-          {
-            "id": "e3d29aaa-1a7e-4772-8a25-3f2923f18684",
-            "nombre": "Mike Sievert",
-            "puesto": "President and CEO",
-            "compañia": "T-Mobile US",
-            "es_cliente": false,
-            "es_proveedor": false,
-            "equipo": [
-              {
-                "id": "2b139548-f0db-4fd5-acef-8bbf4405b8c9",
-                "nombre": "Callie Field",
-                "puesto": "President Business Group"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "04fa1dbe-79fa-40a2-8f52-dec70fd07c65",
-                "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Mike Sievert",
-                "estatus": "En proceso",
-                "requerimientos": "Arquitectura de datos unificada",
-                "kpis": [
-                  "Network uptime"
-                ],
-                "plazo": "2025-11-17",
-                "canal": "Llamada",
-                "presupuesto": 55345,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Mike.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-09T07:07:06.107878",
-                "canal": "WhatsApp",
-                "participantes": [
-                  "Mike Sievert",
-                  "Han Jong-hee"
-                ],
-                "presupuesto": 10032,
-                "requerimientos": "Plan maestro de cadena de suministro",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-18"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "af48c662-1ec1-4545-bb2e-7bfa980c1a23",
-            "titulo": "Global beverage supply optimization program",
-            "usuario_responsable": "Callie Field",
-            "estatus": "Pendiente",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Revenue growth"
-            ],
-            "plazo": "2025-12-09",
-            "canal": "WhatsApp",
-            "presupuesto": 69488,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "3c98ae1f-4e60-46fc-8291-39d7bbecb927",
-            "titulo": "5G enterprise connectivity bundle",
-            "usuario_responsable": "Mike Sievert",
+            "usuario_responsable": "Satya Nadella",
             "estatus": "Terminado",
             "requerimientos": "Evaluación ESG",
             "kpis": [
               "Operating margin"
             ],
-            "plazo": "2025-11-19",
+            "plazo": "2025-11-27",
             "canal": "WhatsApp",
-            "presupuesto": 57386,
-            "notas": "Prioridad alta"
+            "presupuesto": 39772,
+            "notas": "Seguimiento semanal"
+          },
+          {
+            "id": "e332d216-10dd-4d20-912e-ba7d3689a6bc",
+            "titulo": "AI-driven customer care rollout",
+            "usuario_responsable": "Amy Hood",
+            "estatus": "Terminado",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Supply chain resilience"
+            ],
+            "plazo": "2025-11-27",
+            "canal": "Email",
+            "presupuesto": 77315,
+            "notas": "Seguimiento semanal"
           }
         ]
-      }
-    ],
-    "data_fresh_collector": [
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-01",
-        "noticia": "T-Mobile US expands manufacturing footprint in North America",
-        "tema_relacionado": "Finanzas"
       },
-      {
-        "fuente": "Google News",
-        "fecha": "2025-10-31",
-        "noticia": "T-Mobile US expands manufacturing footprint in North America",
-        "tema_relacionado": "Logística"
-      },
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-09",
-        "noticia": "T-Mobile US reports record quarterly earnings above Wall Street expectations",
-        "tema_relacionado": "Finanzas"
-      }
-    ]
-  },
-  {
-    "empresa": "Netflix",
-    "departamentos": [
       {
         "nombre": "Innovación",
         "usuarios": [
           {
-            "id": "cafe351b-54c3-4093-ba30-5834bc172878",
-            "nombre": "Reed Hastings",
-            "puesto": "Executive Chairman",
-            "compañia": "Netflix",
-            "es_cliente": true,
-            "es_proveedor": false,
-            "equipo": [
-              {
-                "id": "3ae009af-7116-4ae1-87b4-777d7430068e",
-                "nombre": "Greg Peters",
-                "puesto": "Co-CEO"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "3d1b8bbf-5b1d-4f8c-9ab0-6d237ca3f490",
-                "titulo": "Gigafactory capacity expansion",
-                "usuario_responsable": "Reed Hastings",
-                "estatus": "Terminado",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Network uptime"
-                ],
-                "plazo": "2025-12-09",
-                "canal": "Email",
-                "presupuesto": 30918,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Reed.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-06T07:07:06.108877",
-                "canal": "Llamada",
-                "participantes": [
-                  "Reed Hastings",
-                  "Nancy Quan"
-                ],
-                "presupuesto": 43229,
-                "requerimientos": "Plan maestro de cadena de suministro",
-                "kpis": [
-                  "Customer satisfaction"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-27"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "79774b58-6912-40e5-91fd-224b3167990d",
-            "titulo": "Personalized streaming recommendation engine",
-            "usuario_responsable": "Reed Hastings",
-            "estatus": "En proceso",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Customer satisfaction"
-            ],
-            "plazo": "2025-12-09",
-            "canal": "Llamada",
-            "presupuesto": 15620,
-            "notas": "Prioridad alta"
-          },
-          {
-            "id": "4d98e85d-a3d5-44c8-9230-7578fb8279ea",
-            "titulo": "5G enterprise connectivity bundle",
-            "usuario_responsable": "Reed Hastings",
-            "estatus": "En proceso",
-            "requerimientos": "Evaluación ESG",
-            "kpis": [
-              "Network uptime"
-            ],
-            "plazo": "2025-11-28",
-            "canal": "Llamada",
-            "presupuesto": 76498,
-            "notas": "Prioridad alta"
-          }
-        ]
-      }
-    ],
-    "data_fresh_collector": [
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-06",
-        "noticia": "Netflix expands manufacturing footprint in North America",
-        "tema_relacionado": "Finanzas"
-      },
-      {
-        "fuente": "Google News",
-        "fecha": "2025-10-31",
-        "noticia": "Netflix launches sustainability roadmap aligned with 2030 goals",
-        "tema_relacionado": "Logística"
-      },
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-01",
-        "noticia": "Netflix secures multiyear sponsorship with global sports league",
-        "tema_relacionado": "Finanzas"
-      }
-    ]
-  },
-  {
-    "empresa": "PepsiCo",
-    "departamentos": [
-      {
-        "nombre": "Finanzas",
-        "usuarios": [
-          {
-            "id": "273cc221-3672-404a-865a-b3818499470e",
-            "nombre": "Ramon Laguarta",
-            "puesto": "Chairman and CEO",
-            "compañia": "PepsiCo",
-            "es_cliente": false,
-            "es_proveedor": false,
-            "equipo": [
-              {
-                "id": "269e3df5-e963-48e3-a083-a42b2e00f8d4",
-                "nombre": "Jane Wakely",
-                "puesto": "Chief Consumer and Marketing Officer"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "693a1421-4736-4424-976e-30ed07442e67",
-                "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Ramon Laguarta",
-                "estatus": "Terminado",
-                "requerimientos": "Auditoría de ciberseguridad",
-                "kpis": [
-                  "Supply chain resilience"
-                ],
-                "plazo": "2025-11-14",
-                "canal": "Email",
-                "presupuesto": 48290,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Ramon.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-04T07:07:06.108877",
-                "canal": "WhatsApp",
-                "participantes": [
-                  "Ramon Laguarta",
-                  "Han Jong-hee"
-                ],
-                "presupuesto": 54843,
-                "requerimientos": "Estrategia de sostenibilidad",
-                "kpis": [
-                  "Customer satisfaction"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-22"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "c91bc2dc-8e2a-48fe-ba06-2392fb2c87d0",
-            "titulo": "Prime fulfillment automation initiative",
-            "usuario_responsable": "Ramon Laguarta",
-            "estatus": "Pendiente",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-12-03",
-            "canal": "WhatsApp",
-            "presupuesto": 58058,
-            "notas": "Prioridad alta"
-          },
-          {
-            "id": "316c0cc0-75cb-406f-be1f-e95fd80fb074",
-            "titulo": "Sustainable packaging transformation",
-            "usuario_responsable": "Ramon Laguarta",
-            "estatus": "En proceso",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Subscriber retention"
-            ],
-            "plazo": "2025-12-05",
-            "canal": "WhatsApp",
-            "presupuesto": 47118,
-            "notas": "Seguimiento semanal"
-          }
-        ]
-      }
-    ],
-    "data_fresh_collector": [
-      {
-        "fuente": "Google News",
-        "fecha": "2025-11-05",
-        "noticia": "PepsiCo introduces new AI-driven customer experience program",
-        "tema_relacionado": "Finanzas"
-      }
-    ]
-  },
-  {
-    "empresa": "Microsoft",
-    "departamentos": [
-      {
-        "nombre": "Comercial",
-        "usuarios": [
-          {
-            "id": "46088e21-6d64-47cd-b6a4-dc5bb0946902",
+            "id": "c786cd5a-3093-4a20-936a-97959d34b834",
             "nombre": "Amy Hood",
             "puesto": "Executive Vice President and CFO",
             "compañia": "Microsoft",
@@ -1832,7 +1323,7 @@
             "es_proveedor": true,
             "equipo": [
               {
-                "id": "908150b8-765d-416b-ad95-dae1ebc37596",
+                "id": "4d5525a9-83b4-46f5-aa7c-e187a44060ce",
                 "nombre": "Satya Nadella",
                 "puesto": "Chairman and CEO"
               }
@@ -1840,222 +1331,69 @@
             "a_cargo_de_equipo": true,
             "status_tareas": [
               {
-                "id": "786ff476-1637-4ec1-ac1f-23bce88f7029",
-                "titulo": "Personalized streaming recommendation engine",
+                "id": "9c559510-34ea-466d-a352-50f4a7ccab50",
+                "titulo": "Global beverage supply optimization program",
                 "usuario_responsable": "Amy Hood",
-                "estatus": "En proceso",
-                "requerimientos": "Auditoría de ciberseguridad",
-                "kpis": [
-                  "Operating margin"
-                ],
-                "plazo": "2025-11-19",
-                "canal": "WhatsApp",
-                "presupuesto": 38537,
-                "notas": "Prioridad alta"
-              }
-            ],
-            "notas_personales": "Prefers to be called Amy.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-02T07:07:06.108877",
-                "canal": "WhatsApp",
-                "participantes": [
-                  "Amy Hood",
-                  "Alicia Boler Davis"
-                ],
-                "presupuesto": 28865,
-                "requerimientos": "Plan maestro de cadena de suministro",
-                "kpis": [
-                  "Network uptime"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-13"
-              }
-            ]
-          }
-        ],
-        "tareas": [
-          {
-            "id": "cec3c8dd-e5c2-40b9-b800-cc1104d9b3dd",
-            "titulo": "Cloud modernization for enterprise productivity",
-            "usuario_responsable": "Amy Hood",
-            "estatus": "En proceso",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Operating margin"
-            ],
-            "plazo": "2025-11-18",
-            "canal": "WhatsApp",
-            "presupuesto": 64006,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "14c4b1ed-39b0-425c-92b1-e5ac2f5c8555",
-            "titulo": "Personalized streaming recommendation engine",
-            "usuario_responsable": "Amy Hood",
-            "estatus": "Terminado",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Subscriber retention"
-            ],
-            "plazo": "2025-11-29",
-            "canal": "Email",
-            "presupuesto": 15072,
-            "notas": "Seguimiento semanal"
-          }
-        ]
-      },
-      {
-        "nombre": "Marketing",
-        "usuarios": [
-          {
-            "id": "05c5c9a2-5878-4ad4-a6eb-f28d70400c8d",
-            "nombre": "Amy Hood",
-            "puesto": "Executive Vice President and CFO",
-            "compañia": "Microsoft",
-            "es_cliente": true,
-            "es_proveedor": false,
-            "equipo": [
-              {
-                "id": "bed22763-12d4-450e-876b-a9b96b698793",
-                "nombre": "Satya Nadella",
-                "puesto": "Chairman and CEO"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "fd85e7d4-d022-4fe0-926a-8734871c7d56",
-                "titulo": "Prime fulfillment automation initiative",
-                "usuario_responsable": "Amy Hood",
-                "estatus": "En proceso",
-                "requerimientos": "Auditoría de ciberseguridad",
+                "estatus": "Pendiente",
+                "requerimientos": "Integración ERP global",
                 "kpis": [
                   "Customer satisfaction"
                 ],
                 "plazo": "2025-11-16",
                 "canal": "Email",
-                "presupuesto": 62252,
+                "presupuesto": 54605,
                 "notas": "Seguimiento semanal"
+              },
+              {
+                "id": "7e6d4d40-b159-4f4c-b4f9-94483d7e0f09",
+                "titulo": "AI-driven customer care rollout",
+                "usuario_responsable": "Amy Hood",
+                "estatus": "Pendiente",
+                "requerimientos": "Integración ERP global",
+                "kpis": [
+                  "Customer satisfaction"
+                ],
+                "plazo": "2025-12-03",
+                "canal": "Email",
+                "presupuesto": 63918,
+                "notas": "Prioridad alta"
               }
             ],
             "notas_personales": "Prefers to be called Amy.",
             "ultimas_interacciones": [
               {
-                "fecha": "2025-11-02T07:07:06.108877",
-                "canal": "Email",
+                "fecha": "2025-11-09T08:24:46.987220",
+                "canal": "Llamada",
                 "participantes": [
                   "Amy Hood",
-                  "Amy Hood"
-                ],
-                "presupuesto": 47798,
-                "requerimientos": "Estrategia de sostenibilidad",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "datos": {
-                  "otro_dato": "Valor mock"
-                },
-                "plazo": "2025-11-20"
-              }
-            ]
-          },
-          {
-            "id": "3cc70556-f55b-4607-931b-44c4f34f0641",
-            "nombre": "Satya Nadella",
-            "puesto": "Chairman and CEO",
-            "compañia": "Microsoft",
-            "es_cliente": true,
-            "es_proveedor": true,
-            "equipo": [
-              {
-                "id": "7747a9bd-ebd9-4c6b-be80-58d7c7a31e90",
-                "nombre": "Amy Hood",
-                "puesto": "Executive Vice President and CFO"
-              }
-            ],
-            "a_cargo_de_equipo": true,
-            "status_tareas": [
-              {
-                "id": "2f97b9f4-a1a6-48c1-b70a-36647c5e24f9",
-                "titulo": "5G enterprise connectivity bundle",
-                "usuario_responsable": "Satya Nadella",
-                "estatus": "Terminado",
-                "requerimientos": "Evaluación ESG",
-                "kpis": [
-                  "Subscriber retention"
-                ],
-                "plazo": "2025-11-19",
-                "canal": "Llamada",
-                "presupuesto": 25650,
-                "notas": "Seguimiento semanal"
-              }
-            ],
-            "notas_personales": "Prefers to be called Satya.",
-            "ultimas_interacciones": [
-              {
-                "fecha": "2025-11-04T07:07:06.108877",
-                "canal": "Email",
-                "participantes": [
-                  "Satya Nadella",
                   "Satya Nadella"
                 ],
-                "presupuesto": 16641,
-                "requerimientos": "Informe de cumplimiento global",
+                "presupuesto": 52091,
+                "requerimientos": "Estrategia de sostenibilidad",
                 "kpis": [
-                  "Subscriber retention"
+                  "Network uptime"
                 ],
                 "datos": {
                   "otro_dato": "Valor mock"
                 },
-                "plazo": "2025-11-13"
+                "plazo": "2025-11-29"
               }
             ]
           }
         ],
         "tareas": [
           {
-            "id": "40e04845-1866-4085-a672-1621a2d688f6",
-            "titulo": "5G enterprise connectivity bundle",
+            "id": "928549d6-49ca-4947-9c8d-f0431a49c632",
+            "titulo": "Global beverage supply optimization program",
             "usuario_responsable": "Amy Hood",
-            "estatus": "En proceso",
-            "requerimientos": "Auditoría de ciberseguridad",
-            "kpis": [
-              "Network uptime"
-            ],
-            "plazo": "2025-11-19",
-            "canal": "Llamada",
-            "presupuesto": 73029,
-            "notas": "Prioridad alta"
-          },
-          {
-            "id": "3e392c8d-a1c3-4aec-a559-771f89dda912",
-            "titulo": "Personalized streaming recommendation engine",
-            "usuario_responsable": "Satya Nadella",
             "estatus": "Terminado",
             "requerimientos": "Integración ERP global",
             "kpis": [
-              "Supply chain resilience"
+              "Revenue growth"
             ],
-            "plazo": "2025-11-18",
-            "canal": "WhatsApp",
-            "presupuesto": 57420,
-            "notas": "Seguimiento semanal"
-          },
-          {
-            "id": "3524f668-8d9c-4b86-baf6-523d4cbbb67b",
-            "titulo": "Personalized streaming recommendation engine",
-            "usuario_responsable": "Satya Nadella",
-            "estatus": "Pendiente",
-            "requerimientos": "Arquitectura de datos unificada",
-            "kpis": [
-              "Supply chain resilience"
-            ],
-            "plazo": "2025-12-04",
-            "canal": "WhatsApp",
-            "presupuesto": 42339,
+            "plazo": "2025-11-11",
+            "canal": "Email",
+            "presupuesto": 36780,
             "notas": "Seguimiento semanal"
           }
         ]
@@ -2064,9 +1402,379 @@
     "data_fresh_collector": [
       {
         "fuente": "Google News",
-        "fecha": "2025-11-04",
+        "fecha": "2025-11-08",
         "noticia": "Microsoft reports record quarterly earnings above Wall Street expectations",
         "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "Apple",
+    "departamentos": [
+      {
+        "nombre": "Innovación",
+        "usuarios": [
+          {
+            "id": "22c0f43a-6d10-4703-a702-99096c52c08d",
+            "nombre": "Katherine Adams",
+            "puesto": "Senior Vice President and General Counsel",
+            "compañia": "Apple",
+            "es_cliente": true,
+            "es_proveedor": false,
+            "equipo": [
+              {
+                "id": "e1fe610f-628f-49d0-a79b-9441df6a4daf",
+                "nombre": "Tim Cook",
+                "puesto": "Chief Executive Officer"
+              }
+            ],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "7f28add1-be7e-4ffb-90bc-25f62556dc16",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "Katherine Adams",
+                "estatus": "Terminado",
+                "requerimientos": "Auditoría de ciberseguridad",
+                "kpis": [
+                  "Network uptime"
+                ],
+                "plazo": "2025-11-28",
+                "canal": "Llamada",
+                "presupuesto": 73762,
+                "notas": "Seguimiento semanal"
+              }
+            ],
+            "notas_personales": "Prefers to be called Katherine.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-04T08:24:46.987220",
+                "canal": "Email",
+                "participantes": [
+                  "Katherine Adams",
+                  "Tim Cook"
+                ],
+                "presupuesto": 37881,
+                "requerimientos": "Estrategia de sostenibilidad",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-28"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "93d83e2f-652a-49fb-8cb5-c04cce096d59",
+            "titulo": "Personalized streaming recommendation engine",
+            "usuario_responsable": "Katherine Adams",
+            "estatus": "Terminado",
+            "requerimientos": "Integración ERP global",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-11-24",
+            "canal": "Llamada",
+            "presupuesto": 56268,
+            "notas": "Prioridad alta"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-07",
+        "noticia": "Apple introduces new AI-driven customer experience program",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-09",
+        "noticia": "Apple expands manufacturing footprint in North America",
+        "tema_relacionado": "Automatización"
+      }
+    ]
+  },
+  {
+    "empresa": "The Coca-Cola Company",
+    "departamentos": [
+      {
+        "nombre": "Comercial",
+        "usuarios": [
+          {
+            "id": "bbd493bc-3926-468b-85f9-42f815c70383",
+            "nombre": "James Quincey",
+            "puesto": "Chief Executive Officer",
+            "compañia": "The Coca-Cola Company",
+            "es_cliente": true,
+            "es_proveedor": false,
+            "equipo": [
+              {
+                "id": "c105ad63-20cc-451b-a9cf-631963eefd94",
+                "nombre": "Nancy Quan",
+                "puesto": "Chief Technical Officer"
+              }
+            ],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "49c1a9d7-0da4-4f6b-9cf0-61ba651906ed",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "James Quincey",
+                "estatus": "Terminado",
+                "requerimientos": "Arquitectura de datos unificada",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "plazo": "2025-12-09",
+                "canal": "Llamada",
+                "presupuesto": 15557,
+                "notas": "Seguimiento semanal"
+              }
+            ],
+            "notas_personales": "Prefers to be called James.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-02T08:24:46.987220",
+                "canal": "Llamada",
+                "participantes": [
+                  "James Quincey",
+                  "Han Jong-hee"
+                ],
+                "presupuesto": 32604,
+                "requerimientos": "Arquitectura de IA generativa",
+                "kpis": [
+                  "Subscriber retention"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-10"
+              }
+            ]
+          },
+          {
+            "id": "916951e1-cad6-48ed-8733-47be76fadc2e",
+            "nombre": "Nancy Quan",
+            "puesto": "Chief Technical Officer",
+            "compañia": "The Coca-Cola Company",
+            "es_cliente": true,
+            "es_proveedor": true,
+            "equipo": [
+              {
+                "id": "9bd7c0d6-f370-44b1-8f4f-00026a8583f4",
+                "nombre": "James Quincey",
+                "puesto": "Chief Executive Officer"
+              }
+            ],
+            "a_cargo_de_equipo": true,
+            "status_tareas": [
+              {
+                "id": "98db1c00-18a3-43d0-9874-a88a01631aa4",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "Nancy Quan",
+                "estatus": "Pendiente",
+                "requerimientos": "Arquitectura de datos unificada",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "plazo": "2025-11-18",
+                "canal": "Llamada",
+                "presupuesto": 78858,
+                "notas": "Seguimiento semanal"
+              },
+              {
+                "id": "3ae0c630-6e75-451d-8c44-5d59a5f56c7e",
+                "titulo": "Global beverage supply optimization program",
+                "usuario_responsable": "Nancy Quan",
+                "estatus": "Pendiente",
+                "requerimientos": "Auditoría de ciberseguridad",
+                "kpis": [
+                  "Customer satisfaction"
+                ],
+                "plazo": "2025-11-23",
+                "canal": "Email",
+                "presupuesto": 36575,
+                "notas": "Seguimiento semanal"
+              }
+            ],
+            "notas_personales": "Prefers to be called Nancy.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-07T08:24:46.987220",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Nancy Quan",
+                  "Greg Peters"
+                ],
+                "presupuesto": 35173,
+                "requerimientos": "Plan maestro de cadena de suministro",
+                "kpis": [
+                  "Operating margin"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-23"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "ba2d4bd3-2aeb-4af7-8538-8e06c073d141",
+            "titulo": "Personalized streaming recommendation engine",
+            "usuario_responsable": "James Quincey",
+            "estatus": "En proceso",
+            "requerimientos": "Arquitectura de datos unificada",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-12-09",
+            "canal": "WhatsApp",
+            "presupuesto": 64778,
+            "notas": "Prioridad alta"
+          },
+          {
+            "id": "ceb52a36-d12e-4071-b487-efb659954edb",
+            "titulo": "Global beverage supply optimization program",
+            "usuario_responsable": "James Quincey",
+            "estatus": "Pendiente",
+            "requerimientos": "Integración ERP global",
+            "kpis": [
+              "Revenue growth"
+            ],
+            "plazo": "2025-12-03",
+            "canal": "Email",
+            "presupuesto": 62775,
+            "notas": "Prioridad alta"
+          },
+          {
+            "id": "1e9b8556-7494-483c-bead-333e9e2f9f33",
+            "titulo": "AI-driven customer care rollout",
+            "usuario_responsable": "Nancy Quan",
+            "estatus": "En proceso",
+            "requerimientos": "Evaluación ESG",
+            "kpis": [
+              "Customer satisfaction"
+            ],
+            "plazo": "2025-11-30",
+            "canal": "Email",
+            "presupuesto": 58483,
+            "notas": "Seguimiento semanal"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-07",
+        "noticia": "The Coca-Cola Company launches sustainability roadmap aligned with 2030 goals",
+        "tema_relacionado": "Logística"
+      }
+    ]
+  },
+  {
+    "empresa": "Tesla",
+    "departamentos": [
+      {
+        "nombre": "Operaciones",
+        "usuarios": [
+          {
+            "id": "8752cbc4-276b-4c03-93ec-118175397f0a",
+            "nombre": "Vaibhav Taneja",
+            "puesto": "Chief Financial Officer",
+            "compañia": "Tesla",
+            "es_cliente": false,
+            "es_proveedor": true,
+            "equipo": [
+              {
+                "id": "7446dee1-f3ae-4c00-b7c9-5629bc029e78",
+                "nombre": "Elon Musk",
+                "puesto": "Technoking"
+              }
+            ],
+            "a_cargo_de_equipo": false,
+            "status_tareas": [
+              {
+                "id": "54fa2652-62b8-4b2d-9696-a8adabc347d7",
+                "titulo": "North America retail analytics deployment",
+                "usuario_responsable": "Vaibhav Taneja",
+                "estatus": "En proceso",
+                "requerimientos": "Integración ERP global",
+                "kpis": [
+                  "Subscriber retention"
+                ],
+                "plazo": "2025-12-01",
+                "canal": "Email",
+                "presupuesto": 65880,
+                "notas": "Prioridad alta"
+              }
+            ],
+            "notas_personales": "Prefers to be called Vaibhav.",
+            "ultimas_interacciones": [
+              {
+                "fecha": "2025-11-05T08:24:46.987220",
+                "canal": "WhatsApp",
+                "participantes": [
+                  "Vaibhav Taneja",
+                  "Callie Field"
+                ],
+                "presupuesto": 13639,
+                "requerimientos": "Informe de cumplimiento global",
+                "kpis": [
+                  "Revenue growth"
+                ],
+                "datos": {
+                  "otro_dato": "Valor mock"
+                },
+                "plazo": "2025-11-21"
+              }
+            ]
+          }
+        ],
+        "tareas": [
+          {
+            "id": "e69f4b93-301b-4cc3-a5ac-dbd0f9acc5cc",
+            "titulo": "Sustainable packaging transformation",
+            "usuario_responsable": "Vaibhav Taneja",
+            "estatus": "Terminado",
+            "requerimientos": "Auditoría de ciberseguridad",
+            "kpis": [
+              "Operating margin"
+            ],
+            "plazo": "2025-11-27",
+            "canal": "Llamada",
+            "presupuesto": 48698,
+            "notas": "Prioridad alta"
+          }
+        ]
+      }
+    ],
+    "data_fresh_collector": [
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-01",
+        "noticia": "Tesla reports record quarterly earnings above Wall Street expectations",
+        "tema_relacionado": "Logística"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-06",
+        "noticia": "Tesla reports record quarterly earnings above Wall Street expectations",
+        "tema_relacionado": "Finanzas"
+      },
+      {
+        "fuente": "Google News",
+        "fecha": "2025-11-01",
+        "noticia": "Tesla introduces new AI-driven customer experience program",
+        "tema_relacionado": "Finanzas"
       }
     ]
   }

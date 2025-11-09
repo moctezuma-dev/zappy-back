@@ -113,7 +113,24 @@ export async function searchKnowledge({ query, companyId = null, limit = 5 }) {
     return data || [];
   }
 
-  const embedding = await embedText({ text: query, taskType: 'RETRIEVAL_QUERY' });
+  let embedding;
+  try {
+    embedding = await embedText({ text: query, taskType: 'RETRIEVAL_QUERY' });
+  } catch (error) {
+    // Si hay un error con la API key, hacer fallback a búsqueda por texto
+    if (error.message?.includes('API key de Google Gemini no es válida')) {
+      console.warn('[knowledge] API key inválida, usando búsqueda por texto como fallback');
+      const { data, error: searchError } = await supabase
+        .from('knowledge_entries')
+        .select('id, title, company_id, content, metadata, created_at')
+        .ilike('content', `%${query}%`)
+        .order('created_at', { ascending: false })
+        .limit(limit);
+      if (searchError) throw searchError;
+      return data || [];
+    }
+    throw error;
+  }
   const { data, error } = await supabase.rpc('match_ai_contexts', {
     query_embedding: embedding,
     match_count: Math.min(limit, 20),
