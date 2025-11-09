@@ -7,6 +7,7 @@
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
     "docs:generate": "node scripts/generate-docs.js",
+    "verify": "node scripts/verify-system.js",
     "seed:usuarios": "node scripts/seed-supabase.js --agregar-usuarios",
     "seed:usuarios:generate": "node scripts/seed-supabase.js --agregar-usuarios --generate",
     "seed:completo": "node scripts/seed-supabase.js --seed-completo",

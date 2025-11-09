@@ -4,6 +4,9 @@ node_modules/
 processed_emails/
 email_analysis/
 .node_modules
-*.md
+ANALISIS_FALTANTE.md
+como base de datos para el proyecto.md
+ejemplos de mensajes de IA.md
+gemini_config.md    
 esquemas.md
 schema.sql

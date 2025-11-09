@@ -151,19 +151,28 @@ async function checkForNewFiles(bucket, folder = '') {
 
   try {
     // Listar archivos en el bucket
-    const files = await supabase.storage.from(bucket).list(folder, {
+    const { data: files, error: listError } = await supabase.storage.from(bucket).list(folder, {
       limit: 100,
       offset: 0,
-      sortBy: { column: 'created_at', order: 'desc' },
     });
-
-    if (files.error) {
-      console.error(`[storage-watcher] Error listando archivos: ${files.error.message}`);
+    
+    if (listError) {
+      console.error(`[storage-watcher] Error listando archivos: ${listError.message}`);
       return;
     }
 
-    // Procesar archivos nuevos
-    for (const file of files.data || []) {
+    if (!files || files.length === 0) {
+      return; // No hay archivos para procesar
+    }
+
+    // Procesar archivos nuevos (ordenar por fecha de creación descendente)
+    const sortedFiles = files.sort((a, b) => {
+      const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+      const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+      return dateB - dateA;
+    });
+    
+    for (const file of sortedFiles) {
       const filePath = folder ? `${folder}/${file.name}` : file.name;
 
       // Saltar si ya fue procesado

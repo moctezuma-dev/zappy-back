@@ -1,11 +1,26 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { env } from '../config/env.js';
 
+const SEARCH_TOOL = { googleSearchRetrieval: {} };
+
+function withSearchTools(payload = {}) {
+  if (!env.GOOGLE_GEMINI_ENABLE_SEARCH_RETRIEVAL) {
+    return payload;
+  }
+  const existingTools = payload.tools || [];
+  const hasSearchTool = existingTools.some((tool) => tool?.googleSearchRetrieval !== undefined);
+  const tools = hasSearchTool ? existingTools : [...existingTools, SEARCH_TOOL];
+  return {
+    ...payload,
+    tools,
+  };
+}
+
 let chatModel = null;
 let embeddingModel = null;
 if (env.GOOGLE_GEMINI_API_KEY) {
   const genAI = new GoogleGenerativeAI(env.GOOGLE_GEMINI_API_KEY);
-  chatModel = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-001' });
+  chatModel = genAI.getGenerativeModel({ model: env.GOOGLE_GEMINI_MODEL });
   embeddingModel = genAI.getGenerativeModel({ model: 'text-embedding-004' });
 }
 
@@ -59,7 +74,7 @@ IMPORTANTE:
 - Para "interaction_type", clasifica el tipo de interacción según el contenido`;
 
   try {
-    const result = await chatModel.generateContent({
+    const request = withSearchTools({
       contents: [
         {
           role: 'user',
@@ -70,6 +85,7 @@ IMPORTANTE:
         responseMimeType: 'application/json',
       },
     });
+    const result = await chatModel.generateContent(request);
 
     const text = result?.response?.text?.() || '';
     let json;
@@ -107,7 +123,7 @@ Devuelve la información en formato JSON estructurado con el siguiente shape:
   "transcript": ""
 }`;
 
-  const result = await chatModel.generateContent({
+  const request = withSearchTools({
     contents: [
       {
         role: 'user',
@@ -121,6 +137,7 @@ Devuelve la información en formato JSON estructurado con el siguiente shape:
       responseMimeType: 'application/json',
     },
   });
+  const result = await chatModel.generateContent(request);
 
   const text = result?.response?.text?.() || '';
   let json;
@@ -163,7 +180,7 @@ Devuelve la información en formato JSON con el siguiente shape:
     }
   }
 
-  const result = await chatModel.generateContent({
+  const request = withSearchTools({
     contents: [
       {
         role: 'user',
@@ -172,6 +189,8 @@ Devuelve la información en formato JSON con el siguiente shape:
     ],
     generationConfig: { responseMimeType: 'application/json' },
   });
+
+  const result = await chatModel.generateContent(request);
 
   const text = result?.response?.text?.() || '';
   let json;
@@ -228,7 +247,7 @@ export async function generateChatResponse({
 
   const contents = mapMessagesToGeminiContent(messages, contextText);
 
-  const result = await chatModel.generateContent({
+  const request = withSearchTools({
     systemInstruction: systemPrompt
       ? {
           role: 'system',
@@ -241,6 +260,7 @@ export async function generateChatResponse({
       maxOutputTokens,
     },
   });
+  const result = await chatModel.generateContent(request);
 
   const responseText = result?.response?.text?.() || '';
   return responseText;

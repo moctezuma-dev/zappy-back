@@ -3,28 +3,38 @@ import path from 'path';
 import crypto from 'crypto';
 
 const FALLBACK_CONTACTS = [
-  { name: 'Sofía Ramírez', company: 'Innovar Group', role: 'Gerente de Compras', email: 'sofia.ramirez@innovargroup.com' },
-  { name: 'Marco Gómez', company: 'TecGlobal', role: 'Director de IT', email: 'marco.gomez@tecglobal.com' },
-  { name: 'Valeria Torres', company: 'Constructora Taurus', role: 'Jefa de Proyectos', email: 'valeria.torres@constructorataurus.com' },
-  { name: 'Roberto Sánchez', company: 'SaludExpress', role: 'Coordinador Médico', email: 'roberto.sanchez@saludexpress.com' },
-  { name: 'Laura Jiménez', company: 'Finanzas Next', role: 'Analista Senior', email: 'laura.jimenez@finanzasnext.com' },
-  { name: 'Juan Torres', company: 'Energía Verde', role: 'Gerente Comercial', email: 'juan.torres@energiaverde.com' },
-  { name: 'Ana López', company: 'ModaFutura', role: 'Encargada de Sourcing', email: 'ana.lopez@modafutura.com' },
-  { name: 'Patricia Peña', company: 'TechSmart', role: 'CEO', email: 'patricia.pena@techsmart.com' },
-  { name: 'Esteban Ruiz', company: 'Farmasur', role: 'Líder Logístico', email: 'esteban.ruiz@farmasur.com' },
-  { name: 'Carla Díaz', company: 'Alimentos Brisa', role: 'Compras Internacionales', email: 'carla.diaz@alimentosbrisa.com' },
+  { name: 'James Quincey', company: 'The Coca-Cola Company', role: 'Chief Executive Officer', email: 'jquincey@coca-cola.com' },
+  { name: 'Nancy Quan', company: 'The Coca-Cola Company', role: 'Chief Technical Officer', email: 'nquan@coca-cola.com' },
+  { name: 'Ramon Laguarta', company: 'PepsiCo', role: 'Chairman and CEO', email: 'ramon.laguarta@pepsico.com' },
+  { name: 'Jane Wakely', company: 'PepsiCo', role: 'Chief Consumer and Marketing Officer', email: 'jane.wakely@pepsico.com' },
+  { name: 'Andy Jassy', company: 'Amazon', role: 'President and CEO', email: 'ajassy@amazon.com' },
+  { name: 'Alicia Boler Davis', company: 'Amazon', role: 'SVP Global Customer Fulfillment', email: 'abolerdavis@amazon.com' },
+  { name: 'Satya Nadella', company: 'Microsoft', role: 'Chairman and CEO', email: 'satya.nadella@microsoft.com' },
+  { name: 'Amy Hood', company: 'Microsoft', role: 'Executive Vice President and CFO', email: 'amy.hood@microsoft.com' },
+  { name: 'Sundar Pichai', company: 'Alphabet', role: 'CEO', email: 'sundar@alphabet.com' },
+  { name: 'Ruth Porat', company: 'Alphabet', role: 'President and Chief Investment Officer', email: 'ruth.porat@alphabet.com' },
+  { name: 'Tim Cook', company: 'Apple', role: 'Chief Executive Officer', email: 'tcook@apple.com' },
+  { name: 'Katherine Adams', company: 'Apple', role: 'Senior Vice President and General Counsel', email: 'katherine.adams@apple.com' },
+  { name: 'Mike Sievert', company: 'T-Mobile US', role: 'President and CEO', email: 'mike.sievert@t-mobile.com' },
+  { name: 'Callie Field', company: 'T-Mobile US', role: 'President, Business Group', email: 'callie.field@t-mobile.com' },
+  { name: 'Elon Musk', company: 'Tesla', role: 'Technoking', email: 'elon@tesla.com' },
+  { name: 'Vaibhav Taneja', company: 'Tesla', role: 'Chief Financial Officer', email: 'vtaneja@tesla.com' },
+  { name: 'Greg Peters', company: 'Netflix', role: 'Co-CEO', email: 'greg.peters@netflix.com' },
+  { name: 'Bela Bajaria', company: 'Netflix', role: 'Chief Content Officer', email: 'bela.bajaria@netflix.com' },
+  { name: 'Han Jong-hee', company: 'Samsung Electronics', role: 'Vice Chairman and CEO', email: 'han.jonghee@samsung.com' },
+  { name: 'Park Hark-kyu', company: 'Samsung Electronics', role: 'President and CFO', email: 'park.harkkyu@samsung.com' },
 ];
 
 const FALLBACK_DEALS = [
-  'Soluciones de automatización en la nube',
-  'Servicios logísticos integrales',
-  'Software ERP especializado',
-  'Consultoría estratégica',
-  'Plataforma de marketing digital',
-  'Diseño y fabricación de mobiliario',
-  'Suministro de materiales',
-  'Outsourcing de soporte técnico',
-  'Implementación de blockchain',
+  'Global beverage supply optimization program',
+  'Smart retail analytics platform',
+  'E-commerce fulfillment automation',
+  'Enterprise cloud modernization',
+  'AI-powered customer service rollout',
+  'Electric vehicle fleet expansion',
+  '5G enterprise connectivity bundle',
+  'Subscription personalization engine',
+  'Sustainable packaging initiative',
 ];
 
 const FALLBACK_REQUIREMENTS = [
@@ -58,16 +68,16 @@ const FALLBACK_TOPICS = [
 const FALLBACK_CHANNELS = ['Email', 'WhatsApp', 'Llamada', 'Slack', 'Videollamada'];
 
 const DOMAIN_OVERRIDES = {
-  'Alimentos Brisa': 'alimentosbrisa.com',
-  'TechSmart': 'techsmart.com',
-  'Finanzas Next': 'finanzasnext.com',
-  'SaludExpress': 'saludexpress.com',
-  'Energía Verde': 'energiaverde.com',
-  'ModaFutura': 'modafutura.com',
-  'Innovar Group': 'innovargroup.com',
-  'Constructora Taurus': 'constructorataurus.com',
-  'TecGlobal': 'tecglobal.com',
-  'Farmasur': 'farmasur.com',
+  'The Coca-Cola Company': 'coca-colacompany.com',
+  PepsiCo: 'pepsico.com',
+  Amazon: 'amazon.com',
+  Microsoft: 'microsoft.com',
+  Alphabet: 'abc.xyz',
+  Apple: 'apple.com',
+  'T-Mobile US': 't-mobile.com',
+  Tesla: 'tesla.com',
+  Netflix: 'netflix.com',
+  'Samsung Electronics': 'samsung.com',
 };
 
 const ROOT_DIR = process.cwd();

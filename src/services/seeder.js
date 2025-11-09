@@ -106,19 +106,46 @@ function inferPriority(notas) {
 }
 
 async function upsertContactsAndLinkCompany(supabase, contacts, companyMap) {
-  const payload = contacts.map(normalizeContactForDB);
-  const { error: upsertError } = await supabase
-    .from('contacts')
-    .upsert(payload, { onConflict: 'email' });
-  if (upsertError) throw upsertError;
-  for (const c of contacts) {
+  // Filtrar duplicados por email antes del upsert
+  const seenEmails = new Set();
+  const uniqueContacts = contacts.filter((c) => {
+    const email = c.email?.trim().toLowerCase();
+    if (!email || seenEmails.has(email)) return false;
+    seenEmails.add(email);
+    return true;
+  });
+  
+  if (uniqueContacts.length === 0) {
+    log('No hay contactos únicos para insertar');
+    return;
+  }
+  
+  const payload = uniqueContacts.map(normalizeContactForDB);
+  
+  // Upsert en lotes para evitar problemas con duplicados
+  const batchSize = 50;
+  for (let i = 0; i < payload.length; i += batchSize) {
+    const batch = payload.slice(i, i + batchSize);
+    const { error: upsertError } = await supabase
+      .from('contacts')
+      .upsert(batch, { onConflict: 'email' });
+    if (upsertError) throw upsertError;
+  }
+  
+  // Actualizar company_id para cada contacto
+  for (const c of uniqueContacts) {
     const companyId = companyMap.get(c.company);
     if (!companyId) continue;
+    const email = c.email?.trim().toLowerCase();
+    if (!email) continue;
+    
     const { error: updateError } = await supabase
       .from('contacts')
       .update({ company_id: companyId })
-      .eq('email', c.email);
-    if (updateError) throw updateError;
+      .eq('email', email);
+    if (updateError) {
+      console.warn(`[seeder] Error actualizando company_id para ${email}:`, updateError.message);
+    }
   }
 }
 
