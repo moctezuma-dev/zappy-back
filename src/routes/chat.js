@@ -336,6 +336,43 @@ router.post('/', async (req, res) => {
 
     const toolContextText = toolTexts.length ? toolTexts.join('\n\n') : null;
     const combinedContext = [contextText, toolContextText].filter(Boolean).join('\n\n---\n\n') || null;
+    const hasContext = Boolean(combinedContext);
+
+    if (!hasContext) {
+      const fallbackAnswer = [
+        'No encontré información relevante en la base de datos ni en las herramientas configuradas para responder con hechos verificados.',
+        'Te sugiero usar los endpoints de investigación o actualizar la base de conocimiento antes de volver a preguntar.',
+        'Opciones recomendadas:',
+        '• Registrar documentos con `POST /api/knowledge` o `POST /api/knowledge/upload`.',
+        '• Ejecutar búsquedas con `POST /api/knowledge/search` o `POST /api/search/query`.',
+        '• Ingerir señales recientes vía `POST /api/news` o los endpoints de ingestión (`/api/ingest/*`).'
+      ].join('\n');
+
+      const assistantMessageId = await insertMessage(supabase, {
+        sessionId: finalSessionId,
+        role: 'assistant',
+        content: fallbackAnswer,
+        context: { sources: [], tools: toolData },
+      });
+
+      if (assistantMessageId && (Object.keys(toolData).length > 0 || toolTexts.length > 0)) {
+        await logToolCall(
+          supabase,
+          assistantMessageId,
+          'context_tools',
+          { toolsRequested: tools },
+          { toolData, summaries: toolTexts }
+        );
+      }
+
+      return res.json({
+        ok: true,
+        sessionId: finalSessionId,
+        answer: fallbackAnswer,
+        sources: [],
+        tools: toolData,
+      });
+    }
 
     if (action?.type === 'generate_summary') {
       try {
