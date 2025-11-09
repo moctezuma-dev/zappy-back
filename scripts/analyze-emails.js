@@ -168,8 +168,13 @@ Responde SOLO en formato JSON válido:
 
     const result = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
-      contents: prompt,
-      generationConfig: { responseMimeType: 'application/json' }
+      contents: [
+        {
+          role: 'user',
+          parts: [{ text: prompt }],
+        },
+      ],
+      generationConfig: { responseMimeType: 'application/json' },
     });
     
     const text = result?.text || result?.response?.text() || '';

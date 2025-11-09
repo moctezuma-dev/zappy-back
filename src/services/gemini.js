@@ -103,7 +103,12 @@ IMPORTANTE:
   try {
     const request = withSearchTools({
       model: env.GOOGLE_GEMINI_MODEL,
-      contents: prompt,
+      contents: [
+        {
+          role: 'user',
+          parts: [{ text: prompt }],
+        },
+      ],
       generationConfig: {
         responseMimeType: 'application/json',
       },
@@ -168,8 +173,13 @@ Devuelve la información en formato JSON estructurado con el siguiente shape:
   const request = withSearchTools({
     model: env.GOOGLE_GEMINI_MODEL,
     contents: [
-      { text: prompt },
-      { inlineData: { mimeType, data: base64 } },
+      {
+        role: 'user',
+        parts: [
+          { text: prompt },
+          { inlineData: { mimeType, data: base64 } },
+        ],
+      },
     ],
     generationConfig: {
       responseMimeType: 'application/json',
@@ -239,7 +249,12 @@ Devuelve la información en formato JSON con el siguiente shape:
 
   const request = withSearchTools({
     model: env.GOOGLE_GEMINI_MODEL,
-    contents: parts,
+    contents: [
+      {
+        role: 'user',
+        parts,
+      },
+    ],
     generationConfig: { responseMimeType: 'application/json' },
   });
 
@@ -262,7 +277,9 @@ export async function embedText({ text, taskType = 'RETRIEVAL_DOCUMENT' } = {}) 
   try {
     const result = await ai.models.embedContent({
       model: 'text-embedding-004',
-      contents: text,
+      content: {
+        parts: [{ text }],
+      },
       taskType,
     });
 
@@ -310,24 +327,24 @@ export async function generateChatResponse({
   if (!ai) throw new Error('Gemini no configurado');
 
   const contents = mapMessagesToGeminiContent(messages, contextText);
-  
-  // Convertir contents al formato del nuevo SDK
-  const formattedContents = contents.map(c => {
-    if (c.role === 'model') {
-      return { role: 'model', parts: c.parts };
-    }
-    return c.parts.map(p => p.text).join('\n');
-  }).filter(Boolean);
-
-  const request = withSearchTools({
+ 
+  const requestPayload = {
     model: env.GOOGLE_GEMINI_MODEL,
-    contents: formattedContents,
-    systemInstruction: systemPrompt,
+    contents,
     generationConfig: {
       temperature,
       maxOutputTokens,
     },
-  });
+  };
+
+  if (systemPrompt) {
+    requestPayload.systemInstruction = {
+      role: 'system',
+      parts: [{ text: systemPrompt }],
+    };
+  }
+
+  const request = withSearchTools(requestPayload);
   
   // Reintentos con backoff exponencial para errores 503
   let lastError = null;
