@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -24,10 +24,9 @@ const GEMINI_CONFIG = {
 };
 
 // Inicializar Gemini si está disponible
-let geminiModel = null;
+let ai = null;
 if (GEMINI_API_KEY) {
-  const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-  geminiModel = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+  ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 }
 
 /**
@@ -126,7 +125,7 @@ function analyzeWithKeywords(email) {
  * Analiza un correo usando Gemini AI (análisis profundo)
  */
 async function analyzeWithGemini(email) {
-  if (!geminiModel) {
+  if (!ai) {
     return null;
   }
   
@@ -167,12 +166,13 @@ Responde SOLO en formato JSON válido:
   "keyPoints": ["...", "..."]
 }`;
 
-    const result = await geminiModel.generateContent({
-      contents: [{ role: 'user', parts: [{ text: prompt }] }],
+    const result = await ai.models.generateContent({
+      model: 'gemini-2.5-flash',
+      contents: prompt,
       generationConfig: { responseMimeType: 'application/json' }
     });
     
-    const text = result?.response?.text() || '';
+    const text = result?.text || result?.response?.text() || '';
     return JSON.parse(text);
   } catch (error) {
     console.error(`Error en análisis Gemini: ${error.message}`);
@@ -321,7 +321,7 @@ async function main() {
   console.log('Iniciando análisis inteligente de correos...');
   console.log(`Directorio de entrada: ${PROCESSED_EMAILS_DIR}`);
   console.log(`Directorio de salida: ${ANALYSIS_OUTPUT_DIR}`);
-  console.log(`Gemini AI: ${geminiModel ? 'Disponible' : 'No disponible (usando solo palabras clave)'}`);
+  console.log(`Gemini AI: ${ai ? 'Disponible' : 'No disponible (usando solo palabras clave)'}`);
   
   // Crear directorio de salida
   if (!fs.existsSync(ANALYSIS_OUTPUT_DIR)) {
@@ -462,7 +462,7 @@ async function main() {
   const mainReport = {
     timestamp: new Date().toISOString(),
     totalEmails: analyses.length,
-    analysisMethod: geminiModel ? 'gemini + keywords' : 'keywords',
+    analysisMethod: ai ? 'gemini + keywords' : 'keywords',
     geminiAnalyzed: geminiCount,
     categories: {
       business_proposal: groups.business_proposal.length,

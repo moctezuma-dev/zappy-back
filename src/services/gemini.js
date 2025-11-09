@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenAI } from '@google/genai';
 import { env } from '../config/env.js';
 
 const SEARCH_TOOL = { googleSearchRetrieval: {} };
@@ -16,20 +16,17 @@ function withSearchTools(payload = {}) {
   };
 }
 
-let chatModel = null;
-let embeddingModel = null;
+let ai = null;
 if (env.GOOGLE_GEMINI_API_KEY) {
-  const genAI = new GoogleGenerativeAI(env.GOOGLE_GEMINI_API_KEY);
-  chatModel = genAI.getGenerativeModel({ model: env.GOOGLE_GEMINI_MODEL });
-  embeddingModel = genAI.getGenerativeModel({ model: 'text-embedding-004' });
+  ai = new GoogleGenAI({ apiKey: env.GOOGLE_GEMINI_API_KEY });
 }
 
 export function hasModel() {
-  return Boolean(chatModel);
+  return Boolean(ai);
 }
 
 export function hasEmbeddingModel() {
-  return Boolean(embeddingModel);
+  return Boolean(ai);
 }
 
 /**
@@ -41,8 +38,8 @@ export async function validateApiKey() {
     return { valid: false, error: 'GOOGLE_GEMINI_API_KEY no está configurada' };
   }
   
-  if (!embeddingModel) {
-    return { valid: false, error: 'Modelo de embeddings no inicializado' };
+  if (!ai) {
+    return { valid: false, error: 'GoogleGenAI no inicializado' };
   }
 
   try {
@@ -66,7 +63,7 @@ export async function validateApiKey() {
  * Analiza texto de una interacción (email, slack, whatsapp) y extrae información CRM avanzada
  */
 export async function analyzeInteractionText({ notes, channel, participants = [] }) {
-  if (!chatModel) {
+  if (!ai) {
     // Fallback a análisis básico si Gemini no está configurado
     return null;
   }
@@ -105,19 +102,15 @@ IMPORTANTE:
 
   try {
     const request = withSearchTools({
-      contents: [
-        {
-          role: 'user',
-          parts: [{ text: prompt }],
-        },
-      ],
+      model: env.GOOGLE_GEMINI_MODEL,
+      contents: prompt,
       generationConfig: {
         responseMimeType: 'application/json',
       },
     });
-    const result = await chatModel.generateContent(request);
+    const result = await ai.models.generateContent(request);
 
-    const text = result?.response?.text?.() || '';
+    const text = result?.text || result?.response?.text || '';
     let json;
     try {
       json = JSON.parse(text);
@@ -133,7 +126,7 @@ IMPORTANTE:
 }
 
 export async function processAudio({ base64, mimeType }) {
-  if (!chatModel) throw new Error('Gemini no configurado');
+  if (!ai) throw new Error('Gemini no configurado');
 
   const prompt = `Analiza esta grabación de llamada de ventas y extrae:
 1. Transcripción completa identificando quién habla
@@ -154,22 +147,18 @@ Devuelve la información en formato JSON estructurado con el siguiente shape:
 }`;
 
   const request = withSearchTools({
+    model: env.GOOGLE_GEMINI_MODEL,
     contents: [
-      {
-        role: 'user',
-        parts: [
-          { text: prompt },
-          { inlineData: { mimeType, data: base64 } },
-        ],
-      },
+      { text: prompt },
+      { inlineData: { mimeType, data: base64 } },
     ],
     generationConfig: {
       responseMimeType: 'application/json',
     },
   });
-  const result = await chatModel.generateContent(request);
+  const result = await ai.models.generateContent(request);
 
-  const text = result?.response?.text?.() || '';
+  const text = result?.text || result?.response?.text || '';
   let json;
   try {
     json = JSON.parse(text);
@@ -180,7 +169,7 @@ Devuelve la información en formato JSON estructurado con el siguiente shape:
 }
 
 export async function processVideo({ audio, frames = [] }) {
-  if (!chatModel) throw new Error('Gemini no configurado');
+  if (!ai) throw new Error('Gemini no configurado');
 
   const prompt = `Analiza esta reunión en video considerando tanto el audio como los elementos visuales.
 Instrucciones:
@@ -211,18 +200,14 @@ Devuelve la información en formato JSON con el siguiente shape:
   }
 
   const request = withSearchTools({
-    contents: [
-      {
-        role: 'user',
-        parts,
-      },
-    ],
+    model: env.GOOGLE_GEMINI_MODEL,
+    contents: parts,
     generationConfig: { responseMimeType: 'application/json' },
   });
 
-  const result = await chatModel.generateContent(request);
+  const result = await ai.models.generateContent(request);
 
-  const text = result?.response?.text?.() || '';
+  const text = result?.text || result?.response?.text || '';
   let json;
   try {
     json = JSON.parse(text);
@@ -233,18 +218,17 @@ Devuelve la información en formato JSON con el siguiente shape:
 }
 
 export async function embedText({ text, taskType = 'RETRIEVAL_DOCUMENT' } = {}) {
-  if (!embeddingModel) throw new Error('Gemini embeddings no configurado');
+  if (!ai) throw new Error('Gemini embeddings no configurado');
   if (!text) return [];
 
   try {
-    const result = await embeddingModel.embedContent({
-      content: {
-        parts: [{ text }],
-      },
+    const result = await ai.models.embedContent({
+      model: 'text-embedding-004',
+      contents: text,
       taskType,
     });
 
-    const values = result?.embedding?.values || [];
+    const values = result?.embedding?.values || result?.values || [];
     return values.map((v) => Number(v));
   } catch (error) {
     // Detectar errores de API key inválida
@@ -285,25 +269,29 @@ export async function generateChatResponse({
   temperature = 0.3,
   maxOutputTokens = 2048,
 } = {}) {
-  if (!chatModel) throw new Error('Gemini no configurado');
+  if (!ai) throw new Error('Gemini no configurado');
 
   const contents = mapMessagesToGeminiContent(messages, contextText);
+  
+  // Convertir contents al formato del nuevo SDK
+  const formattedContents = contents.map(c => {
+    if (c.role === 'model') {
+      return { role: 'model', parts: c.parts };
+    }
+    return c.parts.map(p => p.text).join('\n');
+  }).filter(Boolean);
 
   const request = withSearchTools({
-    systemInstruction: systemPrompt
-      ? {
-          role: 'system',
-          parts: [{ text: systemPrompt }],
-        }
-      : undefined,
-    contents,
+    model: env.GOOGLE_GEMINI_MODEL,
+    contents: formattedContents,
+    systemInstruction: systemPrompt,
     generationConfig: {
       temperature,
       maxOutputTokens,
     },
   });
-  const result = await chatModel.generateContent(request);
+  const result = await ai.models.generateContent(request);
 
-  const responseText = result?.response?.text?.() || '';
+  const responseText = result?.text || result?.response?.text || '';
   return responseText;
 }
