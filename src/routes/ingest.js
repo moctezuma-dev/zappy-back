@@ -10,6 +10,12 @@ import {
   generateSlackMock,
   generateWhatsAppMock,
 } from '../services/mockDataGenerator.js';
+import {
+  emailIngestSchema,
+  slackIngestSchema,
+  whatsappIngestSchema,
+  formatZodError,
+} from '../schemas/ingestSchemas.js';
 import { uploadFileToStorage } from '../services/storageService.js';
 import { processFileManually } from '../services/storageWatcher.js';
 import fs from 'fs/promises';
@@ -55,20 +61,24 @@ function inferExtension(mimeType, fallback = '.bin') {
  */
 router.post('/email', async (req, res) => {
   try {
-    // Si no hay body o está vacío, generar datos mock
-    let emailData = req.body;
-    const generateMock = !emailData || Object.keys(emailData).length === 0 || emailData.generate === true;
+    const payload = req.body || {};
+    const generateMock = Object.keys(payload).length === 0 || payload.generate === true;
+    let emailData;
 
     if (generateMock) {
       console.log('[ingest/email] Generando datos mock automáticamente...');
       emailData = generateEmailMock();
-    }
-
-    if (!emailData.from || !emailData.body) {
-      return res.status(400).json({
-        ok: false,
-        error: 'Se requiere from y body en el body del request',
-      });
+    } else {
+      const { generate, ...domainPayload } = payload;
+      const parsed = emailIngestSchema.safeParse(domainPayload);
+      if (!parsed.success) {
+        return res.status(400).json({
+          ok: false,
+          error: 'Payload inválido para email',
+          details: formatZodError(parsed.error),
+        });
+      }
+      emailData = parsed.data;
     }
 
     // Normalizar datos de email
@@ -76,10 +86,11 @@ router.post('/email', async (req, res) => {
 
     // Extraer información de contacto del remitente
     const fromMatch = emailData.from?.match(/^(.+?)\s*<(.+?)>$/) || [null, emailData.from, emailData.from];
+    const normalizedContext = normalized?.data?.context || {};
     const contactInfo = {
       name: fromMatch[1]?.trim() || emailData.from,
       email: fromMatch[2]?.trim() || emailData.from,
-      company: emailData.company || null, // Opcional en el body
+      company: emailData.company || normalizedContext.company?.name || null,
     };
 
     // Insertar en interactions (esto disparará automáticamente el watcher)
@@ -123,20 +134,24 @@ router.post('/email', async (req, res) => {
  */
 router.post('/slack', async (req, res) => {
   try {
-    // Si no hay body o está vacío, generar datos mock
-    let slackData = req.body;
-    const generateMock = !slackData || Object.keys(slackData).length === 0 || slackData.generate === true;
+    const payload = req.body || {};
+    const generateMock = Object.keys(payload).length === 0 || payload.generate === true;
+    let slackData;
 
     if (generateMock) {
       console.log('[ingest/slack] Generando datos mock automáticamente...');
       slackData = generateSlackMock();
-    }
-
-    if (!slackData.text) {
-      return res.status(400).json({
-        ok: false,
-        error: 'Se requiere text en el body del request',
-      });
+    } else {
+      const { generate, ...domainPayload } = payload;
+      const parsed = slackIngestSchema.safeParse(domainPayload);
+      if (!parsed.success) {
+        return res.status(400).json({
+          ok: false,
+          error: 'Payload inválido para Slack',
+          details: formatZodError(parsed.error),
+        });
+      }
+      slackData = parsed.data;
     }
 
     // Normalizar datos de Slack
@@ -144,10 +159,11 @@ router.post('/slack', async (req, res) => {
 
     // Extraer información de contacto del usuario
     const user = slackData.user || {};
+    const normalizedContext = normalized?.data?.context || {};
     const contactInfo = {
       name: user.real_name || user.name || 'Usuario Slack',
       email: user.email || null,
-      company: slackData.company || null, // Opcional
+      company: slackData.company || normalizedContext.company?.name || null, // Opcional
     };
 
     // Insertar en interactions
@@ -190,31 +206,36 @@ router.post('/slack', async (req, res) => {
  */
 router.post('/whatsapp', async (req, res) => {
   try {
-    // Si no hay body o está vacío, generar datos mock
-    let whatsappData = req.body;
-    const generateMock = !whatsappData || Object.keys(whatsappData).length === 0 || whatsappData.generate === true;
+    const payload = req.body || {};
+    const generateMock = Object.keys(payload).length === 0 || payload.generate === true;
+    let whatsappData;
 
     if (generateMock) {
       console.log('[ingest/whatsapp] Generando datos mock automáticamente...');
       whatsappData = generateWhatsAppMock();
-    }
-
-    if (!whatsappData.message) {
-      return res.status(400).json({
-        ok: false,
-        error: 'Se requiere message en el body del request',
-      });
+    } else {
+      const { generate, ...domainPayload } = payload;
+      const parsed = whatsappIngestSchema.safeParse(domainPayload);
+      if (!parsed.success) {
+        return res.status(400).json({
+          ok: false,
+          error: 'Payload inválido para WhatsApp',
+          details: formatZodError(parsed.error),
+        });
+      }
+      whatsappData = parsed.data;
     }
 
     // Normalizar datos de WhatsApp
     const normalized = normalizeWhatsApp(whatsappData);
 
     // Extraer información de contacto
+    const normalizedContext = normalized?.data?.context || {};
     const contactInfo = {
-      name: whatsappData.contactName || whatsappData.from || 'Contacto WhatsApp',
+      name: whatsappData.contactName || whatsappData.from || normalizedContext.contact?.name || 'Contacto WhatsApp',
       phone: whatsappData.from,
-      email: whatsappData.email || null,
-      company: whatsappData.company || null,
+      email: whatsappData.email || normalizedContext.contact?.email || null,
+      company: whatsappData.company || normalizedContext.company?.name || null,
     };
 
     // Insertar en interactions
