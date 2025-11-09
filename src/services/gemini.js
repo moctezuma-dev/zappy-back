@@ -108,19 +108,38 @@ IMPORTANTE:
         responseMimeType: 'application/json',
       },
     });
-    const result = await ai.models.generateContent(request);
-
-    const text = result?.text || result?.response?.text || '';
-    let json;
-    try {
-      json = JSON.parse(text);
-    } catch (e) {
-      console.error('[gemini] Error parseando JSON de análisis de interacción:', e);
-      return null;
+    
+    // Reintentos con backoff exponencial para errores 503
+    let lastError = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const result = await ai.models.generateContent(request);
+        const text = result?.text || result?.response?.text || '';
+        let json;
+        try {
+          json = JSON.parse(text);
+        } catch (e) {
+          console.error('[gemini] Error parseando JSON de análisis de interacción:', e);
+          return null;
+        }
+        return json;
+      } catch (error) {
+        lastError = error;
+        const statusCode = error?.status || error?.statusCode || error?.code;
+        const is503 = statusCode === 503 || error?.message?.includes('503') || error?.message?.includes('Service Unavailable');
+        
+        if (is503 && attempt < 2) {
+          const delay = Math.pow(2, attempt) * 1000; // 1s, 2s, 4s
+          console.warn(`[gemini] Error 503, reintentando en ${delay}ms (intento ${attempt + 1}/3)`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+        throw error;
+      }
     }
-    return json;
+    throw lastError;
   } catch (error) {
-    console.error('[gemini] Error analizando interacción:', error);
+    console.error('[gemini] Error analizando interacción:', error?.message || error);
     return null;
   }
 }
@@ -156,16 +175,35 @@ Devuelve la información en formato JSON estructurado con el siguiente shape:
       responseMimeType: 'application/json',
     },
   });
-  const result = await ai.models.generateContent(request);
-
-  const text = result?.text || result?.response?.text || '';
-  let json;
-  try {
-    json = JSON.parse(text);
-  } catch (e) {
-    throw new Error('No se pudo parsear la respuesta JSON de Gemini');
+  
+  // Reintentos con backoff exponencial para errores 503
+  let lastError = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const result = await ai.models.generateContent(request);
+      const text = result?.text || result?.response?.text || '';
+      let json;
+      try {
+        json = JSON.parse(text);
+      } catch (e) {
+        throw new Error('No se pudo parsear la respuesta JSON de Gemini');
+      }
+      return json;
+    } catch (error) {
+      lastError = error;
+      const statusCode = error?.status || error?.statusCode || error?.code;
+      const is503 = statusCode === 503 || error?.message?.includes('503') || error?.message?.includes('Service Unavailable');
+      
+      if (is503 && attempt < 2) {
+        const delay = Math.pow(2, attempt) * 1000; // 1s, 2s, 4s
+        console.warn(`[gemini] Error 503 en processAudio, reintentando en ${delay}ms (intento ${attempt + 1}/3)`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+        continue;
+      }
+      throw error;
+    }
   }
-  return json;
+  throw lastError;
 }
 
 export async function processVideo({ audio, frames = [] }) {
@@ -290,8 +328,27 @@ export async function generateChatResponse({
       maxOutputTokens,
     },
   });
-  const result = await ai.models.generateContent(request);
-
-  const responseText = result?.text || result?.response?.text || '';
-  return responseText;
+  
+  // Reintentos con backoff exponencial para errores 503
+  let lastError = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const result = await ai.models.generateContent(request);
+      const responseText = result?.text || result?.response?.text || '';
+      return responseText;
+    } catch (error) {
+      lastError = error;
+      const statusCode = error?.status || error?.statusCode || error?.code;
+      const is503 = statusCode === 503 || error?.message?.includes('503') || error?.message?.includes('Service Unavailable');
+      
+      if (is503 && attempt < 2) {
+        const delay = Math.pow(2, attempt) * 1000; // 1s, 2s, 4s
+        console.warn(`[gemini] Error 503 en generateChatResponse, reintentando en ${delay}ms (intento ${attempt + 1}/3)`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+        continue;
+      }
+      throw error;
+    }
+  }
+  throw lastError;
 }
