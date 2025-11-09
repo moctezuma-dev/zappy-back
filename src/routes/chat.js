@@ -166,8 +166,15 @@ router.post('/', async (req, res) => {
 
     // Buscar contexto relevante
     let embedding = [];
+    let hasValidEmbedding = false;
     try {
       embedding = await embedText({ text: question, taskType: 'RETRIEVAL_QUERY' });
+      // Validar que el embedding tenga al menos 1 dimensión
+      if (Array.isArray(embedding) && embedding.length > 0) {
+        hasValidEmbedding = true;
+      } else {
+        console.warn('[chat] Embedding vacío o inválido, usando búsqueda sin contexto semántico');
+      }
     } catch (error) {
       // Si hay un error con la API key, devolver un error claro
       if (error.message?.includes('API key de Google Gemini no es válida')) {
@@ -176,16 +183,30 @@ router.post('/', async (req, res) => {
           error: 'API key de Google Gemini no es válida. Por favor, verifica la configuración de GOOGLE_GEMINI_API_KEY' 
         });
       }
-      throw error;
+      console.warn('[chat] Error generando embedding:', error.message);
+      // Continuar sin embedding, usar búsqueda básica
     }
     
-    const { data: contextResults, error: searchError } = await supabase.rpc('match_ai_contexts', {
-      query_embedding: embedding,
-      match_count: Math.min(Number(topK) || 5, 20),
-      filter_company: companyId || null,
-      filter_contact: contactId || null,
-    });
-    if (searchError) throw searchError;
+    let contextResults = [];
+    if (hasValidEmbedding) {
+      try {
+        const { data, error: searchError } = await supabase.rpc('match_ai_contexts', {
+          query_embedding: embedding,
+          match_count: Math.min(Number(topK) || 5, 20),
+          filter_company: companyId || null,
+          filter_contact: contactId || null,
+        });
+        if (searchError) {
+          console.warn('[chat] Error en búsqueda semántica:', searchError);
+          // Continuar sin contexto semántico
+        } else {
+          contextResults = data || [];
+        }
+      } catch (error) {
+        console.warn('[chat] Error en búsqueda vectorial:', error.message);
+        // Continuar sin contexto semántico
+      }
+    }
 
     const contexts = (contextResults || []).map((item) => ({
       id: item.id,
@@ -282,15 +303,25 @@ router.post('/', async (req, res) => {
       }
 
       if (normalizedTools.includes('knowledge')) {
-        const { data: knowledgeResults, error: knowledgeError } = await supabase.rpc('match_ai_contexts', {
-          query_embedding: embedding,
-          match_count: 5,
-          filter_company: companyId || null,
-          filter_type: 'knowledge',
-        });
-        if (knowledgeError) {
-          console.warn('[chat] knowledge search error', knowledgeError);
-        } else if (knowledgeResults?.length) {
+        let knowledgeResults = [];
+        if (hasValidEmbedding) {
+          try {
+            const { data, error: knowledgeError } = await supabase.rpc('match_ai_contexts', {
+              query_embedding: embedding,
+              match_count: 5,
+              filter_company: companyId || null,
+              filter_type: 'knowledge',
+            });
+            if (knowledgeError) {
+              console.warn('[chat] knowledge search error', knowledgeError);
+            } else {
+              knowledgeResults = data || [];
+            }
+          } catch (error) {
+            console.warn('[chat] Error en búsqueda de knowledge:', error.message);
+          }
+        }
+        if (knowledgeResults?.length) {
           const items = knowledgeResults.map(
             (item, idx) =>
               `[Knowledge ${idx + 1}] ${item.metadata?.title || 'Documento'} (sim ${

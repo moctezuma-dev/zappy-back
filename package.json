@@ -11,7 +11,8 @@
     "seed:usuarios": "node scripts/seed-supabase.js --agregar-usuarios",
     "seed:usuarios:generate": "node scripts/seed-supabase.js --agregar-usuarios --generate",
     "seed:completo": "node scripts/seed-supabase.js --seed-completo",
-    "seed:completo:generate": "node scripts/seed-supabase.js --seed-completo --generate"
+    "seed:completo:generate": "node scripts/seed-supabase.js --seed-completo --generate",
+    "test:gemini": "node test-gemini.js"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
