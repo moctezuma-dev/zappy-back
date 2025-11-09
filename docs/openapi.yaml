@@ -43,7 +43,7 @@ paths:
       summary: Ingesta de email (mock o real)
       description: >-
         Normaliza un email a una interacción CRM. Si no se especifica body o incluye `generate=true`, genera datos mock
-        automáticamente.
+        automáticamente. El análisis se ejecutará automáticamente después de la ingesta.
       tags:
         - Ingest
       requestBody:
@@ -54,7 +54,7 @@ paths:
               $ref: '#/components/schemas/IngestEmailRequest'
       responses:
         '200':
-          description: Email ingerido correctamente
+          description: Email ingerido correctamente. El análisis se ejecutará automáticamente.
           content:
             application/json:
               schema:
@@ -64,6 +64,9 @@ paths:
   /api/ingest/slack:
     post:
       summary: Ingesta de mensaje de Slack (mock o real)
+      description: >-
+        Normaliza un mensaje de Slack a una interacción CRM. Si no se especifica body o incluye `generate=true`, genera
+        datos mock automáticamente. El análisis se ejecutará automáticamente después de la ingesta.
       tags:
         - Ingest
       requestBody:
@@ -74,7 +77,7 @@ paths:
               $ref: '#/components/schemas/IngestSlackRequest'
       responses:
         '200':
-          description: Mensaje ingerido correctamente
+          description: Mensaje ingerido correctamente. El análisis se ejecutará automáticamente.
           content:
             application/json:
               schema:
@@ -84,6 +87,9 @@ paths:
   /api/ingest/whatsapp:
     post:
       summary: Ingesta de mensaje de WhatsApp (mock o real)
+      description: >-
+        Normaliza un mensaje de WhatsApp a una interacción CRM. Si no se especifica body o incluye `generate=true`,
+        genera datos mock automáticamente. El análisis se ejecutará automáticamente después de la ingesta.
       tags:
         - Ingest
       requestBody:
@@ -94,7 +100,7 @@ paths:
               $ref: '#/components/schemas/IngestWhatsAppRequest'
       responses:
         '200':
-          description: Mensaje ingerido correctamente
+          description: Mensaje ingerido correctamente. El análisis se ejecutará automáticamente.
           content:
             application/json:
               schema:
@@ -104,6 +110,9 @@ paths:
   /api/ingest/audio:
     post:
       summary: Sube audio a Supabase Storage y dispara procesamiento automático
+      description: >-
+        Sube un archivo de audio a Supabase Storage. Admite localPath, base64 o multipart/form-data. El procesamiento se
+        ejecuta automáticamente en background si process=true (por defecto).
       tags:
         - Ingest
       requestBody:
@@ -112,9 +121,22 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/IngestAudioVideoRequest'
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                bucket:
+                  type: string
+                filePath:
+                  type: string
+                process:
+                  type: boolean
       responses:
         '200':
-          description: Audio cargado y en proceso
+          description: Audio cargado correctamente. El procesamiento se ejecutará automáticamente.
           content:
             application/json:
               schema:
@@ -124,6 +146,9 @@ paths:
   /api/ingest/video:
     post:
       summary: Sube video a Supabase Storage y dispara procesamiento automático
+      description: >-
+        Sube un archivo de video a Supabase Storage. Admite localPath, base64 o multipart/form-data. El procesamiento se
+        ejecuta automáticamente en background si process=true (por defecto).
       tags:
         - Ingest
       requestBody:
@@ -132,9 +157,22 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/IngestAudioVideoRequest'
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                bucket:
+                  type: string
+                filePath:
+                  type: string
+                process:
+                  type: boolean
       responses:
         '200':
-          description: Video cargado y en proceso
+          description: Video cargado correctamente. El procesamiento se ejecutará automáticamente.
           content:
             application/json:
               schema:
@@ -712,6 +750,9 @@ paths:
   /api/knowledge/upload:
     post:
       summary: Crear múltiples entradas desde texto/base64
+      description: >-
+        Crea múltiples entradas de conocimiento desde texto plano o base64. El contenido se particiona automáticamente
+        en chunks según chunkSize.
       tags:
         - Knowledge
       requestBody:
@@ -723,6 +764,36 @@ paths:
       responses:
         '200':
           description: Entradas creadas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  entries:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/KnowledgeEntry'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /api/knowledge/url:
+    post:
+      summary: Crear entradas de conocimiento desde URL
+      description: >-
+        Extrae contenido desde una URL y crea múltiples entradas de conocimiento. El contenido se particiona
+        automáticamente en chunks según chunkSize.
+      tags:
+        - Knowledge
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeUrlRequest'
+      responses:
+        '200':
+          description: Entradas creadas desde URL
           content:
             application/json:
               schema:
@@ -877,6 +948,9 @@ paths:
   /api/admin/analyze/trigger:
     post:
       summary: Disparar análisis manual sobre tablas soportadas
+      description: >-
+        Ejecuta análisis manual sobre registros específicos o un conjunto de registros. Útil para re-analizar datos o
+        procesar registros que no fueron analizados automáticamente.
       tags:
         - Admin
       requestBody:
@@ -894,11 +968,15 @@ paths:
                     - contacts
                     - fresh_data
                   default: interactions
+                  description: Tipo de tabla a analizar
                 id:
                   type: string
+                  nullable: true
+                  description: ID específico del registro a analizar (opcional)
                 limit:
                   type: integer
                   default: 10
+                  description: Número máximo de registros a analizar (si no se especifica id)
       responses:
         '200':
           description: Número de registros analizados
@@ -911,6 +989,7 @@ paths:
                     type: boolean
                   analyzed:
                     type: integer
+                    description: Número de registros analizados exitosamente
   /api/admin/watchers/init:
     post:
       summary: Reinicializar watchers realtime (requires service role)
@@ -931,6 +1010,9 @@ paths:
   /api/admin/ai/reindex:
     post:
       summary: Reindexar embeddings/contextos para IA
+      description: >-
+        Reconstruye los embeddings y contextos de IA para búsqueda semántica. Útil cuando se actualiza el modelo de
+        embeddings o se necesita regenerar índices.
       tags:
         - Admin
       requestBody:
@@ -948,14 +1030,18 @@ paths:
                     - fresh_data
                     - all
                   default: all
+                  description: Tipo de contexto a reindexar
                 limit:
                   type: integer
                   default: 100
+                  description: Número máximo de registros a reindexar
                 companyId:
                   type: string
+                  nullable: true
+                  description: Filtrar por ID de compañía (opcional)
       responses:
         '200':
-          description: Reindex ejecutado
+          description: Reindex ejecutado exitosamente
           content:
             application/json:
               schema:
@@ -965,8 +1051,10 @@ paths:
                     type: boolean
                   type:
                     type: string
+                    description: Tipo de contexto reindexado
                   result:
                     type: object
+                    description: Resultados del reindexado (conteos por tipo)
 components:
   schemas:
     HealthResponse:
@@ -1089,17 +1177,23 @@ components:
       properties:
         bucket:
           type: string
+          description: Nombre del bucket en Supabase Storage (por defecto 'audios' o 'videos')
         filePath:
           type: string
+          description: Ruta del archivo en el bucket (se genera automáticamente si no se especifica)
         localPath:
           type: string
+          description: Ruta local del archivo a subir (alternativa a base64 o multipart)
         base64:
           type: string
+          description: Contenido del archivo en base64 (alternativa a localPath o multipart)
         mimeType:
           type: string
+          description: Tipo MIME del archivo (por defecto 'audio/mpeg' o 'video/mp4')
         process:
           type: boolean
           default: true
+          description: Si es true, dispara el procesamiento automático después de subir el archivo
     StorageUploadResponse:
       type: object
       properties:
@@ -1617,21 +1711,29 @@ components:
       properties:
         query:
           type: string
+          description: Texto de búsqueda para generar embedding y buscar contextos similares
         type:
           type: string
           nullable: true
+          description: Filtrar por tipo de contexto (interaction, work_item, fresh_data, knowledge, note)
         companyId:
           type: string
           nullable: true
+          description: Filtrar por ID de compañía
         contactId:
           type: string
           nullable: true
+          description: Filtrar por ID de contacto
         limit:
           type: integer
           default: 8
+          minimum: 1
+          maximum: 20
+          description: Número máximo de resultados a retornar
         taskType:
           type: string
           default: RETRIEVAL_QUERY
+          description: Tipo de tarea para el embedding (RETRIEVAL_QUERY, etc.)
     SearchQueryResponse:
       type: object
       properties:
@@ -1865,19 +1967,26 @@ components:
       properties:
         title:
           type: string
+          nullable: true
+          description: Título opcional para las entradas creadas
         content:
           type: string
+          description: Contenido en texto plano (alternativa a fileBase64)
         fileBase64:
           type: string
+          description: Contenido en base64 (alternativa a content). Se decodifica automáticamente.
         chunkSize:
           type: integer
           default: 1600
+          description: Tamaño de chunks para particionar el contenido en múltiples entradas
         companyId:
           type: string
           nullable: true
+          description: ID de compañía asociada (opcional)
         metadata:
           type: object
           default: {}
+          description: Metadatos adicionales para las entradas
     KnowledgeSearchRequest:
       type: object
       required:
@@ -1913,6 +2022,27 @@ components:
         created_at:
           type: string
           format: date-time
+    KnowledgeUrlRequest:
+      type: object
+      required:
+        - url
+      properties:
+        title:
+          type: string
+          nullable: true
+        url:
+          type: string
+          description: URL desde la cual extraer contenido
+        companyId:
+          type: string
+          nullable: true
+        chunkSize:
+          type: integer
+          default: 1600
+          description: Tamaño de chunks para particionar el contenido
+        metadata:
+          type: object
+          default: {}
     WorkItemCreateRequest:
       type: object
       required:
